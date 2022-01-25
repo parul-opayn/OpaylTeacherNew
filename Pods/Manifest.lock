@@ -1,0 +1,272 @@
+PODS:
+  - Alamofire (5.4.4)
+  - AppAuth (1.4.0):
+    - AppAuth/Core (= 1.4.0)
+    - AppAuth/ExternalUserAgent (= 1.4.0)
+  - AppAuth/Core (1.4.0)
+  - AppAuth/ExternalUserAgent (1.4.0)
+  - CHIPageControl/Jaloro (0.2)
+  - Cosmos (23.0.0)
+  - DropDown (2.3.13)
+  - FaveButton (3.2.1)
+  - Firebase/Analytics (8.9.1):
+    - Firebase/Core
+  - Firebase/Core (8.9.1):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (~> 8.9.1)
+  - Firebase/CoreOnly (8.9.1):
+    - FirebaseCore (= 8.9.1)
+  - Firebase/Crashlytics (8.9.1):
+    - Firebase/CoreOnly
+    - FirebaseCrashlytics (~> 8.9.0)
+  - FirebaseAnalytics (8.9.1):
+    - FirebaseAnalytics/AdIdSupport (= 8.9.1)
+    - FirebaseCore (~> 8.0)
+    - FirebaseInstallations (~> 8.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.6)
+    - GoogleUtilities/MethodSwizzler (~> 7.6)
+    - GoogleUtilities/Network (~> 7.6)
+    - "GoogleUtilities/NSData+zlib (~> 7.6)"
+    - nanopb (~> 2.30908.0)
+  - FirebaseAnalytics/AdIdSupport (8.9.1):
+    - FirebaseCore (~> 8.0)
+    - FirebaseInstallations (~> 8.0)
+    - GoogleAppMeasurement (= 8.9.1)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.6)
+    - GoogleUtilities/MethodSwizzler (~> 7.6)
+    - GoogleUtilities/Network (~> 7.6)
+    - "GoogleUtilities/NSData+zlib (~> 7.6)"
+    - nanopb (~> 2.30908.0)
+  - FirebaseCore (8.9.1):
+    - FirebaseCoreDiagnostics (~> 8.0)
+    - GoogleUtilities/Environment (~> 7.6)
+    - GoogleUtilities/Logger (~> 7.6)
+  - FirebaseCoreDiagnostics (8.9.0):
+    - GoogleDataTransport (~> 9.1)
+    - GoogleUtilities/Environment (~> 7.6)
+    - GoogleUtilities/Logger (~> 7.6)
+    - nanopb (~> 2.30908.0)
+  - FirebaseCrashlytics (8.9.0):
+    - FirebaseCore (~> 8.0)
+    - FirebaseInstallations (~> 8.0)
+    - GoogleDataTransport (~> 9.1)
+    - GoogleUtilities/Environment (~> 7.6)
+    - nanopb (~> 2.30908.0)
+    - PromisesObjC (< 3.0, >= 1.2)
+  - FirebaseInstallations (8.9.0):
+    - FirebaseCore (~> 8.0)
+    - GoogleUtilities/Environment (~> 7.6)
+    - GoogleUtilities/UserDefaults (~> 7.6)
+    - PromisesObjC (< 3.0, >= 1.2)
+  - FirebaseMessaging (8.9.0):
+    - FirebaseCore (~> 8.0)
+    - FirebaseInstallations (~> 8.0)
+    - GoogleDataTransport (~> 9.1)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.6)
+    - GoogleUtilities/Environment (~> 7.6)
+    - GoogleUtilities/Reachability (~> 7.6)
+    - GoogleUtilities/UserDefaults (~> 7.6)
+    - nanopb (~> 2.30908.0)
+  - FloatRatingView (4.0)
+  - GoogleAnalytics (3.20.0)
+  - GoogleAppMeasurement (8.9.1):
+    - GoogleAppMeasurement/AdIdSupport (= 8.9.1)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.6)
+    - GoogleUtilities/MethodSwizzler (~> 7.6)
+    - GoogleUtilities/Network (~> 7.6)
+    - "GoogleUtilities/NSData+zlib (~> 7.6)"
+    - nanopb (~> 2.30908.0)
+  - GoogleAppMeasurement/AdIdSupport (8.9.1):
+    - GoogleAppMeasurement/WithoutAdIdSupport (= 8.9.1)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.6)
+    - GoogleUtilities/MethodSwizzler (~> 7.6)
+    - GoogleUtilities/Network (~> 7.6)
+    - "GoogleUtilities/NSData+zlib (~> 7.6)"
+    - nanopb (~> 2.30908.0)
+  - GoogleAppMeasurement/WithoutAdIdSupport (8.9.1):
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.6)
+    - GoogleUtilities/MethodSwizzler (~> 7.6)
+    - GoogleUtilities/Network (~> 7.6)
+    - "GoogleUtilities/NSData+zlib (~> 7.6)"
+    - nanopb (~> 2.30908.0)
+  - GoogleDataTransport (9.1.2):
+    - GoogleUtilities/Environment (~> 7.2)
+    - nanopb (~> 2.30908.0)
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleSignIn (6.0.2):
+    - AppAuth (~> 1.4)
+    - GTMAppAuth (~> 1.0)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GoogleTagManager (7.4.0):
+    - FirebaseAnalytics (~> 8.0)
+    - GoogleAnalytics (~> 3.20)
+  - GoogleUtilities/AppDelegateSwizzler (7.6.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (7.6.0):
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities/Logger (7.6.0):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (7.6.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (7.6.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (7.6.0)"
+  - GoogleUtilities/Reachability (7.6.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (7.6.0):
+    - GoogleUtilities/Logger
+  - GrowingTextView (0.7.2)
+  - GTMAppAuth (1.2.2):
+    - AppAuth/Core (~> 1.4)
+    - GTMSessionFetcher/Core (~> 1.5)
+  - GTMSessionFetcher/Core (1.7.0)
+  - iCarousel (1.8.3)
+  - IQKeyboardManagerSwift (6.5.9)
+  - MBCircularProgressBar (0.3.5)
+  - nanopb (2.30908.0):
+    - nanopb/decode (= 2.30908.0)
+    - nanopb/encode (= 2.30908.0)
+  - nanopb/decode (2.30908.0)
+  - nanopb/encode (2.30908.0)
+  - ParallaxHeader (3.0.0)
+  - PromisesObjC (2.0.0)
+  - RangeSeekSlider (1.8.0)
+  - razorpay-pod (1.1.16)
+  - SBCardPopup (0.3.0)
+  - ScaledCenterCarouselSwift (1.0.0)
+  - SCPageControl (0.4.0)
+  - SDWebImage (5.12.1):
+    - SDWebImage/Core (= 5.12.1)
+  - SDWebImage/Core (5.12.1)
+  - SideMenu (6.5.0)
+  - SkeletonView (1.5)
+  - SkyFloatingLabelTextField (3.8.0)
+  - TOCropViewController (2.6.0)
+  - TTGSnackbar (1.10.5)
+  - WCLShineButton (1.0.8)
+
+DEPENDENCIES:
+  - Alamofire
+  - CHIPageControl/Jaloro
+  - Cosmos (~> 23.0)
+  - DropDown
+  - FaveButton
+  - Firebase/Analytics
+  - Firebase/Crashlytics
+  - FirebaseCore
+  - FirebaseMessaging
+  - FloatRatingView
+  - GoogleSignIn
+  - GoogleTagManager
+  - GrowingTextView
+  - iCarousel
+  - IQKeyboardManagerSwift
+  - MBCircularProgressBar
+  - ParallaxHeader
+  - RangeSeekSlider
+  - razorpay-pod
+  - SBCardPopup
+  - ScaledCenterCarouselSwift
+  - SCPageControl
+  - SDWebImage
+  - SideMenu
+  - SkeletonView (= 1.5.0)
+  - SkyFloatingLabelTextField (~> 3.0)
+  - TOCropViewController
+  - TTGSnackbar
+  - WCLShineButton
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AppAuth
+    - CHIPageControl
+    - Cosmos
+    - DropDown
+    - FaveButton
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseCoreDiagnostics
+    - FirebaseCrashlytics
+    - FirebaseInstallations
+    - FirebaseMessaging
+    - FloatRatingView
+    - GoogleAnalytics
+    - GoogleAppMeasurement
+    - GoogleDataTransport
+    - GoogleSignIn
+    - GoogleTagManager
+    - GoogleUtilities
+    - GrowingTextView
+    - GTMAppAuth
+    - GTMSessionFetcher
+    - iCarousel
+    - IQKeyboardManagerSwift
+    - MBCircularProgressBar
+    - nanopb
+    - ParallaxHeader
+    - PromisesObjC
+    - RangeSeekSlider
+    - razorpay-pod
+    - SBCardPopup
+    - ScaledCenterCarouselSwift
+    - SCPageControl
+    - SDWebImage
+    - SideMenu
+    - SkeletonView
+    - SkyFloatingLabelTextField
+    - TOCropViewController
+    - TTGSnackbar
+    - WCLShineButton
+
+SPEC CHECKSUMS:
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
+  CHIPageControl: a787bf7205c9b7e7fbfc412be36c5e8636b68f86
+  Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  FaveButton: 93cfebf6030336fa7653fad2068c3152ed668b39
+  Firebase: fb5114cd2bf96e2ff7bcb01d0d9a156cf5fd2f07
+  FirebaseAnalytics: 4ab446ce08a3fe52e8a4303dd997cf26276bf968
+  FirebaseCore: c5aab092d9c4b8efea894946166b04c9d9ef0e68
+  FirebaseCoreDiagnostics: 5daa63f1c1409d981a2d5007daa100b36eac6a34
+  FirebaseCrashlytics: 40efbd81157dae307ec95612fa1328347284d2c2
+  FirebaseInstallations: caa7c8e0d3e2345b8829d2fa9ca1b4dfbf2fcc85
+  FirebaseMessaging: 82c4a48638f53f7b184f3cc9f6cd2cbe533ab316
+  FloatRatingView: bb6bdddfbeec51b1d387b4bd50abc27b4dfccd48
+  GoogleAnalytics: 01e4c5a04544a3608f93e970ce0817836897c5a5
+  GoogleAppMeasurement: 837649ad3987936c232f6717c5680216f6243d24
+  GoogleDataTransport: 629c20a4d363167143f30ea78320d5a7eb8bd940
+  GoogleSignIn: fd381840dbe7c1137aa6dc30849a5c3e070c034a
+  GoogleTagManager: 317a7ba43e0e8c9e334d2f981d61a1b9d782d7b8
+  GoogleUtilities: 684ee790a24f73ebb2d1d966e9711c203f2a4237
+  GrowingTextView: 876bf42005b5e4a4fd740597db12caaf41f0fe6c
+  GTMAppAuth: ad5c2b70b9a8689e1a04033c9369c4915bfcbe89
+  GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
+  iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
+  IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
+  MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
+  nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
+  ParallaxHeader: a343f55eb38f52a89c5820a77e14cf975b84e6aa
+  PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
+  RangeSeekSlider: 650b11fa1edcb92e1e0ede797669d98622570fb5
+  razorpay-pod: f1763f8ee8f83152837abe7de1cdfbcd4eb035b9
+  SBCardPopup: 76a6ac83cbb0fde07a84df31ade1e23c62219a1c
+  ScaledCenterCarouselSwift: 45b7879b3965da266a37c630c50b540b64d78fdc
+  SCPageControl: 8a8dfbba7d7d8c66487a317cb4c4578a7e4af27a
+  SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
+  SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
+  SkeletonView: 6cbb80f82f8bdee3f9093e2fa03b84819b4bd826
+  SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
+  TOCropViewController: 3105367e808b7d3d886a74ff59bf4804e7d3ab38
+  TTGSnackbar: 2bd245d2bbf83639483410273fd936af0b7ba2a9
+  WCLShineButton: 315ee9b0024b1cc56dba34fb6a8878937eb8d0b1
+
+PODFILE CHECKSUM: 5e74d05dd72721c5f5934fcca3c90671063e24bc
+
+COCOAPODS: 1.11.2

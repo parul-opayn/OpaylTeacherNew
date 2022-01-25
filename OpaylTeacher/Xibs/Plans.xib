@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Asap-Medium.ttf">
+            <string>Asap-Medium</string>
+        </array>
+        <array key="Asap-Regular.ttf">
+            <string>Asap-Regular</string>
+        </array>
+        <array key="Asap-SemiBold.ttf">
+            <string>Asap-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PlansView" customModule="IletsLearning" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="211" height="273"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QBd-Iv-8CF" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                    <rect key="frame" x="8" y="8" width="195" height="257"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Per Month" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsx-lE-ubj">
+                            <rect key="frame" x="0.0" y="55" width="195" height="0.0"/>
+                            <constraints>
+                                <constraint firstAttribute="height" id="idE-75-Uhj"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Asap-Regular" family="Asap" pointSize="12"/>
+                            <color key="textColor" name="AppDarkGray"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="$ 40" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NoL-HP-Slx">
+                            <rect key="frame" x="8" y="24" width="179" height="23"/>
+                            <fontDescription key="fontDescription" name="Asap-SemiBold" family="Asap" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W2L-56-gY1" customClass="GradientView" customModule="IletsLearning" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="69.5" width="195" height="187.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PREMIUM" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kvh-uI-xeG">
+                                    <rect key="frame" x="8" y="16" width="179" height="24.5"/>
+                                    <fontDescription key="fontDescription" name="Asap-Medium" family="Asap" pointSize="16"/>
+                                    <color key="textColor" name="Appwhite"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="6xG-za-K1e">
+                                    <rect key="frame" x="8" y="44.5" width="179" height="94"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ueK-Mk-Puy">
+                                            <rect key="frame" x="0.0" y="0.0" width="179" height="31"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon ionic-ios-checkmark-circle" translatesAutoresizingMaskIntoConstraints="NO" id="mjk-tD-rqI">
+                                                    <rect key="frame" x="8" y="9.5" width="12" height="12"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="12" id="7oX-hT-G6h"/>
+                                                        <constraint firstAttribute="width" constant="12" id="hqh-F4-yp3"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum is simply" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Pt-w6-txn">
+                                                    <rect key="frame" x="28" y="4" width="143" height="23"/>
+                                                    <fontDescription key="fontDescription" name="Asap-Regular" family="Asap" pointSize="12"/>
+                                                    <color key="textColor" name="Appwhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="1Pt-w6-txn" firstAttribute="leading" secondItem="mjk-tD-rqI" secondAttribute="trailing" constant="8" id="4eb-GY-ean"/>
+                                                <constraint firstItem="mjk-tD-rqI" firstAttribute="leading" secondItem="ueK-Mk-Puy" secondAttribute="leading" constant="8" id="8Kq-Ov-jpK"/>
+                                                <constraint firstItem="mjk-tD-rqI" firstAttribute="centerY" secondItem="ueK-Mk-Puy" secondAttribute="centerY" id="A8I-BX-iwj"/>
+                                                <constraint firstItem="1Pt-w6-txn" firstAttribute="top" secondItem="ueK-Mk-Puy" secondAttribute="top" constant="4" id="LM1-nJ-vyr"/>
+                                                <constraint firstAttribute="bottom" secondItem="1Pt-w6-txn" secondAttribute="bottom" constant="4" id="LbP-VK-Iuw"/>
+                                                <constraint firstAttribute="trailing" secondItem="1Pt-w6-txn" secondAttribute="trailing" constant="8" id="VZk-Cg-f3I"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MuY-dA-4dg">
+                                            <rect key="frame" x="0.0" y="32" width="179" height="30.5"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon ionic-ios-checkmark-circle" translatesAutoresizingMaskIntoConstraints="NO" id="NAI-MJ-0DS">
+                                                    <rect key="frame" x="8" y="9" width="12" height="12"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="12" id="Pn1-Zs-SR0"/>
+                                                        <constraint firstAttribute="height" constant="12" id="cWE-Ro-78A"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum is simply" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2R-wf-Kjf">
+                                                    <rect key="frame" x="28" y="4" width="143" height="22.5"/>
+                                                    <fontDescription key="fontDescription" name="Asap-Regular" family="Asap" pointSize="12"/>
+                                                    <color key="textColor" name="Appwhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="R2R-wf-Kjf" secondAttribute="bottom" constant="4" id="648-v5-2ox"/>
+                                                <constraint firstItem="NAI-MJ-0DS" firstAttribute="centerY" secondItem="MuY-dA-4dg" secondAttribute="centerY" id="GEA-pP-hHG"/>
+                                                <constraint firstItem="R2R-wf-Kjf" firstAttribute="leading" secondItem="NAI-MJ-0DS" secondAttribute="trailing" constant="8" id="JBY-Nj-Slr"/>
+                                                <constraint firstItem="R2R-wf-Kjf" firstAttribute="top" secondItem="MuY-dA-4dg" secondAttribute="top" constant="4" id="jfh-I7-6FH"/>
+                                                <constraint firstItem="NAI-MJ-0DS" firstAttribute="leading" secondItem="MuY-dA-4dg" secondAttribute="leading" constant="8" id="y8a-IO-oUx"/>
+                                                <constraint firstAttribute="trailing" secondItem="R2R-wf-Kjf" secondAttribute="trailing" constant="8" id="ySB-pG-GLl"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cWc-5e-DRU">
+                                            <rect key="frame" x="0.0" y="63.5" width="179" height="30.5"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon ionic-ios-checkmark-circle" translatesAutoresizingMaskIntoConstraints="NO" id="RS0-Yr-6Dm">
+                                                    <rect key="frame" x="8" y="9" width="12" height="12"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="12" id="xhT-og-pOm"/>
+                                                        <constraint firstAttribute="width" constant="12" id="zMW-b1-yf4"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum is simply" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7F-oU-NGF">
+                                                    <rect key="frame" x="28" y="4" width="143" height="22.5"/>
+                                                    <fontDescription key="fontDescription" name="Asap-Regular" family="Asap" pointSize="12"/>
+                                                    <color key="textColor" name="Appwhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="V7F-oU-NGF" firstAttribute="top" secondItem="cWc-5e-DRU" secondAttribute="top" constant="4" id="61v-K7-eLa"/>
+                                                <constraint firstAttribute="trailing" secondItem="V7F-oU-NGF" secondAttribute="trailing" constant="8" id="b5O-Ci-bav"/>
+                                                <constraint firstItem="V7F-oU-NGF" firstAttribute="leading" secondItem="RS0-Yr-6Dm" secondAttribute="trailing" constant="8" id="dDn-2N-l6P"/>
+                                                <constraint firstItem="RS0-Yr-6Dm" firstAttribute="leading" secondItem="cWc-5e-DRU" secondAttribute="leading" constant="8" id="tAa-hZ-imC"/>
+                                                <constraint firstAttribute="bottom" secondItem="V7F-oU-NGF" secondAttribute="bottom" constant="4" id="uWF-uJ-NdA"/>
+                                                <constraint firstItem="RS0-Yr-6Dm" firstAttribute="centerY" secondItem="cWc-5e-DRU" secondAttribute="centerY" id="wXp-to-lhw"/>
+                                            </constraints>
+                                        </view>
+                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RSW-Zf-BNw">
+                                            <rect key="frame" x="0.0" y="94" width="179" height="8"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon ionic-ios-checkmark-circle" translatesAutoresizingMaskIntoConstraints="NO" id="FQ3-dO-e2S">
+                                                    <rect key="frame" x="8" y="-2" width="12" height="12"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="12" id="b8h-SM-y1a"/>
+                                                        <constraint firstAttribute="height" constant="12" id="fVv-Nw-PnJ"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum is simply" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tha-sg-nAv">
+                                                    <rect key="frame" x="28" y="4" width="143" height="0.0"/>
+                                                    <fontDescription key="fontDescription" name="Asap-Regular" family="Asap" pointSize="12"/>
+                                                    <color key="textColor" name="Appwhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="Tha-sg-nAv" firstAttribute="top" secondItem="RSW-Zf-BNw" secondAttribute="top" constant="4" id="4Qe-kK-2kV"/>
+                                                <constraint firstAttribute="bottom" secondItem="Tha-sg-nAv" secondAttribute="bottom" constant="4" id="4Yj-j3-mvj"/>
+                                                <constraint firstItem="FQ3-dO-e2S" firstAttribute="leading" secondItem="RSW-Zf-BNw" secondAttribute="leading" constant="8" id="BFS-f5-D6u"/>
+                                                <constraint firstItem="Tha-sg-nAv" firstAttribute="leading" secondItem="FQ3-dO-e2S" secondAttribute="trailing" constant="8" id="Kbz-ay-ZEd"/>
+                                                <constraint firstAttribute="trailing" secondItem="Tha-sg-nAv" secondAttribute="trailing" constant="8" id="oYO-1m-I0E"/>
+                                                <constraint firstItem="FQ3-dO-e2S" firstAttribute="centerY" secondItem="RSW-Zf-BNw" secondAttribute="centerY" id="yxV-Ha-y6C"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McD-ob-XN7" customClass="SetButton" customModule="IletsLearning" customModuleProvider="target">
+                                    <rect key="frame" x="47.5" y="146.5" width="100" height="25"/>
+                                    <color key="backgroundColor" name="Appwhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="vk4-ZE-DIo"/>
+                                        <constraint firstAttribute="height" constant="25" id="wrw-UA-ayk"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Asap-Medium" family="Asap" pointSize="14"/>
+                                    <state key="normal" title="Choose"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="McD-ob-XN7" firstAttribute="top" secondItem="6xG-za-K1e" secondAttribute="bottom" constant="8" id="F33-yV-Wpn"/>
+                                <constraint firstItem="Kvh-uI-xeG" firstAttribute="top" secondItem="W2L-56-gY1" secondAttribute="top" constant="16" id="G3x-h0-efb"/>
+                                <constraint firstAttribute="trailing" secondItem="Kvh-uI-xeG" secondAttribute="trailing" constant="8" id="GPN-2w-Ogi"/>
+                                <constraint firstAttribute="bottom" secondItem="McD-ob-XN7" secondAttribute="bottom" constant="16" id="JTY-is-Dii"/>
+                                <constraint firstItem="6xG-za-K1e" firstAttribute="top" secondItem="Kvh-uI-xeG" secondAttribute="bottom" constant="4" id="KZZ-4s-Bc3"/>
+                                <constraint firstItem="6xG-za-K1e" firstAttribute="height" secondItem="W2L-56-gY1" secondAttribute="height" multiplier="0.5" id="Lg9-Tk-sJd"/>
+                                <constraint firstItem="Kvh-uI-xeG" firstAttribute="leading" secondItem="W2L-56-gY1" secondAttribute="leading" constant="8" id="Pt2-bw-qAb"/>
+                                <constraint firstItem="6xG-za-K1e" firstAttribute="leading" secondItem="W2L-56-gY1" secondAttribute="leading" constant="8" id="uUe-ci-88F"/>
+                                <constraint firstAttribute="trailing" secondItem="6xG-za-K1e" secondAttribute="trailing" constant="8" id="vmp-X7-Bwn"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="zsx-lE-ubj" secondAttribute="trailing" id="9aX-fL-kDM"/>
+                        <constraint firstItem="McD-ob-XN7" firstAttribute="centerX" secondItem="QBd-Iv-8CF" secondAttribute="centerX" id="DPU-Rn-yDm"/>
+                        <constraint firstAttribute="bottom" secondItem="W2L-56-gY1" secondAttribute="bottom" id="F4e-61-o41"/>
+                        <constraint firstItem="W2L-56-gY1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="zsx-lE-ubj" secondAttribute="bottom" constant="8" id="HSg-fR-SLc"/>
+                        <constraint firstItem="NoL-HP-Slx" firstAttribute="top" secondItem="QBd-Iv-8CF" secondAttribute="top" constant="24" id="Jgk-hc-mxQ"/>
+                        <constraint firstItem="NoL-HP-Slx" firstAttribute="leading" secondItem="QBd-Iv-8CF" secondAttribute="leading" constant="8" id="LGn-0h-C8o"/>
+                        <constraint firstItem="zsx-lE-ubj" firstAttribute="top" secondItem="NoL-HP-Slx" secondAttribute="bottom" constant="8" id="PnP-QE-oLr"/>
+                        <constraint firstAttribute="trailing" secondItem="W2L-56-gY1" secondAttribute="trailing" id="aln-xE-RD0"/>
+                        <constraint firstItem="zsx-lE-ubj" firstAttribute="leading" secondItem="QBd-Iv-8CF" secondAttribute="leading" id="efm-Pv-JDj"/>
+                        <constraint firstItem="W2L-56-gY1" firstAttribute="leading" secondItem="QBd-Iv-8CF" secondAttribute="leading" id="ivO-Qr-mVD"/>
+                        <constraint firstItem="W2L-56-gY1" firstAttribute="height" secondItem="QBd-Iv-8CF" secondAttribute="height" multiplier="0.73" id="m4c-MH-ttN"/>
+                        <constraint firstAttribute="trailing" secondItem="NoL-HP-Slx" secondAttribute="trailing" constant="8" id="nkq-is-z5p"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="EnableShadow" value="YES"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="ShadowColor">
+                            <color key="value" name="AppDarkGray"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="ShadowRadius">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="ShadowOpacity">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="ShadowOffsetX">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="ShadowOffsetY">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="QBd-Iv-8CF" secondAttribute="bottom" constant="8" id="9uF-ms-yXp"/>
+                <constraint firstItem="QBd-Iv-8CF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="FN9-ek-Q9t"/>
+                <constraint firstAttribute="trailing" secondItem="QBd-Iv-8CF" secondAttribute="trailing" constant="8" id="bDQ-Wk-Uem"/>
+                <constraint firstItem="QBd-Iv-8CF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="ote-l9-9Be"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="buySubscription_btn" destination="McD-ob-XN7" id="rqJ-Wn-kul"/>
+                <outlet property="chooseBtnWidth" destination="vk4-ZE-DIo" id="der-ol-gPq"/>
+                <outlet property="firstLbl" destination="1Pt-w6-txn" id="Gm8-ho-2L1"/>
+                <outlet property="fourthLbl" destination="Tha-sg-nAv" id="7cs-jW-FwO"/>
+                <outlet property="gradientView" destination="W2L-56-gY1" id="j3X-P9-VBC"/>
+                <outlet property="packageTypeLbl" destination="Kvh-uI-xeG" id="nLY-w6-CrB"/>
+                <outlet property="planNameLbl" destination="zsx-lE-ubj" id="mDt-lG-ZcN"/>
+                <outlet property="planPriceLbl" destination="NoL-HP-Slx" id="gzR-gE-LLv"/>
+                <outlet property="planPriceLblTop" destination="Jgk-hc-mxQ" id="bHP-lf-Mix"/>
+                <outlet property="secondLbl" destination="R2R-wf-Kjf" id="jEh-eJ-bQh"/>
+                <outlet property="thirdLbl" destination="V7F-oU-NGF" id="Hc4-6T-yyQ"/>
+            </connections>
+            <point key="canvasLocation" x="-80.434782608695656" y="56.584821428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Icon ionic-ios-checkmark-circle" width="10" height="10"/>
+        <namedColor name="AppDarkGray">
+            <color red="0.396078431372549" green="0.44705882352941179" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Appwhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

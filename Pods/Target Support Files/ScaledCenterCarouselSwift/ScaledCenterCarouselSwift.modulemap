@@ -1,0 +1,6 @@
+framework module ScaledCenterCarouselSwift {
+  umbrella header "ScaledCenterCarouselSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

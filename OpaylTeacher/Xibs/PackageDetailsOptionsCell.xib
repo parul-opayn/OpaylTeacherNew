@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Asap-SemiBold.ttf">
+            <string>Asap-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="PackageDetailsOptionsCell" customModule="IletsLearning" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="122" height="36"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="122" height="36"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7PZ-m7-uMN">
+                        <rect key="frame" x="0.0" y="0.0" width="122" height="36"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNg-Uu-9W1">
+                                <rect key="frame" x="8" y="1" width="106" height="32"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Asap-SemiBold" family="Asap" pointSize="14"/>
+                                <color key="textColor" name="AppBlack"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXK-mI-aYy">
+                                <rect key="frame" x="8" y="34" width="106" height="2"/>
+                                <color key="backgroundColor" name="AppMainPink"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="ocC-Hu-3ci"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gXK-mI-aYy" firstAttribute="top" secondItem="LNg-Uu-9W1" secondAttribute="bottom" constant="1" id="3qd-DB-rZE"/>
+                            <constraint firstItem="gXK-mI-aYy" firstAttribute="leading" secondItem="7PZ-m7-uMN" secondAttribute="leading" constant="8" id="7X0-8q-r87"/>
+                            <constraint firstItem="LNg-Uu-9W1" firstAttribute="top" secondItem="7PZ-m7-uMN" secondAttribute="top" constant="1" id="I2A-TP-jW6"/>
+                            <constraint firstAttribute="trailing" secondItem="gXK-mI-aYy" secondAttribute="trailing" constant="8" id="Kvc-Dp-rJG"/>
+                            <constraint firstItem="LNg-Uu-9W1" firstAttribute="leading" secondItem="7PZ-m7-uMN" secondAttribute="leading" constant="8" id="SUZ-BF-ieh"/>
+                            <constraint firstAttribute="trailing" secondItem="LNg-Uu-9W1" secondAttribute="trailing" constant="8" id="TT3-Af-PSl"/>
+                            <constraint firstAttribute="bottom" secondItem="gXK-mI-aYy" secondAttribute="bottom" id="zd2-EX-dAI"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="7PZ-m7-uMN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1i6-GA-dyR"/>
+                <constraint firstItem="7PZ-m7-uMN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2ze-cP-sFS"/>
+                <constraint firstAttribute="trailing" secondItem="7PZ-m7-uMN" secondAttribute="trailing" id="J0p-9a-H50"/>
+                <constraint firstAttribute="bottom" secondItem="7PZ-m7-uMN" secondAttribute="bottom" id="iZ9-bf-Dn5"/>
+            </constraints>
+            <size key="customSize" width="122" height="36"/>
+            <connections>
+                <outlet property="indicatorView" destination="gXK-mI-aYy" id="uqG-Md-jUZ"/>
+                <outlet property="optionsLbl" destination="LNg-Uu-9W1" id="bGk-dX-rJv"/>
+            </connections>
+            <point key="canvasLocation" x="142.02898550724638" y="-22.098214285714285"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AppBlack">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppMainPink">
+            <color red="0.96470588235294119" green="0.14901960784313725" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
