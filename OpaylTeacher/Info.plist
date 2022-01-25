@@ -22,6 +22,16 @@
 					<key>UISceneStoryboardFile</key>
 					<string>Main</string>
 				</dict>
+				<dict>
+					<key>UISceneClassName</key>
+					<string>LoginViewController</string>
+					<key>UISceneDelegateClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
+					<key>UISceneConfigurationName</key>
+					<string>iPadConfiguration</string>
+					<key>UISceneStoryboardFile</key>
+					<string>Main-iPad</string>
+				</dict>
 			</array>
 		</dict>
 	</dict>
