@@ -28,7 +28,6 @@
         <!--Signup View Controller-->
         <scene sceneID="WDL-05-RBF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mbN-Pf-avF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SignupViewController" id="tJ9-Nw-riy" customClass="SignupViewController" customModule="OpaylTeacher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KPC-l2-Ytw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
@@ -241,7 +240,7 @@
                                                     <action selector="tappedSignupBtn:" destination="tJ9-Nw-riy" eventType="touchUpInside" id="LLg-wx-F1L"/>
                                                 </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r6I-0w-Qcm" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r6I-0w-Qcm" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                 <rect key="frame" x="40" y="588" width="334" height="201"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="services" translatesAutoresizingMaskIntoConstraints="NO" id="sNO-kd-VwF">
@@ -252,13 +251,13 @@
                                                             <constraint firstAttribute="height" constant="15" id="ehC-8f-anB"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Services" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eid-tw-CYf" customClass="SetTextField" customModule="IletsLearning" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Services" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eid-tw-CYf" customClass="SetTextField" customModule="OpaylTeacher" customModuleProvider="target">
                                                         <rect key="frame" x="43" y="16" width="251" height="18"/>
                                                         <color key="textColor" name="AppDarkGray"/>
                                                         <fontDescription key="fontDescription" name="Asap-Medium" family="Asap" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10P-Yj-X9L" customClass="SetButton" customModule="IletsLearning" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10P-Yj-X9L" customClass="SetButton" customModule="OpaylTeacher" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="tze-Ud-Gyp"/>
@@ -285,7 +284,7 @@
                                                         </constraints>
                                                         <color key="separatorColor" name="AppLightGray"/>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="professionCell" id="glo-G9-UBC" customClass="BankNameTableViewCell" customModule="IletsLearning" customModuleProvider="target">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="professionCell" id="glo-G9-UBC" customClass="BankNameTableViewCell" customModule="OpaylTeacher" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="44.5" width="330" height="48.5"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="glo-G9-UBC" id="CLi-IM-e6K">
@@ -382,7 +381,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="575-SK-q7A" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="575-SK-q7A" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                 <rect key="frame" x="40" y="805" width="334" height="202"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qualification" translatesAutoresizingMaskIntoConstraints="NO" id="6ja-GE-8Tf">
@@ -393,13 +392,13 @@
                                                             <constraint firstAttribute="height" constant="15" id="Hut-d7-nBW"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Qualification" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gv9-FO-SyA" customClass="SetTextField" customModule="IletsLearning" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Qualification" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gv9-FO-SyA" customClass="SetTextField" customModule="OpaylTeacher" customModuleProvider="target">
                                                         <rect key="frame" x="43" y="16" width="251" height="18"/>
                                                         <color key="textColor" name="AppDarkGray"/>
                                                         <fontDescription key="fontDescription" name="Asap-Medium" family="Asap" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jab-Bm-KA3" customClass="SetButton" customModule="IletsLearning" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jab-Bm-KA3" customClass="SetButton" customModule="OpaylTeacher" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="93L-la-gAj"/>
@@ -426,7 +425,7 @@
                                                         </constraints>
                                                         <color key="separatorColor" name="AppLightGray"/>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PreparationCell" id="ho3-rx-06o" customClass="BankNameTableViewCell" customModule="IletsLearning" customModuleProvider="target">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PreparationCell" id="ho3-rx-06o" customClass="BankNameTableViewCell" customModule="OpaylTeacher" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="44.5" width="330" height="48.5"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ho3-rx-06o" id="fqq-ZJ-gVf">
@@ -533,7 +532,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-white" translatesAutoresizingMaskIntoConstraints="NO" id="qtU-dm-j16" customClass="SetImage" customModule="IletsLearning" customModuleProvider="target">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-white" translatesAutoresizingMaskIntoConstraints="NO" id="qtU-dm-j16" customClass="SetImage" customModule="OpaylTeacher" customModuleProvider="target">
                                                 <rect key="frame" x="132" y="76" width="150" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="Ymz-vO-Jur"/>
@@ -827,13 +826,13 @@
                         <outlet property="userProfileImage" destination="qtU-dm-j16" id="lbr-CK-HRO"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mbN-Pf-avF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1930" y="202"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="fEf-rv-OcN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BIy-MF-pQE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="LoginViewController" id="MAE-pw-orV" customClass="LoginViewController" customModule="OpaylTeacher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9w3-0b-tTO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -1126,13 +1125,13 @@
                         <outlet property="passwordTxtFld" destination="cDK-TM-JYG" id="GXA-N0-znE"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BIy-MF-pQE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2672" y="-167"/>
         </scene>
         <!--Forgot Password View Controller-->
         <scene sceneID="ZSn-2h-Qdg">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zt9-RH-6hC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ForgotPasswordViewController" id="gyH-kU-IPx" customClass="ForgotPasswordViewController" customModule="OpaylTeacher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ill-qH-DHS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -1257,13 +1256,13 @@
                         <outlet property="instructionLbl" destination="lVh-xh-b0E" id="esr-3D-MDc"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zt9-RH-6hC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3438" y="-167"/>
         </scene>
         <!--Passcode View Controller-->
         <scene sceneID="pbM-lg-tsA">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Occ-aD-s4h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="PasscodeViewController" id="mgX-Gh-vdk" customClass="PasscodeViewController" customModule="OpaylTeacher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tEa-Mp-A5a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -1408,14 +1407,14 @@
                         <outlet property="resendTop" destination="KCV-la-Af3" id="jJj-Dm-Ddy"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Occ-aD-s4h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4222" y="-167"/>
         </scene>
         <!--Main Dashboard View Controller-->
         <scene sceneID="M4x-Xv-bxZ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Clb-BK-jMs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="MainDashboardViewController" id="HC0-Oi-dc8" customClass="MainDashboardViewController" customModule="IletsLearning" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainDashboardViewController" id="HC0-Oi-dc8" customClass="MainDashboardViewController" customModule="OpaylTeacher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="smj-FC-2jD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1435,7 +1434,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="WTn-8m-F5k" customClass="SetImage" customModule="IletsLearning" customModuleProvider="target">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="WTn-8m-F5k" customClass="SetImage" customModule="OpaylTeacher" customModuleProvider="target">
                                                         <rect key="frame" x="16" y="209" width="18" height="18"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="18" id="XMg-Bc-VQm"/>
@@ -1483,7 +1482,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button hidden="YES" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vii-o1-jgL" customClass="SetButton" customModule="IletsLearning" customModuleProvider="target">
+                                                    <button hidden="YES" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vii-o1-jgL" customClass="SetButton" customModule="OpaylTeacher" customModuleProvider="target">
                                                         <rect key="frame" x="320" y="25.5" width="62" height="0.0"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -1510,14 +1509,14 @@
                                                         </constraints>
                                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="popularClasses" id="CcU-ks-fc1" customClass="PackagesTableViewCell" customModule="IletsLearning" customModuleProvider="target">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="popularClasses" id="CcU-ks-fc1" customClass="PackagesTableViewCell" customModule="OpaylTeacher" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="44.5" width="382" height="183"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CcU-ks-fc1" id="dUv-Vj-Zai">
                                                                     <rect key="frame" x="0.0" y="0.0" width="382" height="183"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
-                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Pc-wb-pMg" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Pc-wb-pMg" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                                             <rect key="frame" x="8" y="8" width="366" height="167"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IELTS Preparation" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7s6-11-C2s">
@@ -1541,7 +1540,7 @@
                                                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                                                                     </userDefinedRuntimeAttributes>
                                                                                 </label>
-                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="jqS-9e-m4b" customClass="SetImage" customModule="IletsLearning" customModuleProvider="target">
+                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="jqS-9e-m4b" customClass="SetImage" customModule="OpaylTeacher" customModuleProvider="target">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" constant="120" id="H6C-Nl-fSV"/>
@@ -1801,7 +1800,7 @@
                                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
-                                                                    <button autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mc3-QI-TgE" customClass="SetButton" customModule="IletsLearning" customModuleProvider="target">
+                                                                    <button autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mc3-QI-TgE" customClass="SetButton" customModule="OpaylTeacher" customModuleProvider="target">
                                                                         <rect key="frame" x="8" y="16" width="366" height="40"/>
                                                                         <color key="backgroundColor" name="AppMainPink"/>
                                                                         <constraints>
@@ -1858,7 +1857,7 @@
                                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                         </collectionViewFlowLayout>
                                                                         <cells>
-                                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MentorDetailCollectionViewCell" id="Wli-jX-HNT" customClass="MentorDetailCollectionViewCell" customModule="IletsLearning" customModuleProvider="target">
+                                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MentorDetailCollectionViewCell" id="Wli-jX-HNT" customClass="MentorDetailCollectionViewCell" customModule="OpaylTeacher" customModuleProvider="target">
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="2yn-Ak-LRt">
                                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1866,7 +1865,7 @@
                                                                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JqW-LX-rGj">
                                                                                             <rect key="frame" x="8" y="8" width="284" height="214"/>
                                                                                             <subviews>
-                                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="img" translatesAutoresizingMaskIntoConstraints="NO" id="b8x-jH-CXI" customClass="SetImage" customModule="IletsLearning" customModuleProvider="target">
+                                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="img" translatesAutoresizingMaskIntoConstraints="NO" id="b8x-jH-CXI" customClass="SetImage" customModule="OpaylTeacher" customModuleProvider="target">
                                                                                                     <rect key="frame" x="0.0" y="2" width="284" height="210"/>
                                                                                                     <userDefinedRuntimeAttributes>
                                                                                                         <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
@@ -1874,7 +1873,7 @@
                                                                                                         </userDefinedRuntimeAttribute>
                                                                                                     </userDefinedRuntimeAttributes>
                                                                                                 </imageView>
-                                                                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r56-SY-j9z" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r56-SY-j9z" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                                                                     <rect key="frame" x="0.0" y="2" width="284" height="210"/>
                                                                                                     <color key="backgroundColor" name="LayerBlack"/>
                                                                                                     <userDefinedRuntimeAttributes>
@@ -1889,7 +1888,7 @@
                                                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                     <nil key="highlightedColor"/>
                                                                                                 </label>
-                                                                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFU-n4-Ygj" customClass="SetButton" customModule="IletsLearning" customModuleProvider="target">
+                                                                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFU-n4-Ygj" customClass="SetButton" customModule="OpaylTeacher" customModuleProvider="target">
                                                                                                     <rect key="frame" x="148" y="22" width="120" height="40"/>
                                                                                                     <color key="backgroundColor" name="AppMainPink"/>
                                                                                                     <constraints>
@@ -2145,14 +2144,14 @@ NOV-2021, 11:00 AM</string>
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DashboardResultCollecViewCell" id="6yQ-If-2qx" customClass="DashboardResultCollecViewCell" customModule="IletsLearning" customModuleProvider="target">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DashboardResultCollecViewCell" id="6yQ-If-2qx" customClass="DashboardResultCollecViewCell" customModule="OpaylTeacher" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="199" height="164"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4HL-4m-uOr">
                                                                     <rect key="frame" x="0.0" y="0.0" width="199" height="164"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <subviews>
-                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6nG-8x-4gW" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6nG-8x-4gW" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                                             <rect key="frame" x="8" y="8" width="183" height="152"/>
                                                                             <subviews>
                                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hsg-pG-TOJ" customClass="MBCircularProgressBarView">
@@ -2296,7 +2295,7 @@ NOV-2021, 11:00 AM</string>
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
-                                                    <button hidden="YES" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vcy-Iu-9ec" customClass="SetButton" customModule="IletsLearning" customModuleProvider="target">
+                                                    <button hidden="YES" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vcy-Iu-9ec" customClass="SetButton" customModule="OpaylTeacher" customModuleProvider="target">
                                                         <rect key="frame" x="320" y="4" width="62" height="24"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -2328,17 +2327,17 @@ NOV-2021, 11:00 AM</string>
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CoursesCollectionViewCell" id="nch-cz-tyG" customClass="CoursesCollectionViewCell" customModule="IletsLearning" customModuleProvider="target">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CoursesCollectionViewCell" id="nch-cz-tyG" customClass="CoursesCollectionViewCell" customModule="OpaylTeacher" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="209" height="230"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eqS-EA-yfR">
                                                                     <rect key="frame" x="0.0" y="0.0" width="209" height="230"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <subviews>
-                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Yh-Sa-fZ8" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Yh-Sa-fZ8" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                                             <rect key="frame" x="8" y="8" width="193" height="218"/>
                                                                             <subviews>
-                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DB_Post_Pic4" translatesAutoresizingMaskIntoConstraints="NO" id="2mA-jt-QRJ" customClass="SetImage" customModule="IletsLearning" customModuleProvider="target">
+                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DB_Post_Pic4" translatesAutoresizingMaskIntoConstraints="NO" id="2mA-jt-QRJ" customClass="SetImage" customModule="OpaylTeacher" customModuleProvider="target">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="193" height="113.5"/>
                                                                                     <userDefinedRuntimeAttributes>
                                                                                         <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
@@ -2347,7 +2346,7 @@ NOV-2021, 11:00 AM</string>
                                                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                                                                     </userDefinedRuntimeAttributes>
                                                                                 </imageView>
-                                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W9I-Xb-Axp" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W9I-Xb-Axp" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="193" height="113.5"/>
                                                                                     <color key="backgroundColor" name="LayerBlack"/>
                                                                                     <userDefinedRuntimeAttributes>
@@ -2397,7 +2396,7 @@ NOV-2021, 11:00 AM</string>
                                                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                                                                     </userDefinedRuntimeAttributes>
                                                                                 </label>
-                                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDD-XM-hCA" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDD-XM-hCA" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                                                     <rect key="frame" x="139" y="185" width="46" height="20"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 53" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2B-57-UmW">
@@ -2593,14 +2592,14 @@ NOV-2021, 11:00 AM</string>
                                                         </constraints>
                                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AvailablePackage" id="exU-8S-dRb" customClass="PackagesTableViewCell" customModule="IletsLearning" customModuleProvider="target">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AvailablePackage" id="exU-8S-dRb" customClass="PackagesTableViewCell" customModule="OpaylTeacher" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="44.5" width="382" height="96"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="exU-8S-dRb" id="Wmn-sM-Bqw">
                                                                     <rect key="frame" x="0.0" y="0.0" width="382" height="96"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
-                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ut-fV-421" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ut-fV-421" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                                             <rect key="frame" x="8" y="8" width="366" height="80"/>
                                                                             <subviews>
                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DB_Post_Pic4" translatesAutoresizingMaskIntoConstraints="NO" id="3fc-aK-yYS">
@@ -2631,7 +2630,7 @@ NOV-2021, 11:00 AM</string>
                                                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                                                                     </userDefinedRuntimeAttributes>
                                                                                 </label>
-                                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I4m-Lc-UNB" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I4m-Lc-UNB" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                                                     <rect key="frame" x="310" y="52" width="40" height="20"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNe-6i-ihf">
@@ -2720,14 +2719,14 @@ NOV-2021, 11:00 AM</string>
                                                                     <outlet property="videoLbl" destination="tt3-Bx-IEv" id="9NJ-H3-uFm"/>
                                                                 </connections>
                                                             </tableViewCell>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myPackage" id="8fA-bu-kPj" customClass="PackagesTableViewCell" customModule="IletsLearning" customModuleProvider="target">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myPackage" id="8fA-bu-kPj" customClass="PackagesTableViewCell" customModule="OpaylTeacher" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="140.5" width="382" height="96"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8fA-bu-kPj" id="6yN-im-7X0">
                                                                     <rect key="frame" x="0.0" y="0.0" width="382" height="96"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
-                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BxC-Uk-ykL" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BxC-Uk-ykL" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                                             <rect key="frame" x="8" y="8" width="366" height="80"/>
                                                                             <subviews>
                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DB_Post_Pic4" translatesAutoresizingMaskIntoConstraints="NO" id="j1G-pT-5IX">
@@ -2807,14 +2806,14 @@ NOV-2021, 11:00 AM</string>
                                                                     <outlet property="videoLbl" destination="sY2-X6-4Eh" id="bPa-O9-dDo"/>
                                                                 </connections>
                                                             </tableViewCell>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PackagesTableViewCell" id="BTO-S1-bCx" customClass="PackagesTableViewCell" customModule="IletsLearning" customModuleProvider="target">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PackagesTableViewCell" id="BTO-S1-bCx" customClass="PackagesTableViewCell" customModule="OpaylTeacher" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="236.5" width="382" height="96"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BTO-S1-bCx" id="0be-hk-7Gb">
                                                                     <rect key="frame" x="0.0" y="0.0" width="382" height="96"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
-                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HdT-7D-toy" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HdT-7D-toy" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                                             <rect key="frame" x="8" y="8" width="366" height="80"/>
                                                                             <subviews>
                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DB_Post_Pic4" translatesAutoresizingMaskIntoConstraints="NO" id="6Vj-N1-ymM">
@@ -2836,7 +2835,7 @@ NOV-2021, 11:00 AM</string>
                                                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                                                                     </userDefinedRuntimeAttributes>
                                                                                 </label>
-                                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iNz-rq-l2v" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iNz-rq-l2v" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                                                     <rect key="frame" x="318.5" y="52" width="39.5" height="20"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woL-tl-t1B">
@@ -2981,7 +2980,7 @@ NOV-2021, 11:00 AM</string>
                                                             <outlet property="delegate" destination="HC0-Oi-dc8" id="VBh-al-Xqj"/>
                                                         </connections>
                                                     </tableView>
-                                                    <button hidden="YES" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Rj-kB-9i4" customClass="SetButton" customModule="IletsLearning" customModuleProvider="target">
+                                                    <button hidden="YES" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Rj-kB-9i4" customClass="SetButton" customModule="OpaylTeacher" customModuleProvider="target">
                                                         <rect key="frame" x="320" y="4" width="62" height="24"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -3032,14 +3031,14 @@ NOV-2021, 11:00 AM</string>
                                                             <constraint firstAttribute="height" constant="300" id="LhL-h9-Hym"/>
                                                         </constraints>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PackagesTableViewCell" id="pOZ-zm-UJh" customClass="PackagesTableViewCell" customModule="IletsLearning" customModuleProvider="target">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PackagesTableViewCell" id="pOZ-zm-UJh" customClass="PackagesTableViewCell" customModule="OpaylTeacher" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="44.5" width="382" height="105"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pOZ-zm-UJh" id="a6m-JA-h3L">
                                                                     <rect key="frame" x="0.0" y="0.0" width="382" height="105"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
-                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="My2-Rd-EKS" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="My2-Rd-EKS" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                                             <rect key="frame" x="8" y="8" width="366" height="89"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="English Grammmar and Interview Preperation" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZ4-cf-Bvq">
@@ -3220,13 +3219,13 @@ NOV-2021, 11:00 AM</string>
                         <outlet property="viewPackagesBtn" destination="3Rj-kB-9i4" id="lWO-zR-u7Y"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Clb-BK-jMs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5016" y="-167"/>
         </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="65m-yY-ZDn">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yUm-I0-Obf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController navigationBarHidden="YES" id="Nf1-4I-uZe" customClass="SideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="agM-2W-uvm">
                         <autoresizingMask key="autoresizingMask"/>
@@ -3235,14 +3234,14 @@ NOV-2021, 11:00 AM</string>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yUm-I0-Obf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="281" y="-167"/>
         </scene>
         <!--Side Menu View Controller-->
         <scene sceneID="fH9-h7-IYQ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y6l-hv-sFV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="SideMenuViewController" id="NRY-Y2-ALH" customClass="SideMenuViewController" customModule="IletsLearning" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SideMenuViewController" id="NRY-Y2-ALH" customClass="SideMenuViewController" customModule="OpaylTeacher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9dH-B7-qBh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3258,7 +3257,7 @@ NOV-2021, 11:00 AM</string>
                                             <rect key="frame" x="0.0" y="124.5" width="302" height="88"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8P-FT-wBG" customClass="SetButton" customModule="IletsLearning" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8P-FT-wBG" customClass="SetButton" customModule="OpaylTeacher" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="42" width="286" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="kEz-h7-Vh7"/>
@@ -3315,14 +3314,14 @@ NOV-2021, 11:00 AM</string>
                                             </constraints>
                                         </view>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="guestCell" rowHeight="9" id="BZc-AK-zeO" customClass="SideMenuTableViewCell" customModule="IletsLearning" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="guestCell" rowHeight="9" id="BZc-AK-zeO" customClass="SideMenuTableViewCell" customModule="OpaylTeacher" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="44.5" width="302" height="9"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BZc-AK-zeO" id="KRj-oF-cKG">
                                                     <rect key="frame" x="0.0" y="0.0" width="302" height="9"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lOp-w6-7xa" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                        <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lOp-w6-7xa" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                             <rect key="frame" x="14" y="48.5" width="280" height="108"/>
                                                             <subviews>
                                                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wD9-jR-1iM">
@@ -3334,7 +3333,7 @@ NOV-2021, 11:00 AM</string>
                                                                     <color key="separatorColor" name="Appwhite"/>
                                                                     <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                     <prototypes>
-                                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="innerCell" id="TYa-KY-rZ3" customClass="SideMenuTableViewCell" customModule="IletsLearning" customModuleProvider="target">
+                                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="innerCell" id="TYa-KY-rZ3" customClass="SideMenuTableViewCell" customModule="OpaylTeacher" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="44.5" width="264" height="44"/>
                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TYa-KY-rZ3" id="Jhg-c7-W5v">
@@ -3451,7 +3450,7 @@ NOV-2021, 11:00 AM</string>
                                                     <outlet property="tableViewHeight" destination="WF9-U7-DX9" id="4NC-7j-LMK"/>
                                                 </connections>
                                             </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="LoggedInUserCell" id="u3y-RR-hd6" customClass="SideMenuTableViewCell" customModule="IletsLearning" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="LoggedInUserCell" id="u3y-RR-hd6" customClass="SideMenuTableViewCell" customModule="OpaylTeacher" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="53.5" width="302" height="48.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u3y-RR-hd6" id="rAg-zQ-MYM">
@@ -3496,7 +3495,7 @@ NOV-2021, 11:00 AM</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dYe-uj-oyj">
                                         <rect key="frame" x="16" y="32" width="342" height="76"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="17q-cQ-zKw" customClass="SetImage" customModule="IletsLearning" customModuleProvider="target">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="17q-cQ-zKw" customClass="SetImage" customModule="OpaylTeacher" customModuleProvider="target">
                                                 <rect key="frame" x="32" y="8" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="R8h-R3-6BA"/>
@@ -3680,14 +3679,14 @@ NOV-2021, 11:00 AM</string>
                         <outlet property="viewCoursesTop" destination="fJu-UD-V0l" id="NE2-7B-GbN"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y6l-hv-sFV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1067" y="-169"/>
         </scene>
         <!--Payment List View Controller-->
         <scene sceneID="BpY-ij-ezk">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hDM-Bw-8gi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="PaymentListViewController" id="epo-wG-nL6" customClass="PaymentListViewController" customModule="IletsLearning" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PaymentListViewController" id="epo-wG-nL6" customClass="PaymentListViewController" customModule="OpaylTeacher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oDt-64-epS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3696,14 +3695,14 @@ NOV-2021, 11:00 AM</string>
                                 <rect key="frame" x="32" y="60" width="350" height="802"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bAN-hu-TW1" customClass="PackagesTableViewCell" customModule="IletsLearning" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bAN-hu-TW1" customClass="PackagesTableViewCell" customModule="OpaylTeacher" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="350" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bAN-hu-TW1" id="SVc-vm-O7E">
                                             <rect key="frame" x="0.0" y="0.0" width="350" height="106"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="827-QP-uni" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="827-QP-uni" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="8" width="350" height="90"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English Grammmar and Interview Preperation " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOi-pm-snZ">
@@ -3715,7 +3714,7 @@ NOV-2021, 11:00 AM</string>
                                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DB_Post_Pic4" translatesAutoresizingMaskIntoConstraints="NO" id="slV-5F-DD5" customClass="SetImage" customModule="IletsLearning" customModuleProvider="target">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DB_Post_Pic4" translatesAutoresizingMaskIntoConstraints="NO" id="slV-5F-DD5" customClass="SetImage" customModule="OpaylTeacher" customModuleProvider="target">
                                                             <rect key="frame" x="8" y="8" width="87.5" height="74"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="lessThanOrEqual" priority="750" constant="72" id="EUC-5N-YBI"/>
@@ -3786,7 +3785,7 @@ NOV-2021, 11:00 AM</string>
                                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OqL-FH-yQ5" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OqL-FH-yQ5" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                             <rect key="frame" x="311.5" y="62" width="30.5" height="20"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJc-il-AEc">
@@ -3879,14 +3878,14 @@ NOV-2021, 11:00 AM</string>
                                             <outlet property="ratingView" destination="t5k-X3-Txl" id="1l8-tm-RlX"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PackagesTableViewCell" id="425-Yn-y15" customClass="PackagesTableViewCell" customModule="IletsLearning" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PackagesTableViewCell" id="425-Yn-y15" customClass="PackagesTableViewCell" customModule="OpaylTeacher" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="150.5" width="350" height="92"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="425-Yn-y15" id="1Oh-3A-yNo">
                                             <rect key="frame" x="0.0" y="0.0" width="350" height="92"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R4R-be-KQ2" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R4R-be-KQ2" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.5" width="350" height="91.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="English Grammmar and Interview Preperation For Academic" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9o-7d-Pgw">
@@ -3898,7 +3897,7 @@ NOV-2021, 11:00 AM</string>
                                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DB_Post_Pic4" translatesAutoresizingMaskIntoConstraints="NO" id="Loa-w4-EdB" customClass="SetImage" customModule="IletsLearning" customModuleProvider="target">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DB_Post_Pic4" translatesAutoresizingMaskIntoConstraints="NO" id="Loa-w4-EdB" customClass="SetImage" customModule="OpaylTeacher" customModuleProvider="target">
                                                             <rect key="frame" x="8" y="12" width="70" height="67.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" relation="lessThanOrEqual" priority="750" constant="60" id="FM4-GK-aJB"/>
@@ -4054,6 +4053,7 @@ NOV-2021, 11:00 AM</string>
                         <outlet property="paymentTab" destination="6uM-gq-4sm" id="SPm-SS-mQE"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hDM-Bw-8gi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5828" y="-167"/>
         </scene>
@@ -4091,9 +4091,6 @@ NOV-2021, 11:00 AM</string>
         </designable>
         <designable name="rnp-yv-acd">
             <size key="intrinsicContentSize" width="43" height="18"/>
-        </designable>
-        <designable name="zvg-cz-WdW">
-            <size key="intrinsicContentSize" width="-1" height="30"/>
         </designable>
     </designables>
     <resources>
