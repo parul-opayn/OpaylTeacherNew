@@ -9,14 +9,22 @@ import Foundation
 
 class SignupViewModel: BaseAPI {
     
+    //MARK: - Variables
+    
+    var teacherServices = TeacherServicesDataModel()
+    var teacherQualifications = TeacherQualificationsDataModel()
+    
     //MARK: - API Calls
     
-    func signup(name:String,email:String,password:String,user_category:String,services:[String],course_level:String,completion:@escaping(Bool,String)->()){
+    func signup(name:String,email:String,password:String,mobile:String,experience:String,services:[String],qualifications:[String],introduction:String,about:String,fileName:[String],fileType:[String],fileData:[Data],fileParam:[String],completion:@escaping(Bool,String)->()){
         
-        let param = ["name":name,"email":email,"password":password, "user_category":user_category, "services":services, "course_level":course_level, "timezone":Singleton.sharedInstance.userTimeZone] as baseParameters
-        let request = Request(url: (URLS.baseUrl, APISuffix.signUp), method: .post, parameters: param, headers: true)
+        let param = ["name":name,"email":email,"password":password, "contact_number":mobile,"experience":experience, "services":services, "introduction":introduction,"description":about,"qualification":qualifications, "timezone":Singleton.sharedInstance.userTimeZone] as baseParameters
         
-        super.hitApi(requests: request) { receivedData, message, responseCode in
+       // let request = Request(url: (URLS.baseUrl, APISuffix.signUp), method: .post, parameters: param, headers: true)
+        
+        let request = RequestFilesData(url: (URLS.baseUrl, APISuffix.addTeacher), method: .post, parameters: param, headers: false, fileData: fileData, fileName: fileName, fileMimetype: fileType, fileParam: fileParam, numberOfFiles: fileData.count)
+        
+        super.hitApiWithMultipleFile(requests: request) { receivedData, message, responseCode in
             
             if let data = receivedData as? [String:Any]{
                 if data["code"] as? Int ?? -91 == 200{
@@ -117,11 +125,88 @@ class SignupViewModel: BaseAPI {
         }
     }
     
+    func getServices(completion:@escaping(Bool,String)->()){
+        
+        let request = Request(url: (URLS.baseUrl, APISuffix.teacherServices), method: .get, parameters: nil, headers: false)
+        
+        super.hitApi(requests: request) { receivedData, message, responseCode in
+            
+            if let data = receivedData as? [String:Any]{
+               
+                if data["code"] as? Int ?? -91 == 200{
+                    
+                    if let services = data["data"] as? [[String:Any]]{
+                        
+                        do{
+                            let json = try JSONSerialization.data(withJSONObject: services, options: .prettyPrinted)
+                            self.teacherServices = try JSONDecoder().decode(TeacherServicesDataModel.self, from: json)
+                            completion(true,message ?? "")
+                        }
+                        catch{
+                            completion(false,message ?? "")
+                        }
+                        
+                    }
+                    else{
+                        completion(false,message ?? "")
+                    }
+                   
+                }
+                else{
+                    completion(false,message ?? "")
+                }
+            }
+            else{
+                completion(false,message ?? "")
+            }
+        }
+    }
+    
+    func getQualifications(completion:@escaping(Bool,String)->()){
+        
+        let request = Request(url: (URLS.baseUrl, APISuffix.qualifications), method: .get, parameters: nil, headers: false)
+        
+        super.hitApi(requests: request) { receivedData, message, responseCode in
+            
+            if let data = receivedData as? [String:Any]{
+               
+                if data["code"] as? Int ?? -91 == 200{
+                    
+                    if let services = data["data"] as? [[String:Any]]{
+                        
+                        do{
+                            let json = try JSONSerialization.data(withJSONObject: services, options: .prettyPrinted)
+                            self.teacherQualifications = try JSONDecoder().decode(TeacherQualificationsDataModel.self, from: json)
+                            completion(true,message ?? "")
+                        }
+                        catch{
+                            completion(false,message ?? "")
+                        }
+                        
+                    }
+                    else{
+                        completion(false,message ?? "")
+                    }
+                   
+                }
+                else{
+                    completion(false,message ?? "")
+                }
+            }
+            else{
+                completion(false,message ?? "")
+            }
+        }
+    }
+    
     //MARK: - Validations
     
-    func validations(name:String,email:String,password:String,confirmPassword:String)->(Bool,String){
+    func validations(uploadedProfileImage:Bool,name:String,email:String,mobile:String,experience:String,password:String,servicesCount:Int,qualificationsCount:Int,documentsCount:Int,intro:String,about:String)->(Bool,String){
         
-        if name.replacingOccurrences(of: " ", with: "") == ""{
+        if !uploadedProfileImage{
+            return (false,"Please select profile image")
+        }
+        else if name.replacingOccurrences(of: " ", with: "") == ""{
            return (false,"Please enter user name")
         }
         else if email.replacingOccurrences(of: " ", with: "") == ""{
@@ -130,14 +215,29 @@ class SignupViewModel: BaseAPI {
         else if !(Validation().validateEmailId(emailID: email)){
             return (false,"Please enter valid email")
         }
+        else if mobile.replacingOccurrences(of: " ", with: "") == ""{
+            return (false,"Please enter mobile number")
+        }
+        else if experience.replacingOccurrences(of: " ", with: "") == ""{
+            return (false,"Please enter your experience")
+        }
         else if password.replacingOccurrences(of: " ", with: "") == ""{
             return (false,"Password enter password")
         }
-        else if confirmPassword.replacingOccurrences(of: " ", with: "") == ""{
-            return (false,"Password confirm password")
+        else if servicesCount == 0{
+            return (false,"Please select your services")
         }
-        else if password != confirmPassword{
-            return(false,"Password not match")
+        else if qualificationsCount == 0{
+            return (false,"Please select your qualifications")
+        }
+        else if documentsCount == 0{
+            return (false,"Please select your documents")
+        }
+        else if intro.replacingOccurrences(of: " ", with: "") == ""{
+            return (false,"Please enter introduction")
+        }
+        else if about.replacingOccurrences(of: " ", with: "") == ""{
+            return (false,"Please enter description about yourself")
         }
         else{
             return(true,"")

@@ -33,13 +33,13 @@ open class ImagePicker: NSObject {
         
         //MARK:- Initializer
         
-        public init(presentationController: UIViewController, delegate: ImagePickerDelegate) { self.pickerController = UIImagePickerController()
+        public init(presentationController: UIViewController, delegate: ImagePickerDelegate) {
+            self.pickerController = UIImagePickerController()
             super.init()
             self.presentationController = presentationController
             self.delegate = delegate
             self.pickerController.delegate = self
             self.cropViewController.delegate = self
-            
         }
         
         //MARK:- Alert Button Actions
@@ -219,15 +219,21 @@ open class ImagePicker: NSObject {
             
             if UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad {
                 
-                let popUp = UIPopoverController(contentViewController: actionSheet)
-                
-                popUp.present(from: CGRect(x: 15, y: view.frame.height - 150, width: 0, height: 0),
-                              in: view, permittedArrowDirections: UIPopoverArrowDirection.any, animated: true)
-                }
+//                let popUp = UIPopoverController(contentViewController: actionSheet)
+//
+//                popUp.present(from: CGRect(x: 15, y: view.frame.height - 150, width: 0, height: 0),
+//                              in: view, permittedArrowDirections: UIPopoverArrowDirection.any, animated: true)
+                actionSheet.popoverPresentationController?.sourceView = view
+                actionSheet.popoverPresentationController?.permittedArrowDirections = .up
+                presentationController?.present(actionSheet, animated: true, completion: nil)
+            }
+            
             else {
-                    presentationController?.present(actionSheet, animated: true, completion: nil)
-                    
-                }
+                presentationController?.present(actionSheet, animated: true, completion: nil)
+                
+            }
+            
+            
             
         }
         //MARK:- Custom Functions

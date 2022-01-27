@@ -124,7 +124,7 @@ extension PaymentListViewController: UITableViewDelegate, UITableViewDataSource{
         }
         
         if indexPath.row == 4{
-            cell.packageMainViewBottom.constant = 0.25
+            cell.packageMainViewBottom.constant = 0.3
         }
         else{
             cell.packageMainViewBottom.constant = 0

@@ -60,6 +60,10 @@ enum APISuffix {
     case home
     case mentorDetail(String)
     case notifications
+    case teacherServices
+    case qualifications
+    case addTeacher
+    case teacherClassListing
     
     func getDescription() -> String {
         
@@ -214,9 +218,20 @@ enum APISuffix {
         case .mentorDetail(let id):
             return "mentor/detail/\(id)"
             
-            
         case .notifications:
             return "notifications"
+            
+        case .teacherServices:
+            return "service/listing"
+            
+        case .qualifications:
+            return "qualifications"
+            
+        case .addTeacher:
+            return "admin/addteacher"
+            
+        case .teacherClassListing:
+            return "teacher/class-list"
         }
         
     }
@@ -232,12 +247,12 @@ enum URLS {
     func getDescription() -> String {
         
     let liveUrl = "http://3.22.185.42/opaynly-api/public/api/"
-    let localUrl = "https://83b6-180-188-237-142.ngrok.io/ielts-app/public/api/"
+    let localUrl = "http://7bb0-180-188-237-166.ngrok.io/ielts-app/public/api/"
         
         switch self {
        
         case .baseUrl :
-            return liveUrl
+            return localUrl
             //liveUrl
             
         case .googlePlaces:

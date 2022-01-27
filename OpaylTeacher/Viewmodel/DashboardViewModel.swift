@@ -2,17 +2,12 @@
 import Foundation
 
 class DashboardViewModel: BaseAPI{
-//  DashboardViewModel.swift
-//  IletsLearning
-//
-//  Created by OPAYN LLC on 10/11/21.
-//
 
+    var totalPages = 0
+    var dashboardModel = MyClassesModel()
     
-    var dashboardModel: DashboardDataModel?
-    
-    func dashboardApi(completion: @escaping(Bool, String)->()){
-        let request = Request(url: (URLS.baseUrl, APISuffix.dashboard), method: .get, parameters: nil, headers: true)
+    func dashboardApi(page:Int,completion: @escaping(Bool, String)->()){
+        let request = Request(url: (URLS.baseUrl, APISuffix.teacherClassListing), method: .get, parameters: nil, headers: true)
         
         super.hitApi(requests: request) { receivedData, message, responseCode in
             
@@ -20,10 +15,13 @@ class DashboardViewModel: BaseAPI{
                 
                 if data["code"] as? Int ?? -91 == 200{
                     
-                    if let packagesData = data["data"] as? [String:Any]{
+                    if let classesData = (data["data"] as? [String:Any])?["data"] as? [[String:Any]]{
+                        self.totalPages = data["total"] as? Int ?? 0
                         do{
-                            let json = try JSONSerialization.data(withJSONObject: packagesData, options: .prettyPrinted)
-                            self.dashboardModel = try JSONDecoder().decode(DashboardDataModel.self, from: json)
+                            let json = try JSONSerialization.data(withJSONObject: classesData, options: .prettyPrinted)
+                            let decodedData = try JSONDecoder().decode(MyClassesModel.self, from: json)
+                            
+                            self.dashboardModel += decodedData
                             completion(true,message ?? "")
                         }
                         catch{

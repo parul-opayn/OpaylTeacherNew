@@ -66,7 +66,7 @@ class SideMenuViewController: UIViewController {
       //  self.SignedOutView.isHidden = true
         profileImageView.sd_setImage(with: URL(string: UserDefault.sharedInstance?.getUserDetails()?.image ?? ""), placeholderImage: UIImage(named: "user-white"), options: .highPriority, context: nil)
         self.userNameLbl.text = (UserDefault.sharedInstance?.getUserDetails()?.name ?? "N/A").capitalized
-        self.userProfession.text = (UserDefault.sharedInstance?.getUserDetails()?.userCategory?.name ?? "N/A").capitalized
+        self.userProfession.text = (UserDefault.sharedInstance?.getUserDetails()?.name ?? "N/A").capitalized
         self.menuTab.separatorStyle = .none
         self.menuTab.tableFooterView = UIView()
         self.guestSepratorLine.isHidden = true
@@ -141,10 +141,10 @@ class SideMenuViewController: UIViewController {
     
     @IBAction func tppedEditProfile(_ sender: UIButton) {
         
-//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "EditProfileViewController") as! EditProfileViewController
-//        vc.hidesBottomBarWhenPushed = true
-//        self.viewController.navigationController?.pushViewController(vc, animated: true)
-//        self.dismiss(animated: true, completion: nil)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SignupViewController") as! SignupViewController
+        vc.isEdit = true
+        self.viewController.navigationController?.pushViewController(vc, animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

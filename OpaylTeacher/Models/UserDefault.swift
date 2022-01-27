@@ -22,9 +22,7 @@ class UserDefault
             
             do {
                 self.userData = try JSONDecoder().decode(LoginModel.self, from: JSONSerialization.data(withJSONObject: userdataa, options: .prettyPrinted))
-                UserDefaults.standard.set(self.userData?.userCategory?.id, forKey: "UserProfessionId")
-                UserDefaults.standard.set(self.userData?.userService?.first?.serviceID, forKey: "UserCoursesId")
-                UserDefaults.standard.set(self.userData?.courseLevel, forKey: "UserEnglishLevel")
+               
             }
             catch {
                print((error.localizedDescription))
@@ -47,9 +45,7 @@ class UserDefault
             
             do {
                 self.userData = try JSONDecoder().decode(LoginModel.self, from: JSONSerialization.data(withJSONObject: userdataa, options: .prettyPrinted))
-                UserDefaults.standard.set(self.userData?.userCategory?.id, forKey: "UserProfessionId")
-                UserDefaults.standard.set(self.userData?.userService?.first?.serviceID, forKey: "UserCoursesId")
-                UserDefaults.standard.set(self.userData?.courseLevel, forKey: "UserEnglishLevel")
+             
             }
             catch {
                 

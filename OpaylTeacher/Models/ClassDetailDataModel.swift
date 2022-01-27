@@ -21,7 +21,7 @@ struct ClassDetailDataModel: Codable {
     let reviewCount: Int?
     let dayTime: Int?
     let updatedAt, createdAt: String?
-    let teacher: Teacher?
+    let teacher: TeacherDetails?
     let studyMaterial: [ClassStudyMaterial]?
     let user: [User]?
     let wishlist:Wishlist?
@@ -77,7 +77,7 @@ struct ClassStudyMaterial: Codable {
 }
 
 // MARK: - Teacher
-struct Teacher: Codable {
+struct TeacherDetails: Codable {
     let id: Int?
     let name, email: String?
     let emailVerifiedAt: String?

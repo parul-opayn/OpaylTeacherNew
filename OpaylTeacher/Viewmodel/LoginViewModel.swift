@@ -12,7 +12,8 @@ class LoginViewModel: BaseAPI {
     
     func login(email:String,password:String,completion:@escaping(Bool,String)->()){
         
-        let param = ["email":email,"password":password,"device_token":UserDefaults.standard.value(forKey: "fcmToken") as? String ?? ""] as baseParameters
+        //"device_token":UserDefaults.standard.value(forKey: "fcmToken") as? String ?? ""
+        let param = ["email":email,"password":password] as baseParameters
         let request = Request(url: (URLS.baseUrl, APISuffix.login), method: .post, parameters: param, headers: true)
         
         super.hitApi(requests: request) { receivedData, message, responseCode in

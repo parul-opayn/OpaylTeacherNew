@@ -33,8 +33,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
 #if targetEnvironment(simulator)
-        emailTxtFld.text = "parul@mailinator.com"
-        passwordTxtFld.text = "123456"
+        emailTxtFld.text = "ak@mailinator.com"
+        passwordTxtFld.text = "000000"
         
 #endif
         
@@ -94,14 +94,12 @@ class LoginViewController: UIViewController {
         self.view.endEditing(true)
         let validation = viewModel.validations(email: emailTxtFld.text ?? "", password: passwordTxtFld.text ?? "")
         
-//        if validation.0{
-//            self.loginApi()
-//        }
-//        else{
-//            self.showToast(message: validation.1)
-//        }
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainDashboardViewController") as! MainDashboardViewController
-        self.navigationController?.pushViewController(vc,animated: true)
+        if validation.0{
+            self.loginApi()
+        }
+        else{
+            self.showToast(message: validation.1)
+        }
         
     }
     
@@ -164,22 +162,24 @@ extension LoginViewController{
             
             if isSuccess{
                 
-//                if (UserDefault.sharedInstance?.getUserDetails()?.emailVerifiedAt ?? "") == ""{
-//                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "PasscodeViewController") as! PasscodeViewController
-//                    vc.displayFor = .login
-//                    vc.id = "\(UserDefault.sharedInstance?.getUserDetails()?.id ?? 0)"
-//                    self.navigationController?.pushViewController(vc, animated: true)
-//                }
-//                else{
-//                    if self.moveBack{
-//                        self.navigationController?.popViewController(animated: true)
-//                    }
-//                    else{
-//                        let vc = storyBoardIdentifiers.courses.getStoryBoard().instantiateViewController(withIdentifier: "MainTabBarViewController") as! MainTabBarViewController
-//                        vc.selectedIndex = 4
-//                        self.navigationController?.pushViewController(vc, animated: true)
-//                    }
-//                }
+                switch UserDefault.sharedInstance?.getUserDetails()?.accountVerificationStatus ?? 0{
+                    
+                case 0:
+                    self.showAlert(Title: "", Message: "Your account is under review", ButtonTitle: "OK")
+                    break
+                    
+                case 1:
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainDashboardViewController") as! MainDashboardViewController
+                    self.navigationController?.pushViewController(vc,animated: true)
+                    break
+                    
+                case 2:
+                    self.showAlert(Title: "", Message: "Your account is rejected by admin", ButtonTitle: "OK")
+                    break
+                    
+                default:
+                    break
+                }
                 
             }
             else{

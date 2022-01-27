@@ -36,6 +36,7 @@ class CoursesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var calendarIcon: UIImageView!
     @IBOutlet weak var clockIcon: UIImageView!
     
+    
     // Packages Cell
     
     @IBOutlet weak var videoLbl: UILabel!
@@ -49,4 +50,5 @@ class CoursesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var classRatingLbl: UILabel!
     @IBOutlet weak var startDateLbl: UILabel!
     @IBOutlet weak var classTimingLbl: UILabel!
+    
 }

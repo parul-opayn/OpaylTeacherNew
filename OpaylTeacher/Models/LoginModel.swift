@@ -1,53 +1,67 @@
 import Foundation
 
+// MARK: - DataClass
 // MARK: - LoginModel
 struct LoginModel: Codable {
-    let id: Int?
-    let name, email: String?
-    let introduction, loginModelDescription: String?
-    let emailVerifiedAt: String?
-    let socialID, firebaseToken: String?
-    let userCategory: UserCategory?
-    let courseLevel: Int?
-    let timezone, contactNumber: String?
-    let experience: String?
     let status: Int?
-    let merithubUserID, image, introVideo, deletedAt: String?
-    let createdAt, updatedAt: String?
+    let image: String?
+    let updatedAt: String?
+    let merithubUserID: String?
+    let contactNumber: String?
+    let socialID: String?
     let userService: [UserService]?
-
-    enum CodingKeys: String, CodingKey {
-        case id, name, email, introduction
-        case loginModelDescription = "description"
-        case emailVerifiedAt = "email_verified_at"
-        case socialID = "social_id"
-        case firebaseToken = "firebase_token"
-        case userCategory = "user_category"
-        case courseLevel = "course_level"
-        case timezone
-        case contactNumber = "contact_number"
-        case experience, status
-        case merithubUserID = "merithub_user_id"
-        case image
-        case introVideo = "intro_video"
-        case deletedAt = "deleted_at"
-        case createdAt = "created_at"
-        case updatedAt = "updated_at"
-        case userService = "user_service"
-    }
-}
-
-// MARK: - UserCategory
-struct UserCategory: Codable {
+    let name: String?
+    let courseLevel: Int?
     let id: Int?
-    let name, createdAt, updatedAt: String?
+    let firebaseToken, introVideo: String?
+    let email: String?
+    let deletedAt: String?
+    let roles: [Role]?
+    let timezone, introduction, emailVerifiedAt: String?
+    let userCategory: String?
+    let experience, accountVerificationStatus: Int?
+    let createdAt, loginModelDescription: String?
 
     enum CodingKeys: String, CodingKey {
-        case id, name
-        case createdAt = "created_at"
+        case status, image
         case updatedAt = "updated_at"
+        case merithubUserID = "merithub_user_id"
+        case contactNumber = "contact_number"
+        case socialID = "social_id"
+        case userService = "user_service"
+        case name
+        case courseLevel = "course_level"
+        case id
+        case firebaseToken = "firebase_token"
+        case introVideo = "intro_video"
+        case email
+        case deletedAt = "deleted_at"
+        case roles, timezone, introduction
+        case emailVerifiedAt = "email_verified_at"
+        case userCategory = "user_category"
+        case experience
+        case accountVerificationStatus = "account_verification_status"
+        case createdAt = "created_at"
+        case loginModelDescription = "description"
     }
 }
+
+// MARK: - Role
+struct Role: Codable {
+    let pivot: Pivot?
+    let id: Int?
+    let guardName, name, updatedAt, createdAt: String?
+
+    enum CodingKeys: String, CodingKey {
+        case pivot, id
+        case guardName = "guard_name"
+        case name
+        case updatedAt = "updated_at"
+        case createdAt = "created_at"
+    }
+}
+
+
 
 // MARK: - UserService
 struct UserService: Codable {
@@ -64,51 +78,3 @@ struct UserService: Codable {
     }
 }
 
-
-// MARK: - LoginModel
-//
-//struct LoginModel: Codable {
-//    let id: Int?
-//    let name, email: String?
-//    let emailVerifiedAt: String?
-//    let createdAt, updatedAt: String?
-//    let profile:Profile?
-//
-//    enum CodingKeys: String, CodingKey {
-//        case id, name, email
-//        case emailVerifiedAt = "email_verified_at"
-//        case createdAt = "created_at"
-//        case updatedAt = "updated_at"
-//        case profile = "profile"
-//    }
-//}
-//
-//// MARK: - Profile
-//
-//struct Profile: Codable {
-//    let createdAt: String?
-//    let id: Int?
-//    let image: String?
-//    let updatedAt: String?
-//    let userID: Int?
-//    let user_category:UserCategory?
-//
-//    enum CodingKeys: String, CodingKey {
-//        case createdAt = "created_at"
-//        case id, image
-//        case updatedAt = "updated_at"
-//        case userID = "user_id"
-//        case user_category = "user_category"
-//    }
-//}
-//
-//struct UserCategory:Codable{
-//    let id:String?
-//    let title:String?
-//
-//    enum CodingKeys:String,CodingKey{
-//        case id = "id"
-//        case title = "title"
-//    }
-//}
-//
