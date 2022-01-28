@@ -13,7 +13,9 @@ class PaymentListViewModel: BaseAPI{
     
     func getPaymentListApi(completion:@escaping(Bool,String)->()){
         let request = Request(url: (URLS.baseUrl, APISuffix.PaymentList), method: .get, parameters: nil, headers: true)
+        
         super.hitApi(requests: request) { receivedData, message, responseCode in
+          
             if let data = receivedData as? [String:Any]{
                 if data["code"] as? Int ?? -91 == 200{
                     if let packagesData = data["data"] as? [[String:Any]]{

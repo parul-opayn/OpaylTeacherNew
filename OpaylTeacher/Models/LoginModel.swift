@@ -19,7 +19,8 @@ struct LoginModel: Codable {
     let roles: [Role]?
     let timezone, introduction, emailVerifiedAt: String?
     let userCategory: String?
-    let experience, accountVerificationStatus: Int?
+    let experience:VariacType?
+    let accountVerificationStatus: Int?
     let createdAt, loginModelDescription: String?
 
     enum CodingKeys: String, CodingKey {
@@ -78,3 +79,49 @@ struct UserService: Codable {
     }
 }
 
+
+public enum VariacType:Codable{
+    
+    public func encode(to encoder: Encoder) throws {
+        
+    }
+    
+    case int(Int)
+    case double(Double)
+    case string(String)
+    
+    public init(from decoder: Decoder) throws {
+        if let intValue = try? decoder.singleValueContainer().decode(Int.self)  {
+            self = .int(intValue)
+            return
+        }
+        if let stringValue = try? decoder.singleValueContainer().decode(String.self){
+            self = .string(stringValue)
+            return
+        }
+        if let doubleValue = try? decoder.singleValueContainer().decode(Double.self){
+            self = .double(doubleValue)
+            return
+        }
+        throw VariacError.missingValue
+    }
+    
+    
+    enum VariacError: Error {
+        case missingValue
+    }
+}
+
+extension VariacType {
+    var Value:String {
+        switch self {
+        case .int(let intvalue):
+            return String(intvalue)
+        case .string(let stringValue):
+            return stringValue
+        case .double(let doubleValue):
+            return String(doubleValue)
+        }
+    }
+    
+}

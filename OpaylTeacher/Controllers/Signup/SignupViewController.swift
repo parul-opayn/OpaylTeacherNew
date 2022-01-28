@@ -25,6 +25,14 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var documentsTopBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var documentTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var documentsView: SetView!
+    @IBOutlet weak var loginNavigationView: UIView!
+    @IBOutlet weak var passwordFieldHeight: NSLayoutConstraint!
+    @IBOutlet weak var servicesTop: NSLayoutConstraint!
+    @IBOutlet weak var qualificationsTop: NSLayoutConstraint!
+    @IBOutlet weak var documentsTop: NSLayoutConstraint!
+    @IBOutlet weak var introTop: NSLayoutConstraint!
+    @IBOutlet weak var uploadDocumentsLblTop: NSLayoutConstraint!
+    @IBOutlet weak var signupBtn: SetButton!
     
     
     //DropDown Outlets
@@ -38,7 +46,6 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var serviceBtnHeight: NSLayoutConstraint!
     @IBOutlet weak var qualificationBtnHeight: NSLayoutConstraint!
     @IBOutlet weak var documentsBtnHeight: NSLayoutConstraint!
-    
     
     @IBOutlet weak var QualificationsView: SetView!
     @IBOutlet weak var qualificationsTxtfld: SetTextField!
@@ -71,6 +78,11 @@ class SignupViewController: UIViewController {
     var fileData = [Data]()
     var fileType = [String]()
     var fileParam = [String]()
+    
+    var editFileName = String()
+    var editFileData = Data()
+    var editFileType = String()
+    var editFileParam = String()
     
     //MARK: - Life Cycle Methods
     
@@ -116,6 +128,9 @@ class SignupViewController: UIViewController {
             mainHeadingLbl.text = "Edit Profile"
             editProfileData()
         }
+        
+        introductionTxtFld.delegate = self
+        passwordTxtFld.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -145,7 +160,7 @@ class SignupViewController: UIViewController {
         fullnameTxtFld.text = model?.name ?? ""
         emailTxtFld.text = model?.email ?? ""
         mobileTextField.text = model?.contactNumber ?? ""
-        experienceTxtFld.text = "\(model?.experience ?? 0)"
+        experienceTxtFld.text = "\(model?.experience?.Value ?? "0")"
         passwordTxtFld.isHidden = true
         emailTxtFld.isUserInteractionEnabled = false
         introductionTxtFld.text = model?.introduction ?? ""
@@ -153,13 +168,24 @@ class SignupViewController: UIViewController {
         servicesView.isHidden = true
         serviceBtnHeight.constant = 0
         servicesTabHeight.constant = 0
+        servicesTop.constant = 0
+        
         QualificationsView.isHidden = true
         qualificationsTableHeight.constant = 0
         qualificationBtnHeight.constant = 0
+        qualificationsTop.constant = 0
+        
         documentsBtnHeight.constant = 0
         documentsCollectionHeight.constant = 0
         documentsView.isHidden = true
-        userProfileImage.sd_setImage(with: URL(string: model?.image ?? ""), placeholderImage: UIImage(named: "placeholderImage"), options: .highPriority, context: nil)
+        documentsTop.constant = 0
+        uploadDocumentsLblTop.constant = 0
+        documentsTopBottomConstraint.constant = 0
+        introTop.constant = 0
+        
+        userProfileImage.sd_setImage(with: URL(string: model?.image ?? ""), placeholderImage: UIImage(named: "user-white"), options: .highPriority, context: nil)
+        loginNavigationView.isHidden = true
+        signupBtn.setTitle("Edit Profile", for: .normal)
     }
     
     func displayPreviouslySelectedRows(){
@@ -257,22 +283,48 @@ class SignupViewController: UIViewController {
     
     @IBAction func tappedSignupBtn(_ sender: UIButton) {
         self.view.endEditing(true)
-        //  let validation = viewModel.validations(name: fullnameTxtFld.text ?? "", email: emailTxtFld.text ?? "", password: passwordTxtFld.text ?? "", confirmPassword: confirmPasswordTxtFld.text ?? "")
+        
         var selectedProfile = false
+        
         if userProfileImage.image == UIImage(named: "user-white"){
             selectedProfile = false
         }
         else{
             selectedProfile = true
         }
-        let validation = viewModel.validations(uploadedProfileImage: selectedProfile, name: fullnameTxtFld.text ?? "", email: emailTxtFld.text ?? "", mobile: mobileTextField.text ?? "", experience: experienceTxtFld.text ?? "", password: passwordTxtFld.text ?? "", servicesCount: viewModel.teacherServices.filter({$0.isSelected ?? false}).count, qualificationsCount:  viewModel.teacherQualifications.filter({$0.isSelected ?? false}).count, documentsCount: documents.count, intro: introductionTxtFld.text ?? "", about: AboutTxtView.text ?? "")
         
-        if validation.0{
-            signupApi()
+        if !isEdit{
+           
+            let validation = viewModel.validations(uploadedProfileImage: selectedProfile, name: fullnameTxtFld.text ?? "", email: emailTxtFld.text ?? "", mobile: mobileTextField.text ?? "", experience: experienceTxtFld.text ?? "", password: passwordTxtFld.text ?? "", servicesCount: viewModel.teacherServices.filter({$0.isSelected ?? false}).count, qualificationsCount:  viewModel.teacherQualifications.filter({$0.isSelected ?? false}).count, documentsCount: documents.count, intro: introductionTxtFld.text ?? "", about: AboutTxtView.text ?? "")
+            
+            if validation.0{
+                signupApi()
+            }
+            else{
+                self.showToast(message: validation.1)
+            }
         }
         else{
-            self.showToast(message: validation.1)
+            
+            let validation = viewModel.editValidations(uploadedProfileImage: selectedProfile, name: fullnameTxtFld.text ?? "", email: emailTxtFld.text ?? "", mobile: mobileTextField.text ?? "", experience: experienceTxtFld.text ?? "", intro: introductionTxtFld.text ?? "", about: AboutTxtView.text ?? "")
+            if validation.0{
+                
+                if editFileName == ""{
+                    let name = (UserDefault.sharedInstance?.getUserDetails()?.image ?? "").components(separatedBy: "/").last
+                    self.editFileName = name ?? generateUniqueName(withSuffix: ".jpg")
+                    self.editFileData = userProfileImage.image?.jpegData(compressionQuality: 1.0) ?? Data()
+                    self.editFileType = "image/jpeg"
+                    self.editFileParam = "profile"
+                }
+             
+                self.editProfileApi()
+            }
+            else{
+                self.showToast(message: validation.1)
+            }
+          
         }
+       
     }
     
     @IBAction func tappedLoginBtn(_ sender: UIButton) {
@@ -540,6 +592,7 @@ extension SignupViewController: UITableViewDelegate, UITableViewDataSource{
 //MARK: - UICollectionview Delegates/Datasources
 
 extension SignupViewController:UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+   
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return documents.count
     }
@@ -584,7 +637,7 @@ extension SignupViewController:DocumentPickerDelegate{
                 documents.append(UIImage(named: "my course-active") ?? UIImage())
                 self.fileType.append("application/pdf")
                 
-            case ".jpeg":
+            case "jpeg":
                 documents.append(UIImage(data: data) ?? UIImage())
                 self.fileType.append("image/jpeg")
                 
@@ -594,8 +647,12 @@ extension SignupViewController:DocumentPickerDelegate{
             }
             
             self.documentsTopBottomConstraint.constant = 16
+            documentTopConstraint.constant = 16
             self.documentsCollectionHeight.constant = 100
-            documentsCollectionview.reloadData()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                self.documentsCollectionview.reloadData()
+            }
             
             self.fileData.append(data)
             self.fileName.append(generateUniqueName(withSuffix: type))
@@ -626,15 +683,30 @@ extension SignupViewController:ImagePickerDelegate{
                 self.fileName.append(generateUniqueName(withSuffix: typeString))
                 self.fileType.append("image/jpeg")
                 
+                if isEdit{
+                    self.editFileType = "image/jpeg"
+                    self.editFileName = generateUniqueName(withSuffix: typeString)
+                }
+                
             case .audio:
-                typeString = ".m4a"
-                self.fileName.append(generateUniqueName(withSuffix: typeString))
-                self.fileType.append("audio/m4a")
+//                typeString = ".m4a"
+//                self.fileName.append(generateUniqueName(withSuffix: typeString))
+//                self.fileType.append("audio/m4a")
+//
+//                if isEdit{
+//                    self.editFileType = "audio/m4a"
+//                }
+                break
                 
             case .video:
-                typeString = ".mp4"
-                self.fileName.append(generateUniqueName(withSuffix: typeString))
-                self.fileType.append("video/mp4")
+//                typeString = ".mp4"
+//                self.fileName.append(generateUniqueName(withSuffix: typeString))
+//                self.fileType.append("video/mp4")
+//
+//                if isEdit{
+//                    self.editFileType = "video/mp4"
+//                }
+                break
                 
             default:
                 break
@@ -645,18 +717,26 @@ extension SignupViewController:ImagePickerDelegate{
                 self.documentsTopBottomConstraint.constant = 16
                 documentTopConstraint.constant = 16
                 self.documentsCollectionHeight.constant = 100
-                documentsCollectionview.reloadData()
-                documentsCollectionview.reloadData()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    self.documentsCollectionview.reloadData()
+                }
                 
                 self.fileParam.append("document")
             }
             else{
                 self.userProfileImage.image = UIImage(data: data) ?? UIImage()
                 self.fileParam.append("profile")
+                
+                if isEdit{
+                    self.editFileParam = "profile"
+                }
             }
             
             self.fileData.append(data)
             
+            if isEdit{
+                self.editFileData = data
+            }
         }
     }
 }
@@ -669,38 +749,33 @@ extension SignupViewController{
         
         Indicator.shared.showProgressView(self.view)
         
-//        viewModel.signup(name: fullnameTxtFld.text ?? "", email: emailTxtFld.text ?? "", password: passwordTxtFld.text ?? "", user_category: "\(selectedProfession)", services: coursesId, course_level: "\(selectedLevel)") { isSuccess, message in
-//
-//            Indicator.shared.hideProgressView()
-//
-//            if isSuccess{
-//                self.showToast(message: "Please Verify your email.")
-//                let vc = storyBoardIdentifiers.main.getStoryBoard().instantiateViewController(withIdentifier: "PasscodeViewController") as! PasscodeViewController
-//                vc.displayFor = .signup
-//                vc.id = "\(UserDefault.sharedInstance?.getUserDetails()?.id ?? 0)"
-//                self.navigationController?.pushViewController(vc, animated: true)
-//                UserDefaults.standard.set(self.selectedProfession, forKey: "UserProfessionId")
-//                UserDefaults.standard.set(self.selectedCourses, forKey: "UserCoursesId")
-//                UserDefaults.standard.set(self.selectedLevel, forKey: "UserEnglishLevel")
-//            }
-//            else{
-//                self.showToast(message: message)
-//            }
-//        }
-        
         viewModel.signup(name: fullnameTxtFld.text ?? "", email: emailTxtFld.text ?? "", password: passwordTxtFld.text ?? "", mobile: mobileTextField.text!, experience: experienceTxtFld.text!, services: self.viewModel.teacherServices.filter({$0.isSelected ?? false}).map({"\($0.id ?? 0)"}), qualifications: self.viewModel.teacherQualifications.filter({$0.isSelected ?? false}).map({"\($0.id ?? 0)"}), introduction: introductionTxtFld.text!, about: AboutTxtView.text, fileName: self.fileName, fileType: fileType, fileData: fileData, fileParam: fileParam) { isSuccess, message in
             
             Indicator.shared.hideProgressView()
             
             if isSuccess{
-//                self.showToast(message: "Please Verify your email.")
-//                let vc = storyBoardIdentifiers.main.getStoryBoard().instantiateViewController(withIdentifier: "PasscodeViewController") as! PasscodeViewController
-//                vc.displayFor = .signup
-//                vc.id = "\(UserDefault.sharedInstance?.getUserDetails()?.id ?? 0)"
-//                self.navigationController?.pushViewController(vc, animated: true)
-                
               
                 self.showAlertWithAction(Title: "", Message: "Signup Successful.Please wait for admin approval.", ButtonTitle: "OK") {
+                    self.navigationController?.popViewController(animated: true)
+                }
+            }
+            else{
+                self.showToast(message: message)
+            }
+        }
+    }
+    
+    func editProfileApi(){
+        
+        Indicator.shared.showProgressView(self.view)
+        
+        viewModel.editProfile(name: fullnameTxtFld.text ?? "", email: emailTxtFld.text ?? "", mobile: mobileTextField.text!, experience: experienceTxtFld.text!, introduction: introductionTxtFld.text!, about: AboutTxtView.text, fileName: self.editFileName, fileType: editFileType, fileData: editFileData, fileParam: editFileParam) { isSuccess, message in
+            
+            Indicator.shared.hideProgressView()
+            
+            if isSuccess{
+              
+                self.showAlertWithAction(Title: "", Message: "Profile Edited Successfully!", ButtonTitle: "OK") {
                     self.navigationController?.popViewController(animated: true)
                 }
             }
@@ -749,9 +824,9 @@ extension SignupViewController: customNavigationDelegates{
     func didTapLeftbutton(buttonType type: LeftButtonType) {
         
         if type == .back{
-            print("user has moved back from signup. Removing cached data to remove any inappropriate behaviour")
-            UserDefault.sharedInstance?.removeUserData()
-            UserDefault.sharedInstance?.updateUserData()
+//            print("user has moved back from signup. Removing cached data to remove any inappropriate behaviour")
+//            UserDefault.sharedInstance?.removeUserData()
+//            UserDefault.sharedInstance?.updateUserData()
         }
     }
     
@@ -764,6 +839,23 @@ extension SignupViewController{
     enum displayImageFor {
         case profile
         case documents
+    }
+    
+}
+
+//MARK: - UItextField Delegates
+
+extension SignupViewController:UITextFieldDelegate{
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        if textField == introductionTxtFld{
+            return range.location < 100
+        }
+        else{
+            return true
+        }
+        
     }
     
 }

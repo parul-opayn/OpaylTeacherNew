@@ -68,7 +68,9 @@ class RoundTextField : UITextField,UIGestureRecognizerDelegate{
     }
     
     @IBInspectable var rightImage : UIImage? {
+        
         didSet {
+            
             if let image = rightImage{
                 rightViewMode = .always
                 let imageView = UIImageView(frame: CGRect(x: -08, y: 0, width: 15, height: 15))
@@ -82,7 +84,8 @@ class RoundTextField : UITextField,UIGestureRecognizerDelegate{
                 let view = UIView(frame : CGRect(x: 20, y: 0, width: 15, height: 15))
                 view.addSubview(imageView)
                 rightView = view
-            }else {
+            }
+            else {
                 leftViewMode = .never
             }
 
@@ -113,7 +116,6 @@ class RoundTextField : UITextField,UIGestureRecognizerDelegate{
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.insetBy(dx: 50, dy: 5)
     }
-
     
     @objc func didTapImage(){
         if isRightViewPassword{

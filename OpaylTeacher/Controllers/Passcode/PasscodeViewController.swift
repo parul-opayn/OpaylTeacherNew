@@ -32,7 +32,7 @@ class PasscodeViewController: UIViewController {
             self.instructionLbl.tapDelegate = self
             self.instructionLbl.mentions = ["4-digit code"]
         }
-       
+        codeTxtFld.delegate = self
         
         if UserDefault.sharedInstance?.getUserDetails()?.id == nil{
             resendCodeBtn.isHidden = true
@@ -152,6 +152,16 @@ extension PasscodeViewController{
                 self.showToast(message: message)
             }
         }
+    }
+    
+}
+
+//MARK: - UItextField Delegates
+
+extension PasscodeViewController:UITextFieldDelegate{
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return range.location <= 4
     }
     
 }

@@ -21,11 +21,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: scene)
         
-        let viewCont = storyBoardIdentifiers.main.getStoryBoard().instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-        viewCont.hideBack = true
-        let navVc = UINavigationController(rootViewController: viewCont)
-        window.rootViewController = navVc
-        self.window = window
+        if UserDefault.sharedInstance?.getUserDetails()?.id == nil{
+            let viewCont = storyBoardIdentifiers.main.getStoryBoard().instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            viewCont.hideBack = true
+            let navVc = UINavigationController(rootViewController: viewCont)
+            window.rootViewController = navVc
+            self.window = window
+        }
+        else{
+            let viewCont = storyBoardIdentifiers.main.getStoryBoard().instantiateViewController(withIdentifier: "MainDashboardViewController") as! MainDashboardViewController
+            let navVc = UINavigationController(rootViewController: viewCont)
+            window.rootViewController = navVc
+            self.window = window
+        }
+       
         window.makeKeyAndVisible()
         
     }

@@ -51,6 +51,7 @@ class LoginViewController: UIViewController {
             navigationWithBack(navtTitle: "", titleType: .large, titleColor: .black)
             self.logoTop.constant = 0
         }
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -235,6 +236,23 @@ extension LoginViewController: ASAuthorizationControllerDelegate{
     @available(iOS 13.0, *)
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         // Handle error.
+    }
+    
+}
+
+//MARK: - Navigation Delegates
+
+extension LoginViewController:UIGestureRecognizerDelegate{
+    
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        
+        if hideBack{
+            return false
+        }
+        else{
+            return true
+        }
+       
     }
     
 }

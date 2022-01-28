@@ -21,11 +21,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
-        
-        let viewCont = storyBoardIdentifiers.main.getStoryBoard().instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-        viewCont.hideBack = true
-        let navVc = UINavigationController(rootViewController: viewCont)
-        self.window?.rootViewController = navVc
+        if UserDefault.sharedInstance?.getUserDetails()?.id == nil{
+            let viewCont = storyBoardIdentifiers.main.getStoryBoard().instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            viewCont.hideBack = true
+            let navVc = UINavigationController(rootViewController: viewCont)
+            self.window?.rootViewController = navVc
+        }
+        else{
+            let viewCont = storyBoardIdentifiers.main.getStoryBoard().instantiateViewController(withIdentifier: "MainDashboardViewController") as! MainDashboardViewController
+            let navVc = UINavigationController(rootViewController: viewCont)
+            self.window?.rootViewController = navVc
+        }
         
         if #available(iOS 10.0, *) {
             // For iOS 10 display notification (sent via APNS)

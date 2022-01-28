@@ -64,6 +64,8 @@ class MainDashboardViewController: UIViewController {
     var selectedCourses = [Int]()
     private let footerView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.white)
     var page = 0
+    var hasAPILoaded = false
+    var refershControl:UIRefreshControl!
     
     //MARK: - Life Cycle Methods
     
@@ -81,32 +83,45 @@ class MainDashboardViewController: UIViewController {
             NotificationCenter.default.addObserver(self, selector: #selector(trackPresentedScreen), name: .trackPresentedScreen, object: nil)
         }
         
+        self.refershControl = UIRefreshControl()
+       
+        self.refershControl.tintColor = UIColor.red
+        
+        self.refershControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+        
         if UIDevice().userInterfaceIdiom == .pad{
             
            // popularClassesTableView.isHidden = true
             popularClassCollectionview.delegate = self
             popularClassCollectionview.dataSource = self
+            self.popularClassCollectionview!.alwaysBounceVertical = true
+            self.popularClassCollectionview!.addSubview(refershControl)
            
         }
         else{
             self.popularClassesTableView.isHidden = false
+            self.popularClassesTableView!.addSubview(refershControl)
         }
+        popularClassesTableView.allowsSelection = true
         getDashboardData()
         
-        userGreetingLbl.text = UserDefault.sharedInstance?.getUserDetails()?.name ?? "N/A"
-        userEmailLbl.text = UserDefault.sharedInstance?.getUserDetails()?.email ?? ""
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
         self.bothSideIcons(titleString: "Dashboard", titleType: .large, leftIcon: UIImage(named: "barIcon")!, rightIcon: UIImage(), titleColor: .black, leftBtnType: .menu, rightBtnType: .addFeed)
         navigationButtonsDelegate = self
+        
+        userGreetingLbl.text =  "Hello, " + (UserDefault.sharedInstance?.getUserDetails()?.name ?? "N/A").capitalized
+        userEmailLbl.text = UserDefault.sharedInstance?.getUserDetails()?.email ?? ""
        // prefillUserData()
        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
+        self.bothSideIcons(titleString: "Dashboard", titleType: .large, leftIcon: UIImage(named: "barIcon")!, rightIcon: UIImage(), titleColor: .black, leftBtnType: .menu, rightBtnType: .addFeed)
+        navigationButtonsDelegate = self
     }
     
     //MARK: - custom method
@@ -264,6 +279,24 @@ class MainDashboardViewController: UIViewController {
         
     }
     
+    @objc func refresh(sender:AnyObject)
+    {
+        self.refershControl.beginRefreshing()
+            print("REFRESH SCREEN")
+        page = 1
+        getDashboardData()
+        self.hasAPILoaded = false
+        self.viewModel.dashboardModel = []
+       
+        if UIDevice().userInterfaceIdiom == .pad{
+            popularClassCollectionview.reloadData()
+        }
+        else{
+            popularClassesTableView.reloadData()
+        }
+
+    }
+    
     //MARK: - IBActions
     
     @IBAction func tapBrowseClass(_ sender: Any) {
@@ -313,12 +346,22 @@ extension MainDashboardViewController: UITableViewDelegate, UITableViewDataSourc
             }
         }
         else if tableView == popularClassesTableView{
+           
             let count = viewModel.dashboardModel.count
+            
             if count != 0{
                 return count
             }
             else{
-                return 0
+                if hasAPILoaded{
+                    tableCollectionErrors(view: tableView, text: "No data found", headerHeight: 0)
+                    return count
+                }
+                else{
+                    tableCollectionErrors(view: tableView, text: "", headerHeight: 0)
+                    return 4
+                }
+               
             }
             
         }
@@ -373,18 +416,25 @@ extension MainDashboardViewController: UITableViewDelegate, UITableViewDataSourc
 //        }
         //else
             if tableView == popularClassesTableView{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "popularClasses", for: indexPath) as! PackagesTableViewCell
+          
+                let cell = tableView.dequeueReusableCell(withIdentifier: "popularClasses", for: indexPath) as! PackagesTableViewCell
                 if viewModel.dashboardModel.count == 0{
-               // cell.contentView.showAnimatedSkeleton()
+                    cell.calendarIcon.isHidden = true
+                    cell.clockIcon.isHidden = true
+                    cell.startDateLbl.text = ""
+                    cell.classTimingLbl.text = ""
+                cell.contentView.showAnimatedSkeleton()
             }
             else{
                 cell.contentView.hideSkeleton()
+                cell.calendarIcon.isHidden = false
+                cell.clockIcon.isHidden = false
                 let model = viewModel.dashboardModel[indexPath.row]
                 cell.classImage.sd_setImage(with: URL(string: model.thumbnail ?? ""), placeholderImage: UIImage(named: "placeholderImage"), options: .highPriority, context: nil)
                 cell.nameLbl.text = model.title ?? ""
                 cell.tutorName.text = model.teacher?.name ?? ""
                 cell.tutorExperience.text = "(\(model.teacher?.experience ?? 0) Yrs Exp)"
-                cell.bookingAmount.text = "$\(model.price ?? 0)"
+              //  cell.bookingAmount.text = "$\(model.price ?? 0)"
                 
                 let startDate = model.startDate ?? ""
                 let startDateConversion = Singleton.sharedInstance.UTCToLocal(date: startDate, fromFormat: "yyyy-MM-dd HH:mm:ss", toFormat: "dd-MMM-yyyy")
@@ -410,7 +460,11 @@ extension MainDashboardViewController: UITableViewDelegate, UITableViewDataSourc
                     //cell.ratingStarImage.image = UIImage(named: "star")
                     cell.classRatingLbl.text = "\(model.rating ?? 0.0)"
                 }
+                
+                cell.classImage.roundCorners([.topLeft,.bottomLeft], radius: 8)
+                cell.layerView.roundCorners([.topLeft,.bottomLeft], radius: 8)
             }
+                
             return cell
         }
         else{
@@ -422,28 +476,7 @@ extension MainDashboardViewController: UITableViewDelegate, UITableViewDataSourc
         }
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if tableView == packageTableView{
-//            let vc = storyBoardIdentifiers.main.getStoryBoard().instantiateViewController(withIdentifier: "PackageDetailsViewController") as! PackageDetailsViewController
-//            var model: AvailablePackage?
-//            if myPackages{
-//                model = viewModel.dashboardModel?.myPackages?[indexPath.row]
-//            }
-//            else{
-//                model = viewModel.dashboardModel?.availablePackages?[indexPath.row]
-//            }
-//            vc.mainTitle = model?.title ?? ""
-//            vc.packageId = model?.id ?? 0
-//            vc.hidesBottomBarWhenPushed = true
-//            self.navigationController?.pushViewController(vc, animated: true)
-//        }
-//        else if tableView == popularClassesTableView{
-//            let vc = storyboard?.instantiateViewController(withIdentifier: "SelectedClassViewController") as! SelectedClassViewController
-//            vc.classId = "\(viewModel.dashboardModel?.popularClass?[indexPath.row].id ?? 0)"
-//            vc.hidesBottomBarWhenPushed = true
-//            self.navigationController?.pushViewController(vc, animated: true)
-//        }
-    }
+    
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
@@ -463,6 +496,15 @@ extension MainDashboardViewController: UITableViewDelegate, UITableViewDataSourc
             }
         }
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if viewModel.dashboardModel.count != 0{
+            let vc = storyBoardIdentifiers.main.getStoryBoard().instantiateViewController(withIdentifier: "SelectedClassViewController") as! SelectedClassViewController
+            vc.classId = "\(viewModel.dashboardModel[indexPath.row].id ?? 0)"
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
 }
@@ -539,6 +581,8 @@ extension MainDashboardViewController: UICollectionViewDelegate, UICollectionVie
                     cell.ratingViewWidth.constant = 100
                     cell.classRatingLbl.text = "\(model.rating ?? 0.0)"
                 }
+                cell.classImage.roundCorners([.topLeft,.bottomLeft], radius: 8)
+                cell.layerView.roundCorners([.topLeft,.bottomLeft], radius: 8)
             }
             return cell
         }
@@ -695,6 +739,8 @@ extension MainDashboardViewController{
     func getDashboardData(){
         self.page += 1
         viewModel.dashboardApi(page: self.page,completion: {(isSuccess, message) in
+            self.hasAPILoaded = true
+            self.refershControl.endRefreshing()
             if isSuccess{
            
                 if UIDevice().userInterfaceIdiom == .pad{

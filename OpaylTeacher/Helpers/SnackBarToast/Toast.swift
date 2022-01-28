@@ -28,7 +28,7 @@ extension UIViewController{
         let snackbar = TTGSnackbar(message: message, duration: .middle)
         
         if UIDevice().userInterfaceIdiom == .pad{
-            snackbar.messageTextFont = UIFont(name: "Asap-Medium", size: 27)!
+            snackbar.messageTextFont = UIFont(name: "Asap-Medium", size: 23)!
         }
         else{
             snackbar.messageTextFont = UIFont(name: "Asap-Regular", size: 17)!

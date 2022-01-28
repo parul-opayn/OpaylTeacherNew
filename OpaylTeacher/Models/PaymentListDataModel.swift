@@ -7,67 +7,109 @@
 
 import Foundation
 
-// MARK: - PaymentListDataModelElement
-
 struct PaymentListDataModelElement: Codable {
     let id: Int?
-    let transactionID: String?
-    let gatewayTransactionID: String?
-    let onlineClassID: OnlineClassID?
-    let courseID: CourseID?
-    let packageID: String?
-    let price, userID, status: Int?
-    let updatedAt, createdAt: String?
+    let userID: UserID?
+    let purchaseType: String?
+    let onlineClassID: [OnlineClassID]?
+    let courseID, packageID: CourseID?
+    let paymentID: PaymentID?
+    let status: Int?
+    let createdAt, updatedAt: String?
 
     enum CodingKeys: String, CodingKey {
         case id
-        case transactionID = "transaction_id"
-        case gatewayTransactionID = "gateway_transaction_id"
+        case userID = "user_id"
+        case purchaseType = "purchase_type"
         case onlineClassID = "online_class_id"
         case courseID = "course_id"
         case packageID = "package_id"
-        case price
-        case userID = "user_id"
+        case paymentID = "payment_id"
         case status
-        case updatedAt = "updated_at"
         case createdAt = "created_at"
+        case updatedAt = "updated_at"
     }
 }
 
 // MARK: - OnlineClassID
 struct OnlineClassID: Codable {
-    let id, teacherID, service: Int?
-    let serviceCategory: Int?
+    let id, teacherID, serviceID, serviceCatID: Int?
     let title: String?
     let thumbnail: String?
+    let startDate, endDate: String?
     let seat: Int?
-    let startDate, endDate, duration: String?
+    let duration: String?
     let price: Int?
     let content: String?
     let dayTime: Int?
-    let rating: Double?
-    let reviewCount: Int?
-    let meetingLink: String?
-    let updatedAt, createdAt: String?
+    let rating, reviewCount: Double?
+    let classStatus: Int?
+    let merithubClassID, hostURL, participantURL, meetingURL: String?
+    let deletedAt: String?
+    let createdAt, updatedAt: String?
 
     enum CodingKeys: String, CodingKey {
         case id
         case teacherID = "teacher_id"
-        case service
-        case serviceCategory = "service_category"
-        case title, thumbnail, seat
+        case serviceID = "service_id"
+        case serviceCatID = "service_cat_id"
+        case title, thumbnail
         case startDate = "start_date"
         case endDate = "end_date"
-        case duration, price, content
+        case seat, duration, price, content
         case dayTime = "day_time"
         case rating
         case reviewCount = "review_count"
-        case meetingLink = "meeting_link"
-        case updatedAt = "updated_at"
+        case classStatus = "class_status"
+        case merithubClassID = "merithub_class_id"
+        case hostURL = "host_url"
+        case participantURL = "participant_url"
+        case meetingURL = "meeting_url"
+        case deletedAt = "deleted_at"
         case createdAt = "created_at"
+        case updatedAt = "updated_at"
     }
 }
 
+
+
+// MARK: - UserID
+//struct UserID: Codable {
+//    let id: Int?
+//    let name, email: String?
+//    let introduction, userIDDescription: JSONNull?
+//    let emailVerifiedAt, socialID, firebaseToken: String?
+//    let userCategory, courseLevel: Int?
+//    let timezone, contactNumber: String?
+//    let experience: String?
+//    let status, accountVerificationStatus: Int?
+//    let merithubUserID: JSONNull?
+//    let image: String?
+//    let introVideo, deletedAt: JSONNull?
+//    let createdAt, updatedAt: String?
+//
+//    enum CodingKeys: String, CodingKey {
+//        case id, name, email, introduction
+//        case userIDDescription = "description"
+//        case emailVerifiedAt = "email_verified_at"
+//        case socialID = "social_id"
+//        case firebaseToken = "firebase_token"
+//        case userCategory = "user_category"
+//        case courseLevel = "course_level"
+//        case timezone
+//        case contactNumber = "contact_number"
+//        case experience, status
+//        case accountVerificationStatus = "account_verification_status"
+//        case merithubUserID = "merithub_user_id"
+//        case image
+//        case introVideo = "intro_video"
+//        case deletedAt = "deleted_at"
+//        case createdAt = "created_at"
+//        case updatedAt = "updated_at"
+//    }
+//}
+
+//typealias PaymentListDataModel = [PaymentListDataModelElement]
 // MARK: - CourseID
 
 struct CourseID: Codable {

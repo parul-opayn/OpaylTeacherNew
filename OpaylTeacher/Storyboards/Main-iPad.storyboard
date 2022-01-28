@@ -130,7 +130,7 @@
                                                             <constraint firstAttribute="height" constant="70" id="2DR-nu-tUd"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Asap-Medium" family="Asap" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="10"/>
@@ -263,7 +263,7 @@
                                                             <constraint firstAttribute="height" constant="70" id="Zw0-Kb-hVV"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="16" maxY="0.0"/>
-                                                        <state key="normal" image="downArrow"/>
+                                                        <state key="normal" image="downArrow-iPad"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                                 <real key="value" value="0.0"/>
@@ -320,7 +320,7 @@
                                                                         </view>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3rP-aj-Zex">
                                                                             <rect key="frame" x="0.0" y="54.5" width="496" height="1"/>
-                                                                            <color key="backgroundColor" name="AppBorderPink"/>
+                                                                            <color key="backgroundColor" name="AppLightPink"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="1" id="tcI-wM-oV2"/>
                                                                             </constraints>
@@ -346,7 +346,7 @@
                                                     </tableView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9rg-ey-fMW">
                                                         <rect key="frame" x="0.0" y="70" width="500" height="1"/>
-                                                        <color key="backgroundColor" name="AppBorderPink"/>
+                                                        <color key="backgroundColor" name="AppLightPink"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="PoE-fG-K05"/>
                                                         </constraints>
@@ -414,7 +414,7 @@
                                                             <constraint firstAttribute="height" constant="70" id="Prp-HX-dsS"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="16" maxY="0.0"/>
-                                                        <state key="normal" image="downArrow"/>
+                                                        <state key="normal" image="downArrow-iPad"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                                 <real key="value" value="0.0"/>
@@ -471,7 +471,7 @@
                                                                         </view>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dZ-6W-XQY">
                                                                             <rect key="frame" x="0.0" y="54.5" width="496" height="1"/>
-                                                                            <color key="backgroundColor" name="AppBorderPink"/>
+                                                                            <color key="backgroundColor" name="AppLightPink"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="1" id="nXR-za-lUB"/>
                                                                             </constraints>
@@ -497,7 +497,7 @@
                                                     </tableView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAd-zE-uhm">
                                                         <rect key="frame" x="0.0" y="70" width="500" height="1"/>
-                                                        <color key="backgroundColor" name="AppBorderPink"/>
+                                                        <color key="backgroundColor" name="AppLightPink"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="Nh4-r4-q0d"/>
                                                         </constraints>
@@ -582,17 +582,17 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload Documents" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zn-aN-8za">
-                                                        <rect key="frame" x="48" y="16" width="421" height="54"/>
+                                                        <rect key="frame" x="48" y="16" width="407" height="54"/>
                                                         <fontDescription key="fontDescription" name="Asap-Medium" family="Asap" pointSize="20"/>
                                                         <color key="textColor" systemColor="opaqueSeparatorColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon material-library-books" translatesAutoresizingMaskIntoConstraints="NO" id="2rG-bG-OlU">
-                                                        <rect key="frame" x="477" y="35.5" width="15" height="15"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="roundAdd" translatesAutoresizingMaskIntoConstraints="NO" id="2rG-bG-OlU">
+                                                        <rect key="frame" x="463" y="30.5" width="25" height="25"/>
                                                         <color key="tintColor" name="AppDarkGray"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="15" id="YCk-f0-gCr"/>
-                                                            <constraint firstAttribute="height" constant="15" id="wki-ic-LLs"/>
+                                                            <constraint firstAttribute="width" constant="25" id="YCk-f0-gCr"/>
+                                                            <constraint firstAttribute="height" constant="25" id="wki-ic-LLs"/>
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8i-mR-HBU">
@@ -672,7 +672,7 @@
                                                     <constraint firstItem="XFk-74-lAi" firstAttribute="centerX" secondItem="fPD-by-KJr" secondAttribute="centerX" id="YXf-YE-Ero"/>
                                                     <constraint firstItem="w8i-mR-HBU" firstAttribute="top" secondItem="fPD-by-KJr" secondAttribute="top" id="ey3-LL-Wvt"/>
                                                     <constraint firstAttribute="bottom" secondItem="XFk-74-lAi" secondAttribute="bottom" constant="16" id="fFe-cT-mQF"/>
-                                                    <constraint firstAttribute="trailing" secondItem="2rG-bG-OlU" secondAttribute="trailing" constant="8" id="gK5-v4-1iz"/>
+                                                    <constraint firstAttribute="trailing" secondItem="2rG-bG-OlU" secondAttribute="trailing" constant="12" id="gK5-v4-1iz"/>
                                                     <constraint firstItem="4zn-aN-8za" firstAttribute="leading" secondItem="pd4-Fh-eSx" secondAttribute="trailing" constant="8" id="hW0-cJ-gZG"/>
                                                     <constraint firstItem="XFk-74-lAi" firstAttribute="leading" secondItem="pd4-Fh-eSx" secondAttribute="leading" id="lhE-9U-Mcw"/>
                                                     <constraint firstItem="4zn-aN-8za" firstAttribute="top" secondItem="fPD-by-KJr" secondAttribute="top" constant="16" id="oPC-P2-yTd"/>
@@ -822,28 +822,36 @@
                         <outlet property="documentsBtnHeight" destination="MJ9-OH-0GT" id="7bG-Gt-aJ5"/>
                         <outlet property="documentsCollectionHeight" destination="qhO-Op-Ikh" id="jDn-Lv-Z7U"/>
                         <outlet property="documentsCollectionview" destination="XFk-74-lAi" id="Gvn-dB-moT"/>
+                        <outlet property="documentsTop" destination="hvF-bG-BEA" id="DhT-F0-PZb"/>
                         <outlet property="documentsTopBottomConstraint" destination="fFe-cT-mQF" id="nja-kk-3PH"/>
                         <outlet property="documentsView" destination="fPD-by-KJr" id="9U0-eB-y3D"/>
                         <outlet property="emailTxtFld" destination="cVT-Qa-2oW" id="72R-kI-mMc"/>
                         <outlet property="experienceTxtFld" destination="j7d-Hc-yBs" id="h12-dy-8Sg"/>
                         <outlet property="fullnameTxtFld" destination="IJA-mU-bwV" id="9eF-bu-iDo"/>
+                        <outlet property="introTop" destination="XhB-Zy-OfV" id="Vms-3B-k4n"/>
                         <outlet property="introductionTxtFld" destination="suw-HP-1Nx" id="xeJ-Kk-6d1"/>
+                        <outlet property="loginNavigationView" destination="Wxb-bn-Fi3" id="n5L-rP-sdw"/>
                         <outlet property="mainHeadingLbl" destination="TQs-Ps-Dcg" id="1zk-Ge-2X4"/>
                         <outlet property="mobileTextField" destination="Edb-Wd-Xrn" id="BmP-ss-djS"/>
+                        <outlet property="passwordFieldHeight" destination="6qx-Kk-py5" id="wOJ-Lw-1GH"/>
                         <outlet property="passwordTxtFld" destination="Gth-Al-0bV" id="sJl-U3-QmJ"/>
                         <outlet property="qualificationBtnHeight" destination="Prp-HX-dsS" id="c9c-Jn-mYc"/>
                         <outlet property="qualificationsBtn" destination="IEe-HY-Hf4" id="fiy-3T-q8X"/>
                         <outlet property="qualificationsTableHeight" destination="lfP-7u-4Yu" id="LVq-8W-Ekf"/>
                         <outlet property="qualificationsTableview" destination="DxY-uE-WIS" id="tW9-LA-ez9"/>
+                        <outlet property="qualificationsTop" destination="cIn-3A-X1u" id="bSd-gz-Sqb"/>
                         <outlet property="qualificationsTxtfld" destination="lRo-Fb-Zt1" id="0Xm-Sr-KWK"/>
                         <outlet property="qualificationsUnderline" destination="cAd-zE-uhm" id="cqF-vs-uPD"/>
                         <outlet property="serviceBtnHeight" destination="Zw0-Kb-hVV" id="bWD-Tb-rUa"/>
                         <outlet property="servicesBtn" destination="j7e-JY-M2h" id="6KW-MH-XjE"/>
                         <outlet property="servicesTabHeight" destination="XK5-U0-7PF" id="nmr-Wr-gPT"/>
                         <outlet property="servicesTableView" destination="Bky-iM-lG4" id="VG9-Df-E03"/>
+                        <outlet property="servicesTop" destination="9ZI-9K-JD0" id="5y9-7f-Vw1"/>
                         <outlet property="servicesTxtfld" destination="cgZ-1T-gAu" id="4sX-sY-Gm1"/>
                         <outlet property="servicesUnderline" destination="9rg-ey-fMW" id="RC2-Wy-3ZR"/>
                         <outlet property="servicesView" destination="Ifs-li-99Z" id="a9z-Sb-MOK"/>
+                        <outlet property="signupBtn" destination="AUm-sN-UNJ" id="baY-9o-30I"/>
+                        <outlet property="uploadDocumentsLblTop" destination="oPC-P2-yTd" id="UbL-GK-V75"/>
                         <outlet property="userProfileImage" destination="quS-nd-uUw" id="Cxr-Z1-yv9"/>
                     </connections>
                 </viewController>
@@ -863,7 +871,7 @@
                                 <rect key="frame" x="0.0" y="24" width="834" height="1150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OWu-Hn-K6h">
-                                        <rect key="frame" x="0.0" y="0.0" width="834" height="563"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="834" height="564.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="vrZ-dD-tWL" customClass="SetImage" customModule="OpaylTeacher" customModuleProvider="target">
                                                 <rect key="frame" x="267" y="8" width="300" height="100"/>
@@ -878,13 +886,13 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wi7-MD-D6N">
-                                                <rect key="frame" x="16" y="140" width="802" height="44"/>
+                                                <rect key="frame" x="16" y="140" width="802" height="44.5"/>
                                                 <fontDescription key="fontDescription" name="Asap-SemiBold" family="Asap" pointSize="38"/>
                                                 <color key="textColor" name="AppBlack"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="8ix-Oq-aF0">
-                                                <rect key="frame" x="167" y="216" width="500" height="124"/>
+                                                <rect key="frame" x="167" y="216.5" width="500" height="124"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Sf-ad-f3E" customClass="RoundTextField" customModule="OpaylTeacher" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="500" height="50"/>
@@ -931,16 +939,16 @@
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvI-hy-erY">
-                                                <rect key="frame" x="257.5" y="517" width="319.5" height="38"/>
+                                                <rect key="frame" x="250.5" y="518.5" width="333.5" height="38"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have any account?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ena-bv-Mb5">
-                                                        <rect key="frame" x="0.0" y="0.0" width="236.5" height="38"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="245.5" height="38"/>
                                                         <fontDescription key="fontDescription" name="Asap-SemiBold" family="Asap" pointSize="22"/>
                                                         <color key="textColor" name="AppLightBlack"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkS-Qj-fEe">
-                                                        <rect key="frame" x="244.5" y="0.0" width="75" height="38"/>
+                                                        <rect key="frame" x="253.5" y="0.0" width="80" height="38"/>
                                                         <fontDescription key="fontDescription" name="Asap-Bold" family="Asap" pointSize="22"/>
                                                         <color key="tintColor" name="AppMainPink"/>
                                                         <inset key="titleEdgeInsets" minX="-4" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -964,7 +972,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyo-x8-EtF" customClass="SetButton" customModule="OpaylTeacher" customModuleProvider="target">
-                                                <rect key="frame" x="167" y="415" width="500" height="70"/>
+                                                <rect key="frame" x="167" y="416.5" width="500" height="70"/>
                                                 <color key="backgroundColor" name="AppMainPink"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="70" id="VrD-P8-30k"/>
@@ -983,7 +991,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6f-WI-xB5">
-                                                <rect key="frame" x="514" y="348" width="153" height="35"/>
+                                                <rect key="frame" x="503" y="348.5" width="164" height="36"/>
                                                 <fontDescription key="fontDescription" name="Asap-SemiBold" family="Asap" pointSize="20"/>
                                                 <color key="tintColor" name="AppMainPink"/>
                                                 <inset key="titleEdgeInsets" minX="-4" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -996,7 +1004,7 @@
                                                 </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFj-2C-KjM">
-                                                <rect key="frame" x="551" y="501" width="116" height="0.0"/>
+                                                <rect key="frame" x="552" y="502.5" width="115" height="0.0"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" id="Mzs-Jg-7Kg"/>
                                                 </constraints>
@@ -1009,7 +1017,7 @@
                                                 </state>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ri-Pj-TdC" customClass="SetButton" customModule="OpaylTeacher" customModuleProvider="target">
-                                                <rect key="frame" x="533" y="501" width="134" height="0.0"/>
+                                                <rect key="frame" x="528" y="502.5" width="139" height="0.0"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" id="XKC-rJ-DBt"/>
                                                 </constraints>
@@ -1035,7 +1043,7 @@
                                                 </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1D6-Pz-vjN" customClass="SetButton" customModule="OpaylTeacher" customModuleProvider="target">
-                                                <rect key="frame" x="533" y="501" width="134" height="0.0"/>
+                                                <rect key="frame" x="528" y="502.5" width="139" height="0.0"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" id="4wP-1G-26g"/>
                                                 </constraints>
@@ -1061,7 +1069,7 @@
                                                 </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQl-A9-Dk5" customClass="SetButton" customModule="OpaylTeacher" customModuleProvider="target">
-                                                <rect key="frame" x="476" y="501" width="191" height="0.0"/>
+                                                <rect key="frame" x="476" y="502.5" width="191" height="0.0"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" id="7v2-P3-pbl"/>
                                                 </constraints>
@@ -1159,7 +1167,7 @@
                                 <rect key="frame" x="0.0" y="24" width="834" height="1150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmK-K4-CXO">
-                                        <rect key="frame" x="0.0" y="0.0" width="834" height="466.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="834" height="468"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="7Ra-k5-OHp" customClass="SetImage" customModule="OpaylTeacher" customModuleProvider="target">
                                                 <rect key="frame" x="267" y="0.0" width="300" height="100"/>
@@ -1174,13 +1182,13 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot your password?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNH-pq-zC0">
-                                                <rect key="frame" x="167" y="226" width="500" height="32.5"/>
+                                                <rect key="frame" x="167" y="227" width="500" height="33"/>
                                                 <fontDescription key="fontDescription" name="Asap-SemiBold" family="Asap" pointSize="28"/>
                                                 <color key="textColor" name="AppBlack"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="MYz-ef-g45">
-                                                <rect key="frame" x="167" y="274.5" width="500" height="50"/>
+                                                <rect key="frame" x="167" y="276" width="500" height="50"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u9L-Rr-ptt" customClass="RoundTextField" customModule="OpaylTeacher" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="500" height="50"/>
@@ -1206,7 +1214,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9l-0c-NZ5" customClass="SetButton" customModule="OpaylTeacher" customModuleProvider="target">
-                                                <rect key="frame" x="167" y="364.5" width="500" height="70"/>
+                                                <rect key="frame" x="167" y="366" width="500" height="70"/>
                                                 <color key="backgroundColor" name="AppMainPink"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="70" id="9hS-yf-e9A"/>
@@ -1225,7 +1233,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the email associated with your account and we'll send an email with 4-digit code to reset your password." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPe-ZP-JqI" customClass="AtMentionsLabel" customModule="OpaylTeacher" customModuleProvider="target">
-                                                <rect key="frame" x="167" y="140" width="500" height="46"/>
+                                                <rect key="frame" x="167" y="140" width="500" height="47"/>
                                                 <fontDescription key="fontDescription" name="Asap-Regular" family="Asap" pointSize="20"/>
                                                 <color key="textColor" name="AppBlack"/>
                                                 <nil key="highlightedColor"/>
@@ -1290,7 +1298,7 @@
                                 <rect key="frame" x="0.0" y="24" width="834" height="1150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WK0-SK-2lU">
-                                        <rect key="frame" x="0.0" y="0.0" width="834" height="459.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="834" height="460.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="xDO-xf-vcy" customClass="SetImage" customModule="OpaylTeacher" customModuleProvider="target">
                                                 <rect key="frame" x="317" y="0.0" width="200" height="100"/>
@@ -1305,13 +1313,13 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your code" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swQ-zZ-WlZ">
-                                                <rect key="frame" x="167" y="179" width="500" height="32.5"/>
+                                                <rect key="frame" x="167" y="179.5" width="500" height="33"/>
                                                 <fontDescription key="fontDescription" name="Asap-SemiBold" family="Asap" pointSize="28"/>
                                                 <color key="textColor" name="AppBlack"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="YLg-VQ-ffY">
-                                                <rect key="frame" x="167" y="227.5" width="500" height="50"/>
+                                                <rect key="frame" x="167" y="228.5" width="500" height="50"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SYL-l6-9xO" customClass="RoundTextField" customModule="OpaylTeacher" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="500" height="50"/>
@@ -1337,7 +1345,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9b-d2-Ro1" customClass="SetButton" customModule="OpaylTeacher" customModuleProvider="target">
-                                                <rect key="frame" x="167" y="357.5" width="500" height="70"/>
+                                                <rect key="frame" x="167" y="358.5" width="500" height="70"/>
                                                 <color key="backgroundColor" name="AppMainPink"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="70" id="NjH-u5-mPs"/>
@@ -1356,13 +1364,13 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter the 4-digit code receive by Email." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PtD-je-Fia" customClass="AtMentionsLabel" customModule="OpaylTeacher" customModuleProvider="target">
-                                                <rect key="frame" x="167" y="124" width="500" height="23"/>
+                                                <rect key="frame" x="167" y="124" width="500" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="Asap-Regular" family="Asap" pointSize="20"/>
                                                 <color key="textColor" name="AppBlack"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afe-9s-ugP">
-                                                <rect key="frame" x="551" y="293.5" width="116" height="32"/>
+                                                <rect key="frame" x="544" y="294.5" width="123" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="dq1-Sb-7q0"/>
                                                 </constraints>
@@ -1432,7 +1440,6 @@
         <!--Main Dashboard View Controller-->
         <scene sceneID="cfz-nY-KXL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pFS-Hh-aI3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="MainDashboardViewController" id="dLh-BG-L5D" customClass="MainDashboardViewController" customModule="OpaylTeacher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R7D-w2-m1X">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
@@ -2903,7 +2910,7 @@ NOV-2021, 11:00 AM</string>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button hidden="YES" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PH5-DN-Aqe" customClass="SetButton" customModule="IletsLearning" customModuleProvider="target">
+                                            <button hidden="YES" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PH5-DN-Aqe" customClass="SetButton" customModule="OpaylTeacher" customModuleProvider="target">
                                                 <rect key="frame" x="694" y="16" width="108" height="34"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -2929,14 +2936,14 @@ NOV-2021, 11:00 AM</string>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PopularClassCell" id="Je2-YX-KO2" customClass="CoursesCollectionViewCell" customModule="IletsLearning" customModuleProvider="target">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PopularClassCell" id="Je2-YX-KO2" customClass="CoursesCollectionViewCell" customModule="OpaylTeacher" customModuleProvider="target">
                                                         <rect key="frame" x="183" y="0.0" width="436" height="395"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7Ta-iO-Gih">
                                                             <rect key="frame" x="0.0" y="0.0" width="436" height="395"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <subviews>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybg-oi-9hs" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybg-oi-9hs" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                                     <rect key="frame" x="8" y="8" width="420" height="379"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IELTS Preparation" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDl-fq-NXw">
@@ -2957,7 +2964,7 @@ NOV-2021, 11:00 AM</string>
                                                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                                                             </userDefinedRuntimeAttributes>
                                                                         </label>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="caa-Kf-T4S" customClass="SetImage" customModule="IletsLearning" customModuleProvider="target">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="caa-Kf-T4S" customClass="SetImage" customModule="OpaylTeacher" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="0.0" width="420" height="189.5"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" relation="lessThanOrEqual" priority="750" constant="140" id="U7f-TV-tlo"/>
@@ -3167,6 +3174,7 @@ NOV-2021, 11:00 AM</string>
                                                             <outlet property="classImage" destination="caa-Kf-T4S" id="CAK-hh-reB"/>
                                                             <outlet property="classRatingLbl" destination="BCB-BH-EaW" id="DYJ-Jj-0cq"/>
                                                             <outlet property="classTimingLbl" destination="eab-Zh-9JE" id="oZP-Yb-tMS"/>
+                                                            <outlet property="layerView" destination="stj-Y7-tOU" id="aqv-0c-R5m"/>
                                                             <outlet property="nameLbl" destination="nDl-fq-NXw" id="HHu-oS-KnE"/>
                                                             <outlet property="ratingView" destination="yTz-w6-HOA" id="tsi-X6-ZLc"/>
                                                             <outlet property="ratingViewWidth" destination="aFJ-9t-g3d" id="uGs-GM-fm2"/>
@@ -3256,6 +3264,7 @@ NOV-2021, 11:00 AM</string>
                         <outlet property="viewPackagesBtn" destination="paK-TV-43W" id="ARu-zg-kf1"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pFS-Hh-aI3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5044.6043165467627" y="-167.33668341708542"/>
         </scene>
@@ -3286,11 +3295,11 @@ NOV-2021, 11:00 AM</string>
                                 <rect key="frame" x="0.0" y="0.0" width="534" height="1194"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LDF-M4-6rg">
-                                        <rect key="frame" x="24" y="148.5" width="470" height="946.5"/>
+                                        <rect key="frame" x="24" y="148.5" width="470" height="947"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="separatorColor" name="ABABAB"/>
                                         <view key="tableFooterView" contentMode="scaleToFill" id="8Uq-C0-y2G">
-                                            <rect key="frame" x="0.0" y="134" width="470" height="88"/>
+                                            <rect key="frame" x="0.0" y="133.5" width="470" height="88"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Sm-N6-wlx" customClass="SetButton" customModule="OpaylTeacher" customModuleProvider="target">
@@ -3487,14 +3496,14 @@ NOV-2021, 11:00 AM</string>
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="LoggedInUserCell" id="fP5-0l-C1X" customClass="SideMenuTableViewCell" customModule="OpaylTeacher" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="53.5" width="470" height="58"/>
+                                                <rect key="frame" x="0.0" y="53.5" width="470" height="57.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fP5-0l-C1X" id="guA-oO-Oqu">
-                                                    <rect key="frame" x="0.0" y="0.0" width="470" height="58"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="470" height="57.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZX-HH-sFQ">
-                                                            <rect key="frame" x="48" y="16" width="414" height="26"/>
+                                                            <rect key="frame" x="48" y="16" width="414" height="25.5"/>
                                                             <fontDescription key="fontDescription" name="Asap-SemiBold" family="Asap" pointSize="22"/>
                                                             <color key="textColor" name="AppTitleBlack"/>
                                                             <nil key="highlightedColor"/>
@@ -3548,16 +3557,16 @@ NOV-2021, 11:00 AM</string>
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sqf-mU-ZvZ">
-                                                <rect key="frame" x="148" y="8" width="112" height="69"/>
+                                                <rect key="frame" x="148" y="8" width="108" height="68"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Doe" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mL-YC-yMl">
-                                                        <rect key="frame" x="0.0" y="0.0" width="112" height="30.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Doe" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mL-YC-yMl">
+                                                        <rect key="frame" x="0.0" y="0.0" width="108" height="30"/>
                                                         <fontDescription key="fontDescription" name="Asap-SemiBold" family="Asap" pointSize="26"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEu-a0-ecV">
-                                                        <rect key="frame" x="0.0" y="38.5" width="112" height="30.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEu-a0-ecV">
+                                                        <rect key="frame" x="0.0" y="38" width="108" height="30"/>
                                                         <fontDescription key="fontDescription" name="Asap-Regular" family="Asap" pointSize="20"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -3591,17 +3600,17 @@ NOV-2021, 11:00 AM</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2po-48-nbo">
-                                        <rect key="frame" x="32" y="1111" width="454" height="1"/>
+                                        <rect key="frame" x="32" y="1111.5" width="454" height="1"/>
                                         <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="bWX-Qe-mka"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fb-BC-xv5">
-                                        <rect key="frame" x="32" y="1128" width="113.5" height="42"/>
+                                        <rect key="frame" x="32" y="1128.5" width="111.5" height="41.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61o-PE-VpH">
-                                                <rect key="frame" x="36" y="8" width="69.5" height="26"/>
+                                                <rect key="frame" x="36" y="8" width="67.5" height="25.5"/>
                                                 <fontDescription key="fontDescription" name="Asap-SemiBold" family="Asap" pointSize="22"/>
                                                 <color key="textColor" name="AppBlack"/>
                                                 <nil key="highlightedColor"/>
@@ -3614,7 +3623,7 @@ NOV-2021, 11:00 AM</string>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymY-ep-eS6">
-                                                <rect key="frame" x="8" y="8" width="97.5" height="26"/>
+                                                <rect key="frame" x="8" y="8" width="95.5" height="25.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title=""/>
                                                 <connections>
@@ -3637,7 +3646,7 @@ NOV-2021, 11:00 AM</string>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v1.0.1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wC6-he-kuO">
-                                        <rect key="frame" x="418" y="1136" width="60" height="26"/>
+                                        <rect key="frame" x="423" y="1136.5" width="55" height="25.5"/>
                                         <fontDescription key="fontDescription" name="Asap-Regular" family="Asap" pointSize="22"/>
                                         <color key="textColor" name="AppDarkGray"/>
                                         <nil key="highlightedColor"/>
@@ -3713,7 +3722,7 @@ NOV-2021, 11:00 AM</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6kD-Rv-1r9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1389" y="-167"/>
+            <point key="canvasLocation" x="1388.4892086330935" y="-167.33668341708542"/>
         </scene>
         <!--Payment List View Controller-->
         <scene sceneID="sdh-v6-A8U">
@@ -3929,7 +3938,7 @@ NOV-2021, 11:00 AM</string>
                                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DB_Post_Pic4" translatesAutoresizingMaskIntoConstraints="NO" id="w5x-jB-Jqm" customClass="SetImage" customModule="OpaylTeacher" customModuleProvider="target">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DB_Post_Pic4" translatesAutoresizingMaskIntoConstraints="NO" id="w5x-jB-Jqm" customClass="SetImage" customModule="OpaylTeacher" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="12" width="153.5" height="111"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" relation="lessThanOrEqual" priority="750" constant="60" id="2FD-yg-mWJ"/>
@@ -4092,13 +4101,13 @@ NOV-2021, 11:00 AM</string>
         <!--Create New Password View Controller-->
         <scene sceneID="Y5G-5C-4OW">
             <objects>
-                <viewController storyboardIdentifier="CreateNewPasswordViewController" id="7mq-SL-PGL" customClass="CreateNewPasswordViewController" customModule="IletsLearning" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateNewPasswordViewController" id="7mq-SL-PGL" customClass="CreateNewPasswordViewController" customModule="OpaylTeacher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tra-Qe-yyn">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdm-i4-xI6" customClass="SetButton" customModule="IletsLearning" customModuleProvider="target">
-                                <rect key="frame" x="150" y="542" width="534" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdm-i4-xI6" customClass="SetButton" customModule="OpaylTeacher" customModuleProvider="target">
+                                <rect key="frame" x="150" y="542.5" width="534" height="70"/>
                                 <color key="backgroundColor" name="AppMainPink"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="9Vc-Xx-ER8"/>
@@ -4116,7 +4125,7 @@ NOV-2021, 11:00 AM</string>
                                     <action selector="tappedSubmitBtn:" destination="7mq-SL-PGL" eventType="touchUpInside" id="oSc-46-W8P"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="5dV-WH-QwQ" customClass="SetImage" customModule="IletsLearning" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="5dV-WH-QwQ" customClass="SetImage" customModule="OpaylTeacher" customModuleProvider="target">
                                 <rect key="frame" x="267" y="24" width="300" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="GSb-Ul-WVi"/>
@@ -4129,15 +4138,15 @@ NOV-2021, 11:00 AM</string>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create new password" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcB-aw-UI8">
-                                <rect key="frame" x="150" y="274" width="534" height="44"/>
+                                <rect key="frame" x="150" y="274" width="534" height="44.5"/>
                                 <fontDescription key="fontDescription" name="Asap-SemiBold" family="Asap" pointSize="38"/>
                                 <color key="textColor" name="AppBlack"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="7g1-Bj-2sv">
-                                <rect key="frame" x="150" y="334" width="534" height="166"/>
+                                <rect key="frame" x="150" y="334.5" width="534" height="166"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tgS-FF-UDx" customClass="RoundTextField" customModule="IletsLearning" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tgS-FF-UDx" customClass="RoundTextField" customModule="OpaylTeacher" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="534" height="70"/>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -4158,7 +4167,7 @@ NOV-2021, 11:00 AM</string>
                                             <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="password"/>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cG9-6U-6E2" customClass="RoundTextField" customModule="IletsLearning" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cG9-6U-6E2" customClass="RoundTextField" customModule="OpaylTeacher" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="96" width="534" height="70"/>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -4211,7 +4220,7 @@ NOV-2021, 11:00 AM</string>
         <!--Change Password View Controller-->
         <scene sceneID="e1h-wp-J1c">
             <objects>
-                <viewController storyboardIdentifier="ChangePasswordViewController" id="Dul-ca-0wF" customClass="ChangePasswordViewController" customModule="IletsLearning" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChangePasswordViewController" id="Dul-ca-0wF" customClass="ChangePasswordViewController" customModule="OpaylTeacher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K8Z-Ym-Ctp">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4225,7 +4234,7 @@ NOV-2021, 11:00 AM</string>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="n6g-R6-geA">
                                                 <rect key="frame" x="150" y="40" width="534" height="258"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Old Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uhb-rl-cER" customClass="SetTextField" customModule="IletsLearning" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Old Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uhb-rl-cER" customClass="SetTextField" customModule="OpaylTeacher" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="534" height="70"/>
                                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -4245,7 +4254,7 @@ NOV-2021, 11:00 AM</string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B0p-mS-hdQ" customClass="SetTextField" customModule="IletsLearning" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B0p-mS-hdQ" customClass="SetTextField" customModule="OpaylTeacher" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="94" width="534" height="70"/>
                                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -4265,7 +4274,7 @@ NOV-2021, 11:00 AM</string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T7G-j4-Haf" customClass="SetTextField" customModule="IletsLearning" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T7G-j4-Haf" customClass="SetTextField" customModule="OpaylTeacher" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="188" width="534" height="70"/>
                                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -4287,7 +4296,7 @@ NOV-2021, 11:00 AM</string>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AH2-58-9JQ" customClass="SetButton" customModule="IletsLearning" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AH2-58-9JQ" customClass="SetButton" customModule="OpaylTeacher" customModuleProvider="target">
                                                 <rect key="frame" x="150" y="338" width="534" height="70"/>
                                                 <color key="backgroundColor" name="AppMainPink"/>
                                                 <constraints>
@@ -4350,7 +4359,7 @@ NOV-2021, 11:00 AM</string>
         <!--Selected Class View Controller-->
         <scene sceneID="oCh-ZM-aXp">
             <objects>
-                <viewController storyboardIdentifier="SelectedClassViewController" id="AXy-ZI-xE2" customClass="SelectedClassViewController" customModule="IletsLearning" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectedClassViewController" id="AXy-ZI-xE2" customClass="SelectedClassViewController" customModule="OpaylTeacher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VzI-FY-xEI">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="2200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4368,7 +4377,7 @@ NOV-2021, 11:00 AM</string>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEO-Ln-C0A" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEO-Ln-C0A" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                         <rect key="frame" x="26" y="17" width="891" height="97"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Phi-IZ-Ocw" customClass="GrowingTextView" customModule="GrowingTextView">
@@ -4464,7 +4473,7 @@ NOV-2021, 11:00 AM</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LSb-E1-lJv">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1022"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="A9d-7c-DRc" customClass="SetImage" customModule="IletsLearning" customModuleProvider="target">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="A9d-7c-DRc" customClass="SetImage" customModule="OpaylTeacher" customModuleProvider="target">
                                                 <rect key="frame" x="34" y="16" width="956" height="350"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="350" id="hD0-XZ-KDm"/>
@@ -4643,7 +4652,7 @@ NOV-2021, 11:00 AM</string>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVw-Tm-hrY" customClass="SetButton" customModule="IletsLearning" customModuleProvider="target">
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVw-Tm-hrY" customClass="SetButton" customModule="OpaylTeacher" customModuleProvider="target">
                                                 <rect key="frame" x="34" y="702.5" width="956" height="70"/>
                                                 <color key="backgroundColor" name="AppMainPink"/>
                                                 <constraints>
@@ -4679,7 +4688,7 @@ NOV-2021, 11:00 AM</string>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ClassOptionsCell" id="UVA-qD-PbM" customClass="CoursesCollectionViewCell" customModule="IletsLearning" customModuleProvider="target">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ClassOptionsCell" id="UVA-qD-PbM" customClass="CoursesCollectionViewCell" customModule="OpaylTeacher" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="15" width="138" height="40"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4da-aN-XcN">
@@ -4741,14 +4750,14 @@ NOV-2021, 11:00 AM</string>
                                                             <constraint firstAttribute="height" constant="50" id="iex-Cf-bd8"/>
                                                         </constraints>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mockTestTableViewCell" id="p5x-Ie-qKQ" customClass="mockTestTableViewCell" customModule="IletsLearning" customModuleProvider="target">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mockTestTableViewCell" id="p5x-Ie-qKQ" customClass="mockTestTableViewCell" customModule="OpaylTeacher" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="44.5" width="1024" height="92"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p5x-Ie-qKQ" id="Qol-fg-x9O">
                                                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="92"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
-                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yTU-VN-kye" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yTU-VN-kye" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                                             <rect key="frame" x="34" y="8" width="956" height="72"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IELTS reading practice test 1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="all-ff-e6I">
@@ -4861,23 +4870,23 @@ NOV-2021, 11:00 AM</string>
                                                                     <outlet property="testTile" destination="all-ff-e6I" id="V6L-3i-QsZ"/>
                                                                 </connections>
                                                             </tableViewCell>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="receiveCell" id="Djr-Ou-zcH" customClass="ChatTableViewCell" customModule="IletsLearning" customModuleProvider="target">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="receiveCell" id="Djr-Ou-zcH" customClass="ChatTableViewCell" customModule="OpaylTeacher" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="136.5" width="1024" height="44"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Djr-Ou-zcH" id="CK0-MC-NVS">
                                                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
-                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aBn-eu-iFN" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aBn-eu-iFN" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                                             <rect key="frame" x="26" y="8" width="972" height="28"/>
                                                                             <subviews>
-                                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XHn-q8-DAr">
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XHn-q8-DAr">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="972" height="28"/>
                                                                                     <subviews>
                                                                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pIE-tk-1fv">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="972" height="8"/>
                                                                                             <subviews>
-                                                                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bkv-aj-b3i" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bkv-aj-b3i" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                                                                     <rect key="frame" x="438.5" y="4" width="95.5" height="32"/>
                                                                                                     <subviews>
                                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzy-T2-ttu">
@@ -4911,7 +4920,7 @@ NOV-2021, 11:00 AM</string>
                                                                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f0v-Q5-yLr">
                                                                                             <rect key="frame" x="0.0" y="8" width="972" height="20"/>
                                                                                             <subviews>
-                                                                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TA4-dK-rSt" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TA4-dK-rSt" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                                                                     <rect key="frame" x="8" y="33" width="58" height="65"/>
                                                                                                     <subviews>
                                                                                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o2w-d8-FkK">
@@ -4922,7 +4931,7 @@ NOV-2021, 11:00 AM</string>
                                                                                                                 <constraint firstAttribute="height" constant="40" id="g8Q-FU-EcV"/>
                                                                                                             </constraints>
                                                                                                         </view>
-                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMi-ig-GFM">
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Hi" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMi-ig-GFM">
                                                                                                             <rect key="frame" x="16" y="16" width="22" height="0.0"/>
                                                                                                             <fontDescription key="fontDescription" name="Asap-Regular" family="Asap" pointSize="22"/>
                                                                                                             <color key="textColor" name="AppDarkGray"/>
@@ -4950,7 +4959,7 @@ NOV-2021, 11:00 AM</string>
                                                                                                     <color key="textColor" name="AppDarkGray"/>
                                                                                                     <nil key="highlightedColor"/>
                                                                                                 </label>
-                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mL-pn-lAN">
+                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="User" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mL-pn-lAN">
                                                                                                     <rect key="frame" x="8" y="8" width="37" height="0.0"/>
                                                                                                     <fontDescription key="fontDescription" name="Asap-Medium" family="Asap" pointSize="18"/>
                                                                                                     <color key="textColor" name="AppDarkGray"/>
@@ -5026,23 +5035,23 @@ NOV-2021, 11:00 AM</string>
                                                                     <outlet property="usernameaLbl" destination="5mL-pn-lAN" id="9az-Wd-w21"/>
                                                                 </connections>
                                                             </tableViewCell>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sendCell" id="Xhd-DH-dpE" customClass="ChatTableViewCell" customModule="IletsLearning" customModuleProvider="target">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sendCell" id="Xhd-DH-dpE" customClass="ChatTableViewCell" customModule="OpaylTeacher" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="180.5" width="1024" height="44"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xhd-DH-dpE" id="lHI-4G-ZuP">
                                                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
-                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UpJ-zR-6JS" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UpJ-zR-6JS" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                                             <rect key="frame" x="26" y="8" width="972" height="28"/>
                                                                             <subviews>
-                                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HIJ-gh-Ytb">
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HIJ-gh-Ytb">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="972" height="28"/>
                                                                                     <subviews>
                                                                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rae-9c-HXG">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="972" height="8"/>
                                                                                             <subviews>
-                                                                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FeV-wv-0AD" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FeV-wv-0AD" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                                                                     <rect key="frame" x="438.5" y="4" width="95.5" height="32"/>
                                                                                                     <subviews>
                                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrh-jm-y72">
@@ -5076,7 +5085,7 @@ NOV-2021, 11:00 AM</string>
                                                                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6RN-yq-kqF">
                                                                                             <rect key="frame" x="0.0" y="8" width="972" height="20"/>
                                                                                             <subviews>
-                                                                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GlU-vI-spX" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GlU-vI-spX" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                                                                     <rect key="frame" x="906" y="40.5" width="58" height="57.5"/>
                                                                                                     <subviews>
                                                                                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uxj-IW-5Nv">
@@ -5087,7 +5096,7 @@ NOV-2021, 11:00 AM</string>
                                                                                                                 <constraint firstAttribute="height" constant="40" id="g4e-tp-WeX"/>
                                                                                                             </constraints>
                                                                                                         </view>
-                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymb-jg-wIw">
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Hi" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymb-jg-wIw">
                                                                                                             <rect key="frame" x="16" y="16" width="22" height="0.0"/>
                                                                                                             <fontDescription key="fontDescription" name="Asap-SemiBold" family="Asap" pointSize="22"/>
                                                                                                             <color key="textColor" name="Appwhite"/>
@@ -5115,7 +5124,7 @@ NOV-2021, 11:00 AM</string>
                                                                                                     <color key="textColor" name="AppDarkGray"/>
                                                                                                     <nil key="highlightedColor"/>
                                                                                                 </label>
-                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2e0-Cj-hwF">
+                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="User" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2e0-Cj-hwF">
                                                                                                     <rect key="frame" x="927" y="8" width="37" height="0.0"/>
                                                                                                     <fontDescription key="fontDescription" name="Asap-Medium" family="Asap" pointSize="18"/>
                                                                                                     <color key="textColor" name="AppDarkGray"/>
@@ -5191,26 +5200,26 @@ NOV-2021, 11:00 AM</string>
                                                                     <outlet property="usernameaLbl" destination="2e0-Cj-hwF" id="0wl-C1-PQh"/>
                                                                 </connections>
                                                             </tableViewCell>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sendMediaCell" id="9aq-Qv-kSo" customClass="ChatTableViewCell" customModule="IletsLearning" customModuleProvider="target">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sendMediaCell" id="9aq-Qv-kSo" customClass="ChatTableViewCell" customModule="OpaylTeacher" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="224.5" width="1024" height="44"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9aq-Qv-kSo" id="fuZ-bW-mcM">
                                                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
-                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ay-M5-B3M" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ay-M5-B3M" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                                             <rect key="frame" x="16" y="8" width="992" height="28"/>
                                                                             <subviews>
-                                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QD5-QY-sTd">
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QD5-QY-sTd">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="992" height="28"/>
                                                                                     <subviews>
-                                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PJJ-cW-dLj">
+                                                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PJJ-cW-dLj">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="992" height="28"/>
                                                                                             <subviews>
-                                                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="64T-Ej-fqr" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="64T-Ej-fqr" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                                                                     <rect key="frame" x="465.5" y="4" width="61.5" height="20"/>
                                                                                                     <subviews>
-                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaD-bn-UpJ">
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaD-bn-UpJ">
                                                                                                             <rect key="frame" x="16" y="3.5" width="29.5" height="13"/>
                                                                                                             <fontDescription key="fontDescription" name="Asap-Regular" family="Asap" pointSize="11"/>
                                                                                                             <color key="textColor" name="AppDarkGray"/>
@@ -5238,13 +5247,13 @@ NOV-2021, 11:00 AM</string>
                                                                                                 <constraint firstItem="64T-Ej-fqr" firstAttribute="centerX" secondItem="PJJ-cW-dLj" secondAttribute="centerX" id="umM-rw-hj0"/>
                                                                                             </constraints>
                                                                                         </view>
-                                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOP-NV-l7L">
+                                                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GOP-NV-l7L">
                                                                                             <rect key="frame" x="0.0" y="28" width="992" height="0.0"/>
                                                                                             <subviews>
-                                                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gDv-te-K7G" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gDv-te-K7G" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                                                                     <rect key="frame" x="768" y="-289.5" width="216" height="256.5"/>
                                                                                                     <subviews>
-                                                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GkL-ii-KzY">
+                                                                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GkL-ii-KzY">
                                                                                                             <rect key="frame" x="196" y="236.5" width="20" height="20"/>
                                                                                                             <color key="backgroundColor" name="AppMainPink"/>
                                                                                                             <constraints>
@@ -5252,7 +5261,7 @@ NOV-2021, 11:00 AM</string>
                                                                                                                 <constraint firstAttribute="width" constant="20" id="wLy-f0-awh"/>
                                                                                                             </constraints>
                                                                                                         </view>
-                                                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="mTh-vR-Z0k" customClass="SetImage" customModule="IletsLearning" customModuleProvider="target">
+                                                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="mTh-vR-Z0k" customClass="SetImage" customModule="OpaylTeacher" customModuleProvider="target">
                                                                                                             <rect key="frame" x="8" y="8" width="200" height="200"/>
                                                                                                             <constraints>
                                                                                                                 <constraint firstAttribute="width" constant="200" id="Z41-u8-iFa"/>
@@ -5264,7 +5273,7 @@ NOV-2021, 11:00 AM</string>
                                                                                                                 </userDefinedRuntimeAttribute>
                                                                                                             </userDefinedRuntimeAttributes>
                                                                                                         </imageView>
-                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HI" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vx5-8H-S7A">
+                                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="HI" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vx5-8H-S7A">
                                                                                                             <rect key="frame" x="16" y="216" width="184" height="24.5"/>
                                                                                                             <fontDescription key="fontDescription" name="Asap-SemiBold" family="Asap" pointSize="21"/>
                                                                                                             <color key="textColor" name="Appwhite"/>
@@ -5289,13 +5298,13 @@ NOV-2021, 11:00 AM</string>
                                                                                                         </userDefinedRuntimeAttribute>
                                                                                                     </userDefinedRuntimeAttributes>
                                                                                                 </view>
-                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03:40 AM" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANp-GX-ZC7">
+                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="03:40 AM" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANp-GX-ZC7">
                                                                                                     <rect key="frame" x="911" y="-29" width="73" height="21"/>
                                                                                                     <fontDescription key="fontDescription" name="Asap-Regular" family="Asap" pointSize="18"/>
                                                                                                     <color key="textColor" name="AppDarkGray"/>
                                                                                                     <nil key="highlightedColor"/>
                                                                                                 </label>
-                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYD-gh-p4M">
+                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="User" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYD-gh-p4M">
                                                                                                     <rect key="frame" x="947" y="8" width="37" height="21"/>
                                                                                                     <fontDescription key="fontDescription" name="Asap-Medium" family="Asap" pointSize="18"/>
                                                                                                     <color key="textColor" name="AppDarkGray"/>
@@ -5372,23 +5381,23 @@ NOV-2021, 11:00 AM</string>
                                                                     <outlet property="usernameaLbl" destination="VYD-gh-p4M" id="sre-mi-tcu"/>
                                                                 </connections>
                                                             </tableViewCell>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="receiveMediaCell" id="Yum-Ix-5IY" customClass="ChatTableViewCell" customModule="IletsLearning" customModuleProvider="target">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="receiveMediaCell" id="Yum-Ix-5IY" customClass="ChatTableViewCell" customModule="OpaylTeacher" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="268.5" width="1024" height="44"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yum-Ix-5IY" id="Xm6-eZ-BSY">
                                                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
-                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Oz-5S-7DV" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Oz-5S-7DV" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                                             <rect key="frame" x="16" y="8" width="992" height="28"/>
                                                                             <subviews>
-                                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TSx-ep-GOV">
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TSx-ep-GOV">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="992" height="28"/>
                                                                                     <subviews>
                                                                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MVF-o8-sI7">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="992" height="8"/>
                                                                                             <subviews>
-                                                                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Eh-ul-HrQ" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Eh-ul-HrQ" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                                                                     <rect key="frame" x="465.5" y="4" width="61.5" height="22"/>
                                                                                                     <subviews>
                                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWj-iD-4df">
@@ -5422,7 +5431,7 @@ NOV-2021, 11:00 AM</string>
                                                                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GN7-YQ-LY5">
                                                                                             <rect key="frame" x="0.0" y="8" width="992" height="20"/>
                                                                                             <subviews>
-                                                                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UnD-UM-Y2m" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UnD-UM-Y2m" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                                                                     <rect key="frame" x="8" y="33" width="216" height="256.5"/>
                                                                                                     <subviews>
                                                                                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SHr-Yr-2lZ">
@@ -5433,7 +5442,7 @@ NOV-2021, 11:00 AM</string>
                                                                                                                 <constraint firstAttribute="height" constant="20" id="N4L-PZ-vUp"/>
                                                                                                             </constraints>
                                                                                                         </view>
-                                                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="L2g-So-VGJ" customClass="SetImage" customModule="IletsLearning" customModuleProvider="target">
+                                                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="L2g-So-VGJ" customClass="SetImage" customModule="OpaylTeacher" customModuleProvider="target">
                                                                                                             <rect key="frame" x="8" y="8" width="200" height="200"/>
                                                                                                             <constraints>
                                                                                                                 <constraint firstAttribute="height" constant="200" id="cry-Hd-oXJ"/>
@@ -5476,7 +5485,7 @@ NOV-2021, 11:00 AM</string>
                                                                                                     <color key="textColor" name="AppDarkGray"/>
                                                                                                     <nil key="highlightedColor"/>
                                                                                                 </label>
-                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEe-Sc-7Gy">
+                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="User" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEe-Sc-7Gy">
                                                                                                     <rect key="frame" x="8" y="8" width="37" height="0.0"/>
                                                                                                     <fontDescription key="fontDescription" name="Asap-Medium" family="Asap" pointSize="18"/>
                                                                                                     <color key="textColor" name="AppDarkGray"/>
@@ -5553,14 +5562,14 @@ NOV-2021, 11:00 AM</string>
                                                                     <outlet property="usernameaLbl" destination="wEe-Sc-7Gy" id="SkD-EF-n3y"/>
                                                                 </connections>
                                                             </tableViewCell>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="classDescription" id="iDh-DE-W74" customClass="mockTestTableViewCell" customModule="IletsLearning" customModuleProvider="target">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="classDescription" id="iDh-DE-W74" customClass="mockTestTableViewCell" customModule="OpaylTeacher" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="312.5" width="1024" height="44"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iDh-DE-W74" id="4IO-Ew-dcZ">
                                                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idr-jh-1l2">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idr-jh-1l2">
                                                                             <rect key="frame" x="34" y="19" width="956" height="6"/>
                                                                             <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</string>
                                                                             <fontDescription key="fontDescription" name="Asap-Regular" family="Asap" pointSize="24"/>
@@ -5590,17 +5599,17 @@ NOV-2021, 11:00 AM</string>
                                                                     <outlet property="overViewLbl" destination="Idr-jh-1l2" id="T1P-W9-Ms5"/>
                                                                 </connections>
                                                             </tableViewCell>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="moreOptions" id="nZS-yf-iP5" customClass="mockTestTableViewCell" customModule="IletsLearning" customModuleProvider="target">
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="moreOptions" id="nZS-yf-iP5" customClass="mockTestTableViewCell" customModule="OpaylTeacher" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="356.5" width="1024" height="44"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nZS-yf-iP5" id="ndZ-PC-c8E">
                                                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
-                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8xq-IZ-jEd" customClass="SetView" customModule="IletsLearning" customModuleProvider="target">
+                                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8xq-IZ-jEd" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
                                                                             <rect key="frame" x="34" y="8" width="956" height="28"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share this course" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ej2-lM-OV4">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Share this course" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ej2-lM-OV4">
                                                                                     <rect key="frame" x="72" y="22" width="180" height="0.0"/>
                                                                                     <fontDescription key="fontDescription" name="Asap-SemiBold" family="Asap" pointSize="24"/>
                                                                                     <nil key="textColor"/>
@@ -5609,7 +5618,7 @@ NOV-2021, 11:00 AM</string>
                                                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                                                                     </userDefinedRuntimeAttributes>
                                                                                 </label>
-                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yKq-iS-DUQ">
+                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yKq-iS-DUQ">
                                                                                     <rect key="frame" x="16" y="2" width="40" height="40"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" constant="40" id="SA2-0C-Del"/>
@@ -5619,7 +5628,7 @@ NOV-2021, 11:00 AM</string>
                                                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                                                                     </userDefinedRuntimeAttributes>
                                                                                 </imageView>
-                                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXl-Fd-6Ox">
+                                                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXl-Fd-6Ox">
                                                                                     <rect key="frame" x="16" y="2" width="40" height="40"/>
                                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <constraints>
@@ -5627,7 +5636,7 @@ NOV-2021, 11:00 AM</string>
                                                                                     </constraints>
                                                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 </button>
-                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="Sel-qA-NVV">
+                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="Sel-qA-NVV">
                                                                                     <rect key="frame" x="914" y="9" width="26" height="26"/>
                                                                                     <color key="tintColor" name="AppLightGray"/>
                                                                                     <constraints>
@@ -5858,7 +5867,7 @@ NOV-2021, 11:00 AM</string>
     </scenes>
     <designables>
         <designable name="9Sf-ad-f3E">
-            <size key="intrinsicContentSize" width="50.5" height="24.5"/>
+            <size key="intrinsicContentSize" width="49" height="25"/>
         </designable>
         <designable name="Edb-Wd-Xrn">
             <size key="intrinsicContentSize" width="60.5" height="25"/>
@@ -5869,17 +5878,11 @@ NOV-2021, 11:00 AM</string>
         <designable name="IJA-mU-bwV">
             <size key="intrinsicContentSize" width="90.5" height="25"/>
         </designable>
-        <designable name="K1e-c5-qs9">
-            <size key="intrinsicContentSize" width="-1" height="30"/>
-        </designable>
-        <designable name="Phi-IZ-Ocw">
-            <size key="intrinsicContentSize" width="-1" height="30"/>
-        </designable>
         <designable name="SYL-l6-9xO">
-            <size key="intrinsicContentSize" width="95" height="24.5"/>
+            <size key="intrinsicContentSize" width="97.5" height="25"/>
         </designable>
         <designable name="cG9-6U-6E2">
-            <size key="intrinsicContentSize" width="190" height="28"/>
+            <size key="intrinsicContentSize" width="198.5" height="28"/>
         </designable>
         <designable name="cVT-Qa-2oW">
             <size key="intrinsicContentSize" width="49" height="25"/>
@@ -5888,7 +5891,7 @@ NOV-2021, 11:00 AM</string>
             <size key="intrinsicContentSize" width="100" height="25"/>
         </designable>
         <designable name="kcG-rd-kDm">
-            <size key="intrinsicContentSize" width="83" height="23"/>
+            <size key="intrinsicContentSize" width="88.5" height="24"/>
         </designable>
         <designable name="rBF-18-BV9">
             <size key="intrinsicContentSize" width="116" height="17"/>
@@ -5897,10 +5900,10 @@ NOV-2021, 11:00 AM</string>
             <size key="intrinsicContentSize" width="107.5" height="25"/>
         </designable>
         <designable name="tgS-FF-UDx">
-            <size key="intrinsicContentSize" width="153" height="28"/>
+            <size key="intrinsicContentSize" width="161.5" height="28"/>
         </designable>
         <designable name="u9L-Rr-ptt">
-            <size key="intrinsicContentSize" width="102" height="24.5"/>
+            <size key="intrinsicContentSize" width="101.5" height="25"/>
         </designable>
     </designables>
     <resources>
@@ -5910,12 +5913,12 @@ NOV-2021, 11:00 AM</string>
         <image name="Icon awesome-file-pdf" width="15" height="20"/>
         <image name="Icon ionic-ios-arrow-down (1)" width="9.5" height="16"/>
         <image name="Icon material-dashboard" width="20" height="20"/>
-        <image name="Icon material-library-books" width="20" height="20"/>
         <image name="Mobile" width="10" height="16"/>
         <image name="appleLogo" width="30" height="30"/>
         <image name="attachment" width="17.5" height="20"/>
         <image name="cameraIcon" width="45" height="45"/>
         <image name="downArrow" width="16" height="9.3333330154418945"/>
+        <image name="downArrow-iPad" width="24" height="14"/>
         <image name="edit" width="24.5" height="24.5"/>
         <image name="email" width="18" height="15.5"/>
         <image name="emptyStar" width="16.5" height="15.5"/>
@@ -5935,6 +5938,7 @@ NOV-2021, 11:00 AM</string>
         <image name="qualification" width="18.5" height="16"/>
         <image name="redCross" width="20" height="20"/>
         <image name="right" width="14.5" height="25.5"/>
+        <image name="roundAdd" width="30" height="30"/>
         <image name="send" width="40" height="40"/>
         <image name="services" width="16" height="16"/>
         <image name="star" width="12" height="11.5"/>

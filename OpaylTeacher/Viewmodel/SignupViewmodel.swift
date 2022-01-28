@@ -57,6 +57,46 @@ class SignupViewModel: BaseAPI {
         
     }
     
+    
+    func editProfile(name:String,email:String,mobile:String,experience:String,introduction:String,about:String,fileName:String,fileType:String,fileData:Data,fileParam:String,completion:@escaping(Bool,String)->()){
+        
+        let param = ["name":name,"email":email, "contact_number":mobile,"experience":experience, "introduction":introduction,"description":about, "timezone":Singleton.sharedInstance.userTimeZone,"id":"\(UserDefault.sharedInstance?.getUserDetails()?.id ?? 0)"] as baseParameters
+        
+        let request = RequestFileData(url: (URLS.baseUrl, APISuffix.updateTeacher), method: .post, parameters: param, headers: true, fileData: fileData, fileName: fileName, fileMimetype: fileType, fileParam: fileParam)
+        
+        super.hitApiWithSingleFile(requests: request) { receivedData, message, responseCode in
+            
+            if let data = receivedData as? [String:Any]{
+                if data["code"] as? Int ?? -91 == 200{
+                    
+                    if let userData = data["data"] as? [String:Any]{
+                        
+                        do{
+                            try UserDefaults.standard.setValue(NSKeyedArchiver.archivedData(withRootObject:userData, requiringSecureCoding:true), forKey: "userData")
+                            UserDefault.sharedInstance?.updateUserData()
+                            completion(true,message ?? "")
+                        }
+                        catch{
+                            completion(false,error.localizedDescription)
+                        }
+                        
+                    }
+                    else{
+                        completion(false,message ?? "")
+                    }
+                   
+                }
+                else{
+                    completion(false,message ?? "")
+                }
+            }
+            else{
+                completion(false,message ?? "")
+            }
+        }
+        
+    }
+    
     func otpVerification(id:String,code:String,completion:@escaping(Bool,String)->()){
         
         let param = ["id":(Int(id) ?? 0)!,"code":code] as baseParameters
@@ -232,6 +272,37 @@ class SignupViewModel: BaseAPI {
         }
         else if documentsCount == 0{
             return (false,"Please select your documents")
+        }
+        else if intro.replacingOccurrences(of: " ", with: "") == ""{
+            return (false,"Please enter introduction")
+        }
+        else if about.replacingOccurrences(of: " ", with: "") == ""{
+            return (false,"Please enter description about yourself")
+        }
+        else{
+            return(true,"")
+        }
+    }
+    
+    func editValidations(uploadedProfileImage:Bool,name:String,email:String,mobile:String,experience:String,intro:String,about:String)->(Bool,String){
+        
+        if !uploadedProfileImage{
+            return (false,"Please select profile image")
+        }
+        else if name.replacingOccurrences(of: " ", with: "") == ""{
+           return (false,"Please enter user name")
+        }
+        else if email.replacingOccurrences(of: " ", with: "") == ""{
+            return (false,"Please enter email")
+        }
+        else if !(Validation().validateEmailId(emailID: email)){
+            return (false,"Please enter valid email")
+        }
+        else if mobile.replacingOccurrences(of: " ", with: "") == ""{
+            return (false,"Please enter mobile number")
+        }
+        else if experience.replacingOccurrences(of: " ", with: "") == ""{
+            return (false,"Please enter your experience")
         }
         else if intro.replacingOccurrences(of: " ", with: "") == ""{
             return (false,"Please enter introduction")

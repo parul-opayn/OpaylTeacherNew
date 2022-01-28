@@ -71,10 +71,19 @@ class DocumentPicker: NSObject, UIDocumentPickerDelegate, UINavigationController
                   print("import result : \(myURL)")
         do {
             fileData = try Data(contentsOf: myURL)
+            
             let myURLString = url.path
+            
             if myURLString.contains(".docx"){
                 fileType = "docx"
-            }else{
+            }
+            else if myURLString.contains(".PNG") || myURLString.contains(".JPEG") || myURLString.contains(".JPEG") || myURLString.contains(".HEIC"){
+                fileType = "jpeg"
+            }
+            else if myURLString.contains("GIF"){
+                fileType = "gif"
+            }
+            else{
                 fileType = "pdf"
             }
             delegate.selectedDocxData(fileData: fileData, fileType: fileType)

@@ -18,6 +18,12 @@ extension UIViewController {
         
         alert.view.tintColor = UIColor.black
         
+        alert.addAction(UIAlertAction(title: ButtonTitle, style: .default, handler: { (action: UIAlertAction!) in
+            
+            outputBlock()
+            
+        }))
+        
         self.present(alert, animated: true, completion: nil)
         
     }
@@ -43,14 +49,14 @@ extension UIViewController {
         let alert = UIAlertController(title: Title, message: Message, preferredStyle: UIAlertController.Style.alert)
         alert.view.tintColor = UIColor.black
         alert.addAction(UIAlertAction(title: ButtonTitle, style: .default, handler: nil))
-       
+        
         self.present(alert, animated: true, completion: nil)
         
     }
     
     func showDefaultAlert(Message: String) {
         
-        let alert = UIAlertController(title: "Tajr", message: Message, preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "", message: Message, preferredStyle: UIAlertController.Style.alert)
         alert.view.tintColor = UIColor.black
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         

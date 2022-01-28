@@ -55,7 +55,7 @@ class SideMenuViewController: UIViewController {
         menuList = [Menu]()
         
         
-        menuList.append(Menu(heading: "Section1", subHeading: [subMenu(viewName: "My Classes",image: UIImage(named: "my classes-active")), subMenu(viewName: "Payments",image: UIImage(named: "cash"))], collapsed: false))
+        menuList.append(Menu(heading: "Section1", subHeading: [subMenu(viewName: "My Classes",image: UIImage(named: "my classes-active")), subMenu(viewName: "Payments",image: UIImage(named: "cash")),subMenu(viewName: "Change Password",image: UIImage(named: "change password-active"))], collapsed: false))
         
         menuTab.reloadData()
         
@@ -141,10 +141,12 @@ class SideMenuViewController: UIViewController {
     
     @IBAction func tppedEditProfile(_ sender: UIButton) {
         
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SignupViewController") as! SignupViewController
-        vc.isEdit = true
-        self.viewController.navigationController?.pushViewController(vc, animated: true)
-        self.dismiss(animated: true, completion: nil)
+   
+        self.dismiss(animated: true, completion:{
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "SignupViewController") as! SignupViewController
+            vc.isEdit = true
+            self.viewController.navigationController?.pushViewController(vc, animated: true)
+        })
     }
     
 }
@@ -191,6 +193,7 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource{
         
         case 0:
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainDashboardViewController") as! MainDashboardViewController
+            
             self.dismiss(animated: true, completion: {
                 self.viewController.navigationController?.pushViewController(vc, animated: true)
             })
@@ -200,6 +203,14 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource{
             
         case 1:
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "PaymentListViewController") as! PaymentListViewController
+           
+            self.dismiss(animated: true, completion: {
+                self.viewController.navigationController?.pushViewController(vc, animated: true)
+            })
+            
+        case 2:
+            
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChangePasswordViewController") as! ChangePasswordViewController
            
             self.dismiss(animated: true, completion: {
                 self.viewController.navigationController?.pushViewController(vc, animated: true)

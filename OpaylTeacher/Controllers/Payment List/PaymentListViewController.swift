@@ -30,7 +30,12 @@ class PaymentListViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //getPaymentList()
+        getPaymentList()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.bothSideIcons(titleString: "Payment History", titleType: .large, leftIcon: UIImage(named: "barIcon")!, rightIcon: UIImage(), titleColor: .black, leftBtnType: .menu, rightBtnType: .addFeed)
+        navigationButtonsDelegate = self
     }
 
 }
@@ -48,7 +53,7 @@ extension PaymentListViewController: UITableViewDelegate, UITableViewDataSource{
                 return viewModel.paymentListModel.count
             }
             else{
-                tableCollectionErrors(view: tableView, text: "No data found", headerHeight: 0)
+                tableCollectionErrors(view: tableView, text: "", headerHeight: 0)
                 return 5
             }
             
@@ -65,7 +70,7 @@ extension PaymentListViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "PackagesTableViewCell") as! PackagesTableViewCell
         
         if viewModel.paymentListModel.count == 0{
-            //cell.contentView.showSkeleton()
+            cell.contentView.showSkeleton()
         }
         else{
             cell.contentView.hideSkeleton()
@@ -74,8 +79,8 @@ extension PaymentListViewController: UITableViewDelegate, UITableViewDataSource{
             
             if model.onlineClassID != nil{
                 cell.packageType.text = "(Online Class)"
-                cell.courseImage.sd_setImage(with: URL(string: model.onlineClassID?.thumbnail ?? ""), placeholderImage: UIImage(named: "placeholderImage"), options: .highPriority, context: nil)
-                cell.nameLbl.text = model.onlineClassID?.title ?? ""
+                cell.courseImage.sd_setImage(with: URL(string: model.onlineClassID?.first?.thumbnail ?? ""), placeholderImage: UIImage(named: "placeholderImage"), options: .highPriority, context: nil)
+                cell.nameLbl.text = model.onlineClassID?.first?.title ?? ""
             }
             else if model.courseID != nil{
                 cell.packageType.text = "(Course)"
@@ -116,14 +121,14 @@ extension PaymentListViewController: UITableViewDelegate, UITableViewDataSource{
             default:
                 break
             }
-            cell.amountLbl.text = "$\(model.price ?? 0)"
+            cell.amountLbl.text = "$\(model.onlineClassID?.first?.price ?? 0)"
             dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-            let buyDate = dateFormatter.date(from: model.onlineClassID?.createdAt ?? "")
+            let buyDate = dateFormatter.date(from: model.paymentID?.createdAt ?? "")
             dateFormatter.dateFormat = "dd MMM, yyyy"
             cell.paidOnDate.text = dateFormatter.string(from: buyDate ?? Date())
         }
         
-        if indexPath.row == 4{
+        if indexPath.row == (viewModel.paymentListModel.count - 1){
             cell.packageMainViewBottom.constant = 0.3
         }
         else{

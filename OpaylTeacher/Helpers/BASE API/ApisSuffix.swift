@@ -64,6 +64,7 @@ enum APISuffix {
     case qualifications
     case addTeacher
     case teacherClassListing
+    case updateTeacher
     
     func getDescription() -> String {
         
@@ -169,7 +170,7 @@ enum APISuffix {
             return "social/login"
             
         case .PaymentList:
-            return "user/payment/status"
+            return "teacher/payments"
             //"payment/list"
             
         case .messages:
@@ -232,6 +233,9 @@ enum APISuffix {
             
         case .teacherClassListing:
             return "teacher/class-list"
+            
+        case .updateTeacher:
+            return "admin/teacher/update"
         }
         
     }
@@ -247,7 +251,7 @@ enum URLS {
     func getDescription() -> String {
         
     let liveUrl = "http://3.22.185.42/opaynly-api/public/api/"
-    let localUrl = "http://7bb0-180-188-237-166.ngrok.io/ielts-app/public/api/"
+    let localUrl = "http://f361-180-188-237-118.ngrok.io/ielts-app/public/api/"
         
         switch self {
        

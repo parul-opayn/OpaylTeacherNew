@@ -267,7 +267,14 @@ class SelectedClassViewController: UIViewController {
         navigationWithBack(navtTitle: viewModel.classDetail?.title ?? "", titleType: .large, titleColor: .black)
         classImage.sd_setImage(with: URL(string: viewModel.classDetail?.thumbnail ?? ""), placeholderImage: UIImage(named: "placeholderImage"), options: .highPriority, context: nil)
         tutorName.text = viewModel.classDetail?.teacher?.name ?? ""
-        tutorQualification.text = "(\(viewModel.classDetail?.teacher?.profile?.qualification?.title ?? ""))"
+        
+        if let qualification = viewModel.classDetail?.teacher?.profile?.qualification?.title{
+            tutorQualification.text = "(\(qualification)"
+        }
+        else{
+            tutorQualification.text = ""
+        }
+       
         classBookingAmount.text = "$\(viewModel.classDetail?.price ?? 0)"
       
         if viewModel.classDetail?.teacher?.profile?.experience == nil{
