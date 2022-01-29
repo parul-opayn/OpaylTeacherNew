@@ -106,19 +106,19 @@ class SelectedClassViewController: UIViewController {
     
     //MARK: - custom method
     
-//    func moreTabRow(indexPath: IndexPath){
-//
-//        if indexPath.row == 0{
-//            let text = "Online Class"
-//            let textShare = [ text ]
-//            let activityViewController = UIActivityViewController(activityItems: textShare , applicationActivities: nil)
-//            activityViewController.popoverPresentationController?.sourceView = self.view
-//            if UIDevice.current.userInterfaceIdiom == .pad {
-//                activityViewController.popoverPresentationController?.sourceRect = CGRect(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2, width: 0, height: 0)
-//                activityViewController.popoverPresentationController?.permittedArrowDirections = []
-//            }
-//            self.present(activityViewController, animated: true, completion: nil)
-//        }
+    func moreTabRow(indexPath: IndexPath){
+
+        if indexPath.row == 0{
+            let text = "Online Class"
+            let textShare = [ text ]
+            let activityViewController = UIActivityViewController(activityItems: textShare , applicationActivities: nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                activityViewController.popoverPresentationController?.sourceRect = CGRect(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2, width: 0, height: 0)
+                activityViewController.popoverPresentationController?.permittedArrowDirections = []
+            }
+            self.present(activityViewController, animated: true, completion: nil)
+        }
 //        else if indexPath.row == 1{
 //            needRefresh = true
 //            let vc1 = storyBoardIdentifiers.courses.getStoryBoard().instantiateViewController(withIdentifier: "FavouriteClassesViewController") as! FavouriteClassesViewController
@@ -143,7 +143,7 @@ class SelectedClassViewController: UIViewController {
 //            vc.isClass = true
 //            navigationController?.pushViewController(vc, animated: true)
 //        }
-//    }
+    }
     
     func setBottomView(){
         
@@ -884,8 +884,8 @@ extension SelectedClassViewController: UITableViewDelegate, UITableViewDataSourc
 
             break
 
-        case 3:
-           // moreTabRow(indexPath: indexPath)
+        case 4:
+            moreTabRow(indexPath: indexPath)
             break
         default:
             break
