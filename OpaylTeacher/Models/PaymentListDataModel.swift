@@ -9,7 +9,7 @@ import Foundation
 
 struct PaymentListDataModelElement: Codable {
     let id: Int?
-    let userID: UserID?
+    let userID: PaymentUserID?
     let purchaseType: String?
     let onlineClassID: [OnlineClassID]?
     let courseID, packageID: CourseID?
@@ -30,6 +30,7 @@ struct PaymentListDataModelElement: Codable {
         case updatedAt = "updated_at"
     }
 }
+
 
 // MARK: - OnlineClassID
 struct OnlineClassID: Codable {
@@ -74,40 +75,40 @@ struct OnlineClassID: Codable {
 
 
 // MARK: - UserID
-//struct UserID: Codable {
-//    let id: Int?
-//    let name, email: String?
-//    let introduction, userIDDescription: JSONNull?
-//    let emailVerifiedAt, socialID, firebaseToken: String?
-//    let userCategory, courseLevel: Int?
-//    let timezone, contactNumber: String?
-//    let experience: String?
-//    let status, accountVerificationStatus: Int?
-//    let merithubUserID: JSONNull?
-//    let image: String?
-//    let introVideo, deletedAt: JSONNull?
-//    let createdAt, updatedAt: String?
-//
-//    enum CodingKeys: String, CodingKey {
-//        case id, name, email, introduction
-//        case userIDDescription = "description"
-//        case emailVerifiedAt = "email_verified_at"
-//        case socialID = "social_id"
-//        case firebaseToken = "firebase_token"
-//        case userCategory = "user_category"
-//        case courseLevel = "course_level"
-//        case timezone
-//        case contactNumber = "contact_number"
-//        case experience, status
-//        case accountVerificationStatus = "account_verification_status"
-//        case merithubUserID = "merithub_user_id"
-//        case image
-//        case introVideo = "intro_video"
-//        case deletedAt = "deleted_at"
-//        case createdAt = "created_at"
-//        case updatedAt = "updated_at"
-//    }
-//}
+struct PaymentUserID: Codable {
+    let id: Int?
+    let name, email: String?
+    let introduction, userIDDescription: String?
+    let emailVerifiedAt, socialID, firebaseToken: String?
+    let userCategory, courseLevel: Int?
+    let timezone, contactNumber: String?
+    let experience: String?
+    let status, accountVerificationStatus: Int?
+    let merithubUserID: String?
+    let image: String?
+    let introVideo, deletedAt: String?
+    let createdAt, updatedAt: String?
+
+    enum CodingKeys: String, CodingKey {
+        case id, name, email, introduction
+        case userIDDescription = "description"
+        case emailVerifiedAt = "email_verified_at"
+        case socialID = "social_id"
+        case firebaseToken = "firebase_token"
+        case userCategory = "user_category"
+        case courseLevel = "course_level"
+        case timezone
+        case contactNumber = "contact_number"
+        case experience, status
+        case accountVerificationStatus = "account_verification_status"
+        case merithubUserID = "merithub_user_id"
+        case image
+        case introVideo = "intro_video"
+        case deletedAt = "deleted_at"
+        case createdAt = "created_at"
+        case updatedAt = "updated_at"
+    }
+}
 
 //typealias PaymentListDataModel = [PaymentListDataModelElement]
 // MARK: - CourseID

@@ -27,7 +27,8 @@ struct ClassDetailDataModel: Codable {
     let wishlist:Wishlist?
     let meeting_link:String?
     let merithub_class_id:String?
-    let participant_url:String?
+    let participant_url,host_url:String?
+    let reviews: [Review]?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -49,6 +50,8 @@ struct ClassDetailDataModel: Codable {
         case meeting_link
         case merithub_class_id
         case participant_url
+        case host_url
+        case reviews
     }
 }
 

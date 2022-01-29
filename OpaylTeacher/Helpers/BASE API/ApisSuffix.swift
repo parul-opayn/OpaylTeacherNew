@@ -71,7 +71,8 @@ enum APISuffix {
         switch self {
         
         case .signUp :
-            return "sign-up"
+            return "teacher/signup"
+            //"sign-up"
             
         case .login :
             return "login"
@@ -251,7 +252,7 @@ enum URLS {
     func getDescription() -> String {
         
     let liveUrl = "http://3.22.185.42/opaynly-api/public/api/"
-    let localUrl = "http://f361-180-188-237-118.ngrok.io/ielts-app/public/api/"
+    let localUrl = "https://6b1b-180-188-237-118.ngrok.io/ielts-app/public/api/"
         
         switch self {
        

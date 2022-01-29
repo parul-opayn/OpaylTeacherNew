@@ -77,7 +77,7 @@ class DocumentPicker: NSObject, UIDocumentPickerDelegate, UINavigationController
             if myURLString.contains(".docx"){
                 fileType = "docx"
             }
-            else if myURLString.contains(".PNG") || myURLString.contains(".JPEG") || myURLString.contains(".JPEG") || myURLString.contains(".HEIC"){
+            else if myURLString.contains(".PNG") || myURLString.contains(".JPEG") || myURLString.contains(".HEIC"){
                 fileType = "jpeg"
             }
             else if myURLString.contains("GIF"){

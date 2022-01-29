@@ -248,6 +248,7 @@ enum rightButtontype{
     case cross
     case expand
     case notification
+    case options
 }
 
 extension UITableView{

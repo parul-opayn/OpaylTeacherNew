@@ -20,6 +20,7 @@ extension UIViewController{
     //MARK:- NavigationBar
     
     func navigationWithBack(navtTitle:String,titleType:NavigationTitleType,titleColor:UIColor){
+       
         self.navigationController?.isNavigationBarHidden = false
         
         if UIDevice().userInterfaceIdiom == .pad{
@@ -268,7 +269,6 @@ extension UIViewController{
             button.imageEdgeInsets = UIEdgeInsets(top: 4, left: 16, bottom: 4, right: 2)
             button.setBackgroundImage(icon, for: .normal)
             
-            
             let leftBarItem = UIBarButtonItem(customView: button)
             //   leftBarItem.customView?.translatesAutoresizingMaskIntoConstraints = true
             // leftBarItem.customView?.heightAnchor.constraint(equalToConstant: 30).isActive = true
@@ -280,7 +280,7 @@ extension UIViewController{
             button = UIButton(type: .custom)
             button.imageView?.contentMode =  .scaleAspectFit
             button.imageEdgeInsets = UIEdgeInsets(top: 4, left: 0, bottom: 4, right: 2)
-            button.setImage(leftIcon.withRenderingMode(.alwaysOriginal), for: .normal)
+            button.setImage(leftIcon, for: .normal)
             
             let leftBarItem = UIBarButtonItem(customView: button)
             leftBarItem.customView?.translatesAutoresizingMaskIntoConstraints = false
@@ -336,10 +336,13 @@ extension UIViewController{
         else if rightBtnType == .notification{
             rightbutton.addTarget(self, action: #selector(didTapNotification), for: .touchUpInside)
         }
+        else if rightBtnType == .options{
+            rightbutton.addTarget(self, action: #selector(didTapOptions), for: .touchUpInside)
+        }
         let rightBarItem = UIBarButtonItem(customView: rightbutton)
-        rightBarItem.customView?.translatesAutoresizingMaskIntoConstraints = false
-        rightBarItem.customView?.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        rightBarItem.customView?.widthAnchor.constraint(equalToConstant: 50).isActive = true
+       // rightBarItem.customView?.translatesAutoresizingMaskIntoConstraints = false
+        //rightBarItem.customView?.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        //rightBarItem.customView?.widthAnchor.constraint(equalToConstant: 50).isActive = true
         
         self.navigationItem.rightBarButtonItem = rightBarItem
         
@@ -404,5 +407,10 @@ extension UIViewController{
     @objc func didTapNotification(){
         print("Notification")
         navigationButtonsDelegate?.didTapRightButton(buttonType: .notification)
+    }
+    
+    @objc func didTapOptions(){
+        print("Notification")
+        navigationButtonsDelegate?.didTapRightButton(buttonType: .options)
     }
 }

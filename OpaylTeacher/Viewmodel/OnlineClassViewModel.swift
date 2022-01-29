@@ -11,6 +11,7 @@ class OnlineClassViewModel: BaseAPI{
     
     var moreDataArray = [subMenu]()
     var classDetail: ClassDetailDataModel?
+    var reviews:ReviewsListing?
 //    var classCheckoutData: ClassCheckoutDataModel?
 //    var totalPages = 0
 //    var popular_class = false
@@ -90,6 +91,44 @@ class OnlineClassViewModel: BaseAPI{
             }
         }
     }
+    
+    func reviewsListing(course_id: String,completion: @escaping(Bool, String)->()){
+        
+        let param = ["online_class_id": course_id] as baseParameters
+        let request = Request(url: (URLS.baseUrl, APISuffix.review), method: .get, parameters: param, headers: true)
+        
+        super.hitApi(requests: request) { receivedData, message, responseCode in
+            
+            if let dataReceived = receivedData as? [String:Any]{
+              
+                if dataReceived["code"] as? Int ?? -91 == 200{
+                    
+                    if let data = dataReceived["data"] as? [String:Any]{
+                        do{
+                            let jsonData = try
+                            JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
+                            self.reviews = try JSONDecoder().decode(ReviewsListing.self, from: jsonData)
+                            completion(true, message ?? "")
+                        }
+                        catch{
+                            completion(false, message ?? "")
+                        }
+                    }
+                    else{
+                        self.reviews = nil
+                        completion(true,message ?? "")
+                    }
+                }
+                else{
+                    completion(false,message ?? "")
+                }
+            }
+            else{
+                completion(false,message ?? "")
+            }
+        }
+    }
+    
 //    
 //    func classCheckoutApi(online_class_id: String,isCourse:Bool,couponId:String,completion:@escaping(Bool,String)->()){
 //        

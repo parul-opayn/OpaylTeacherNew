@@ -124,11 +124,6 @@ class SignupViewController: UIViewController {
         servicesListing()
         qualificationsListing()
         
-        if isEdit{
-            mainHeadingLbl.text = "Edit Profile"
-            editProfileData()
-        }
-        
         introductionTxtFld.delegate = self
         passwordTxtFld.delegate = self
     }
@@ -137,7 +132,16 @@ class SignupViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
-        navigationWithBack(navtTitle: "", titleType: .large, titleColor: .black)
+       
+        if isEdit{
+           // mainHeadingLbl.text = "Edit Profile"
+            navigationWithBack(navtTitle: "Edit Profile", titleType: .large, titleColor: .black)
+            editProfileData()
+        }
+        else{
+            navigationWithBack(navtTitle: "Signup", titleType: .large, titleColor: .black)
+        }
+      
         navigationButtonsDelegate = self
     }
     

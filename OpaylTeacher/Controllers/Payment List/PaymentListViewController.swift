@@ -126,6 +126,7 @@ extension PaymentListViewController: UITableViewDelegate, UITableViewDataSource{
             let buyDate = dateFormatter.date(from: model.paymentID?.createdAt ?? "")
             dateFormatter.dateFormat = "dd MMM, yyyy"
             cell.paidOnDate.text = dateFormatter.string(from: buyDate ?? Date())
+            cell.paideBy.text = "Paid By: \(model.userID?.name ?? "") (\(model.userID?.email ?? ""))"
         }
         
         if indexPath.row == (viewModel.paymentListModel.count - 1){

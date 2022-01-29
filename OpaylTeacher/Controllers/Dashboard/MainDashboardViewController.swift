@@ -102,7 +102,7 @@ class MainDashboardViewController: UIViewController {
             self.popularClassesTableView.isHidden = false
             self.popularClassesTableView!.addSubview(refershControl)
         }
-        popularClassesTableView.allowsSelection = true
+       // popularClassesTableView.allowsSelection = true
         getDashboardData()
         
     
@@ -373,22 +373,22 @@ extension MainDashboardViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-//        if tableView == packageTableView{
-//
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "PackagesTableViewCell") as! PackagesTableViewCell
-//
-//            if viewModel.dashboardModel == nil{
-//               // cell.contentView.showAnimatedSkeleton()
-//                //cell.amountView.BorderWidth = 0
-//               // packageLbl.showSkeleton()
-//                //viewPackagesBtn.showSkeleton()
-//            }
-//            else{
-//                cell.contentView.hideSkeleton()
-//                cell.amountView.BorderWidth = 1
-//                packageLbl.hideSkeleton()
-//                //viewPackagesBtn.hideSkeleton()
-//                var model: AvailablePackage?
+        if tableView == packageTableView{
+
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PackagesTableViewCell") as! PackagesTableViewCell
+
+            if viewModel.dashboardModel == nil{
+               // cell.contentView.showAnimatedSkeleton()
+                //cell.amountView.BorderWidth = 0
+               // packageLbl.showSkeleton()
+                //viewPackagesBtn.showSkeleton()
+            }
+            else{
+                cell.contentView.hideSkeleton()
+                cell.amountView.BorderWidth = 1
+                packageLbl.hideSkeleton()
+                //viewPackagesBtn.hideSkeleton()
+                var model: AvailablePackage?
 //                if myPackages{
 //                    model = viewModel.dashboardModel?.myPackages?[indexPath.row]
 //                    cell.amountView.isHidden = true
@@ -397,24 +397,24 @@ extension MainDashboardViewController: UITableViewDelegate, UITableViewDataSourc
 //                    model = viewModel.dashboardModel?.availablePackages?[indexPath.row]
 //                    cell.amountView.isHidden = false
 //                }
-//                cell.nameLbl.text = (model?.title ?? "").capitalized
-//                cell.courseImage.sd_setImage(with: URL(string: model?.thumbnail ?? ""), placeholderImage: UIImage(named: "placeholderImage"), options: .highPriority, context: nil)
-//                cell.ratingView.editable = false
-//                if UIDevice.current.userInterfaceIdiom == .pad{
-//                    cell.ratingViewWidth.constant = 24
-//                }
-//                else{
-//                    cell.ratingViewWidth.constant = 14
-//                }
-//                cell.ratingView.maxRating = 1
-//                cell.ratingView.rating = 0
-//                cell.ratingLbl.text = "Not Rated"
-//                cell.amountLbl.text = "$\(Int(Double(model?.price ?? "0.0") ?? 0.0))"
-//            }
-//            return cell
-//
-//        }
-        //else
+                cell.nameLbl.text = (model?.title ?? "").capitalized
+                cell.courseImage.sd_setImage(with: URL(string: model?.thumbnail ?? ""), placeholderImage: UIImage(named: "placeholderImage"), options: .highPriority, context: nil)
+                cell.ratingView.editable = false
+                if UIDevice.current.userInterfaceIdiom == .pad{
+                    cell.ratingViewWidth.constant = 24
+                }
+                else{
+                    cell.ratingViewWidth.constant = 14
+                }
+                cell.ratingView.maxRating = 1
+                cell.ratingView.rating = 0
+                cell.ratingLbl.text = "Not Rated"
+                cell.amountLbl.text = "$\(Int(Double(model?.price ?? "0.0") ?? 0.0))"
+            }
+            return cell
+
+        }
+        else
             if tableView == popularClassesTableView{
           
                 let cell = tableView.dequeueReusableCell(withIdentifier: "popularClasses", for: indexPath) as! PackagesTableViewCell
@@ -502,6 +502,7 @@ extension MainDashboardViewController: UITableViewDelegate, UITableViewDataSourc
         if viewModel.dashboardModel.count != 0{
             let vc = storyBoardIdentifiers.main.getStoryBoard().instantiateViewController(withIdentifier: "SelectedClassViewController") as! SelectedClassViewController
             vc.classId = "\(viewModel.dashboardModel[indexPath.row].id ?? 0)"
+            vc.className = viewModel.dashboardModel[indexPath.row].title ?? ""
             vc.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(vc, animated: true)
         }
