@@ -6856,7 +6856,7 @@ NOV-2021, 11:00 AM</string>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNg-9j-xR4" customClass="SetButton" customModule="OpaylTeacher" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="157.5" width="350" height="50"/>
+                                        <rect key="frame" x="133.5" y="157.5" width="115" height="50"/>
                                         <color key="backgroundColor" name="AppMainPink"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="bCi-b3-8cG"/>
@@ -6880,10 +6880,10 @@ NOV-2021, 11:00 AM</string>
                                 <constraints>
                                     <constraint firstItem="n0U-kQ-3zk" firstAttribute="top" secondItem="0g5-Rb-lSz" secondAttribute="top" constant="24" id="GLO-Iu-q8s"/>
                                     <constraint firstAttribute="trailing" secondItem="n0U-kQ-3zk" secondAttribute="trailing" constant="16" id="GQJ-3I-xte"/>
-                                    <constraint firstAttribute="trailing" secondItem="cNg-9j-xR4" secondAttribute="trailing" constant="16" id="L3V-N6-LLz"/>
-                                    <constraint firstItem="cNg-9j-xR4" firstAttribute="leading" secondItem="0g5-Rb-lSz" secondAttribute="leading" constant="16" id="Pom-3N-Zqt"/>
                                     <constraint firstItem="GkW-Db-5Bh" firstAttribute="top" secondItem="n0U-kQ-3zk" secondAttribute="bottom" constant="24" id="Tnf-4f-TkP"/>
                                     <constraint firstItem="GkW-Db-5Bh" firstAttribute="leading" secondItem="0g5-Rb-lSz" secondAttribute="leading" constant="16" id="XYV-vZ-axd"/>
+                                    <constraint firstItem="cNg-9j-xR4" firstAttribute="centerX" secondItem="0g5-Rb-lSz" secondAttribute="centerX" id="cKU-YF-z8h"/>
+                                    <constraint firstItem="cNg-9j-xR4" firstAttribute="width" secondItem="0g5-Rb-lSz" secondAttribute="width" multiplier="0.3" id="cuh-nL-cjI"/>
                                     <constraint firstAttribute="bottom" secondItem="cNg-9j-xR4" secondAttribute="bottom" constant="24" id="lL1-nY-awj"/>
                                     <constraint firstItem="n0U-kQ-3zk" firstAttribute="leading" secondItem="0g5-Rb-lSz" secondAttribute="leading" constant="16" id="nPD-ii-1m8"/>
                                     <constraint firstItem="cNg-9j-xR4" firstAttribute="top" secondItem="GkW-Db-5Bh" secondAttribute="bottom" constant="40" id="tCM-eL-Rug"/>
@@ -6921,9 +6921,6 @@ NOV-2021, 11:00 AM</string>
         <designable name="4by-C9-CvS">
             <size key="intrinsicContentSize" width="35.5" height="18"/>
         </designable>
-        <designable name="6N2-li-AXC">
-            <size key="intrinsicContentSize" width="-1" height="30"/>
-        </designable>
         <designable name="Ajo-3S-F90">
             <size key="intrinsicContentSize" width="76.5" height="18"/>
         </designable>
@@ -6932,9 +6929,6 @@ NOV-2021, 11:00 AM</string>
         </designable>
         <designable name="DN2-QM-DCG">
             <size key="intrinsicContentSize" width="69" height="18"/>
-        </designable>
-        <designable name="GkW-Db-5Bh">
-            <size key="intrinsicContentSize" width="145" height="18"/>
         </designable>
         <designable name="J8F-ju-aaJ">
             <size key="intrinsicContentSize" width="66.5" height="18"/>
@@ -6971,12 +6965,6 @@ NOV-2021, 11:00 AM</string>
         </designable>
         <designable name="txD-GJ-kGG">
             <size key="intrinsicContentSize" width="72.5" height="18"/>
-        </designable>
-        <designable name="xtO-74-0Bf">
-            <size key="intrinsicContentSize" width="-1" height="30"/>
-        </designable>
-        <designable name="zvg-cz-WdW">
-            <size key="intrinsicContentSize" width="-1" height="30"/>
         </designable>
     </designables>
     <resources>

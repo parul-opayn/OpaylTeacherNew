@@ -46,4 +46,11 @@ class Validation {
         let isValidateOtherString = validateOtherString.evaluate(with: trimmedString)
         return isValidateOtherString
     }
+    
+    func isValidUrl(url: String) -> Bool {
+        let urlRegEx = "(http|https)://((\\w)*|([0-9]*)|([-|_])*)+([\\.|/]((\\w)*|([0-9]*)|([-|_])*))+"
+        let urlTest = NSPredicate(format:"SELF MATCHES %@", urlRegEx)
+        let result = urlTest.evaluate(with: url)
+        return result
+    }
 }

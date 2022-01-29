@@ -65,6 +65,8 @@ enum APISuffix {
     case addTeacher
     case teacherClassListing
     case updateTeacher
+    case customUrl
+    case generateLiveClass
     
     func getDescription() -> String {
         
@@ -237,6 +239,12 @@ enum APISuffix {
             
         case .updateTeacher:
             return "admin/teacher/update"
+            
+        case .customUrl:
+            return "teacher/custom/meeting_link"
+            
+        case .generateLiveClass:
+            return "teacher/class/join"
         }
         
     }

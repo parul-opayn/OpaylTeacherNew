@@ -129,6 +129,56 @@ class OnlineClassViewModel: BaseAPI{
         }
     }
     
+    func addCustomUrl(classId:String,meetingUrl:String,completion:@escaping(Bool,String)->()){
+        
+        let param = ["online_class_id":classId,"meeting_link":meetingUrl] as baseParameters
+        
+        let request = Request(url: (URLS.baseUrl, APISuffix.customUrl), method: .post, parameters: param, headers: true)
+        
+        super.hitApi(requests: request) { receivedData, message, responseCode in
+            
+            if let data = receivedData as? [String:Any]{
+                
+                if data["code"] as? Int ?? -91 == 200{
+                    
+                    completion(true,message ?? "")
+                    
+                }
+                else{
+                    completion(false,message ?? "")
+                }
+            }
+            else{
+                completion(false,message ?? "")
+            }
+        }
+    }
+    
+    func generateLiveClass(classId:String,completion:@escaping(Bool,String)->()){
+        
+        let param = ["online_class_id":classId] as baseParameters
+        
+        let request = Request(url: (URLS.baseUrl, APISuffix.generateLiveClass), method: .post, parameters: param, headers: true)
+        
+        super.hitApi(requests: request) { receivedData, message, responseCode in
+            
+            if let data = receivedData as? [String:Any]{
+                
+                if data["code"] as? Int ?? -91 == 200{
+                    
+                    completion(true,message ?? "")
+                    
+                }
+                else{
+                    completion(false,message ?? "")
+                }
+            }
+            else{
+                completion(false,message ?? "")
+            }
+        }
+    }
+    
 //    
 //    func classCheckoutApi(online_class_id: String,isCourse:Bool,couponId:String,completion:@escaping(Bool,String)->()){
 //        

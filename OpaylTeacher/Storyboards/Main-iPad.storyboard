@@ -6223,16 +6223,16 @@ NOV-2021, 11:00 AM</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g5w-e9-a3L" customClass="SetView" customModule="OpaylTeacher" customModuleProvider="target">
-                                <rect key="frame" x="109" y="432.5" width="616" height="333"/>
+                                <rect key="frame" x="125" y="432.5" width="584" height="333"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Meeting URL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmR-za-VdB">
-                                        <rect key="frame" x="16" y="32" width="584" height="29"/>
+                                        <rect key="frame" x="16" y="32" width="552" height="29"/>
                                         <fontDescription key="fontDescription" name="Asap-Medium" family="Asap" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter meeting link here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="URq-Lt-s20" customClass="SetTextField" customModule="OpaylTeacher" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="111" width="584" height="70"/>
+                                        <rect key="frame" x="16" y="111" width="552" height="70"/>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="pq4-K2-pix"/>
@@ -6252,7 +6252,7 @@ NOV-2021, 11:00 AM</string>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UhW-d3-T3C" customClass="SetButton" customModule="OpaylTeacher" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="231" width="584" height="70"/>
+                                        <rect key="frame" x="204.5" y="231" width="175" height="70"/>
                                         <color key="backgroundColor" name="AppMainPink"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="4Ue-mP-dZc"/>
@@ -6277,12 +6277,12 @@ NOV-2021, 11:00 AM</string>
                                     <constraint firstItem="UhW-d3-T3C" firstAttribute="top" secondItem="URq-Lt-s20" secondAttribute="bottom" constant="50" id="0Xk-VB-xLZ"/>
                                     <constraint firstAttribute="bottom" secondItem="UhW-d3-T3C" secondAttribute="bottom" constant="32" id="3NU-dJ-1aN"/>
                                     <constraint firstItem="BmR-za-VdB" firstAttribute="leading" secondItem="g5w-e9-a3L" secondAttribute="leading" constant="16" id="4xW-1u-Jp2"/>
-                                    <constraint firstItem="UhW-d3-T3C" firstAttribute="leading" secondItem="g5w-e9-a3L" secondAttribute="leading" constant="16" id="DUy-UX-Tov"/>
+                                    <constraint firstItem="UhW-d3-T3C" firstAttribute="centerX" secondItem="g5w-e9-a3L" secondAttribute="centerX" id="AGS-og-nQH"/>
                                     <constraint firstAttribute="trailing" secondItem="URq-Lt-s20" secondAttribute="trailing" constant="16" id="GXh-Hq-FFw"/>
                                     <constraint firstItem="URq-Lt-s20" firstAttribute="top" secondItem="BmR-za-VdB" secondAttribute="bottom" constant="50" id="Kba-JM-E50"/>
                                     <constraint firstItem="URq-Lt-s20" firstAttribute="leading" secondItem="g5w-e9-a3L" secondAttribute="leading" constant="16" id="NZS-58-fAd"/>
                                     <constraint firstAttribute="trailing" secondItem="BmR-za-VdB" secondAttribute="trailing" constant="16" id="aAK-Jm-c8k"/>
-                                    <constraint firstAttribute="trailing" secondItem="UhW-d3-T3C" secondAttribute="trailing" constant="16" id="pMV-5r-sVs"/>
+                                    <constraint firstItem="UhW-d3-T3C" firstAttribute="width" secondItem="g5w-e9-a3L" secondAttribute="width" multiplier="0.3" id="seo-Zo-JGy"/>
                                     <constraint firstItem="BmR-za-VdB" firstAttribute="top" secondItem="g5w-e9-a3L" secondAttribute="top" constant="32" id="zyQ-Wl-Owm"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -6295,9 +6295,9 @@ NOV-2021, 11:00 AM</string>
                         <viewLayoutGuide key="safeArea" id="PKt-gh-fXD"/>
                         <color key="backgroundColor" red="0.012000000104308128" green="0.012000000104308128" blue="0.012000000104308128" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="g5w-e9-a3L" firstAttribute="width" secondItem="D2M-OS-LsI" secondAttribute="width" multiplier="0.7" id="0YJ-0n-Qyv"/>
                             <constraint firstItem="g5w-e9-a3L" firstAttribute="centerY" secondItem="PKt-gh-fXD" secondAttribute="centerY" id="3ir-CF-ymI"/>
                             <constraint firstItem="g5w-e9-a3L" firstAttribute="centerX" secondItem="PKt-gh-fXD" secondAttribute="centerX" id="CuE-JW-46L"/>
-                            <constraint firstItem="UhW-d3-T3C" firstAttribute="width" secondItem="D2M-OS-LsI" secondAttribute="width" multiplier="0.7" id="RT7-SX-jT4"/>
                         </constraints>
                     </view>
                     <connections>
@@ -6322,20 +6322,8 @@ NOV-2021, 11:00 AM</string>
         <designable name="IJA-mU-bwV">
             <size key="intrinsicContentSize" width="91" height="24.5"/>
         </designable>
-        <designable name="K1e-c5-qs9">
-            <size key="intrinsicContentSize" width="-1" height="30"/>
-        </designable>
-        <designable name="Phi-IZ-Ocw">
-            <size key="intrinsicContentSize" width="-1" height="30"/>
-        </designable>
-        <designable name="Rpp-IH-gVR">
-            <size key="intrinsicContentSize" width="-1" height="30"/>
-        </designable>
         <designable name="SYL-l6-9xO">
             <size key="intrinsicContentSize" width="95" height="24.5"/>
-        </designable>
-        <designable name="URq-Lt-s20">
-            <size key="intrinsicContentSize" width="227.5" height="27"/>
         </designable>
         <designable name="cG9-6U-6E2">
             <size key="intrinsicContentSize" width="190" height="28"/>

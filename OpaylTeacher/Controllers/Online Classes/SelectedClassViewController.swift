@@ -986,6 +986,33 @@ extension SelectedClassViewController{
         })
     }
     
+    func customUrlAPI(link:String){
+        Indicator.shared.showProgressView(self.view)
+        viewModel.addCustomUrl(classId: classId,meetingUrl:link,completion: {(isSuccess, message) in
+            Indicator.shared.hideProgressView()
+            if isSuccess{
+                self.getClassDetail()
+            }
+            else{
+                self.showToast(message: message)
+            }
+        })
+    }
+    
+    
+    func generateClassAPI(){
+        Indicator.shared.showProgressView(self.view)
+        viewModel.generateLiveClass(classId: classId,completion: {(isSuccess, message) in
+            Indicator.shared.hideProgressView()
+            if isSuccess{
+                self.showToast(message: "Class Generated successfully")
+            }
+            else{
+                self.showToast(message: message)
+            }
+        })
+    }
+    
     func reviewsListing(){
         
         Indicator.shared.showProgressView(self.view)
@@ -1096,10 +1123,15 @@ extension SelectedClassViewController:customNavigationDelegates{
                 switch index {
                 
                 case 0:
+                    self.generateClassAPI()
                     break
                     
                 case 1:
                     let vc = storyBoardIdentifiers.main.getStoryBoard().instantiateViewController(withIdentifier: "CustomUrlViewController") as! CustomUrlViewController
+                    vc.cb = {
+                        url in
+                        self.customUrlAPI(link: url)
+                    }
                     vc.modalPresentationStyle = .overCurrentContext
                     self.navigationController?.present(vc, animated: true, completion: nil)
                     break

@@ -22,7 +22,7 @@ class SignupViewModel: BaseAPI {
         
        // let request = Request(url: (URLS.baseUrl, APISuffix.signUp), method: .post, parameters: param, headers: true)
         
-        let request = RequestFilesData(url: (URLS.baseUrl, APISuffix.addTeacher), method: .post, parameters: param, headers: false, fileData: fileData, fileName: fileName, fileMimetype: fileType, fileParam: fileParam, numberOfFiles: fileData.count)
+        let request = RequestFilesData(url: (URLS.baseUrl, APISuffix.signUp), method: .post, parameters: param, headers: false, fileData: fileData, fileName: fileName, fileMimetype: fileType, fileParam: fileParam, numberOfFiles: fileData.count)
         
         super.hitApiWithMultipleFile(requests: request) { receivedData, message, responseCode in
             

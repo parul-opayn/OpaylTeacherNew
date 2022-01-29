@@ -12,7 +12,7 @@ class CustomUrlViewController: UIViewController {
     @IBOutlet weak var mainContainerView: SetView!
     @IBOutlet weak var meetingUrlTxtField: SetTextField!
     
-    var cb = ((String)->())?
+    var cb : ((String)->())?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,10 +38,16 @@ class CustomUrlViewController: UIViewController {
     @IBAction func tappedGenerateBtn(_ sender: UIButton) {
         
         if meetingUrlTxtField.text?.isEmpty ?? false{
-            
+            self.showToast(message: "Please enter meeting url")
+        }
+        else if !Validation().isValidUrl(url: meetingUrlTxtField.text ?? ""){
+            self.showToast(message: "Please enter valid meeting url")
         }
         else{
-            
+            self.dismiss(animated: true) {
+                self.cb?(self.meetingUrlTxtField.text!)
+            }
+           
         }
     }
     
